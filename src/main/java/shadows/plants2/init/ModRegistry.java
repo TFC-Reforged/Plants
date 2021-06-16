@@ -53,6 +53,8 @@ public class ModRegistry {
 
     public static final BlockEnumBush<Desert> DESERT_0 = new BlockEnumFlower<>("desert_0", EnumPlantType.Desert, Desert.class, 0);
     public static final BlockEnumBush<Desert> DESERT_1 = new BlockEnumFlower<>("desert_1", EnumPlantType.Desert, Desert.class, 1);
+    public static final BlockEnumBush<Desert> DESERT_2 = new BlockEnumFlower<>("desert_2", EnumPlantType.Desert, Desert.class, 2);
+    //public static final BlockEnumBush<Desert> DESERT_3 = new BlockEnumFlower<>("desert_3", EnumPlantType.Desert, Desert.class, 3);
 
     public static final BlockEnumBush<Double> DOUBLE_0 = new BlockEnumDoubleFlower<>("double_0", EnumPlantType.Plains, Double.class, 0);
 
