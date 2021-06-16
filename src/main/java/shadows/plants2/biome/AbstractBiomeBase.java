@@ -1,5 +1,5 @@
 package shadows.plants2.biome;
-
+/*
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.registries.IForgeRegistry;
 import shadows.plants2.Plants2;
@@ -13,4 +13,4 @@ public abstract class AbstractBiomeBase extends Biome {
 
 	public abstract void register(IForgeRegistry<Biome> reg);
 
-}
+}*/

@@ -1,5 +1,5 @@
 package shadows.plants2.biome;
-
+/*
 import java.util.Random;
 
 import net.minecraft.entity.monster.EntityCreeper;
@@ -73,4 +73,4 @@ public class BiomeCrystalForest extends AbstractBiomeBase {
 		}
 	}
 
-}
+}*/

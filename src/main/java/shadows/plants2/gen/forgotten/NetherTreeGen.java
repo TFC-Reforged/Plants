@@ -1,5 +1,5 @@
 package shadows.plants2.gen.forgotten;
-
+/*
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -280,3 +280,4 @@ public class NetherTreeGen<E extends Enum<E> & ITreeEnum> extends WorldGenerator
 	}
 
 }
+*/

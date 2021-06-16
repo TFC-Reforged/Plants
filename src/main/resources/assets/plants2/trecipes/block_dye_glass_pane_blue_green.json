@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "panes",
+      "enabled": "true"
+    }
+  ],
+
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+    "item": "ferdinandsflowers:block_dye_glass",
+    "data": 6
+    }
+  },
+  "result": {
+    "item": "ferdinandsflowers:block_dye_glass_pane",
+    "data": 6,
+    "count":16
+  }
+}

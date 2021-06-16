@@ -1,5 +1,5 @@
 package shadows.plants2.gen;
-
+/*
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -110,4 +110,4 @@ public class TreeTemplate extends Template {
 		}
 		return true;
 	}
-}
+}*/

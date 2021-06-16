@@ -1,5 +1,5 @@
 package shadows.plants2.gen;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.BlockFlower;
@@ -32,4 +32,4 @@ public class WorldGenCrystals extends WorldGenFlowers {
 		if (world.getBlockState(blockpos).getBlock().isReplaceable(world, blockpos) && world.getBlockState(down).isSideSolid(world, down, EnumFacing.UP)) world.setBlockState(blockpos, rand.nextFloat() >= 0.7F ? dark_shard : shard, 2);
 		return true;
 	}
-}
+}*/

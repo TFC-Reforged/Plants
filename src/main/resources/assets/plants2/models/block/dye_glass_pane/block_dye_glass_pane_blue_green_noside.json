@@ -1,0 +1,6 @@
+{
+    "parent": "block/pane_noside",
+    "textures": {
+        "pane": "ferdinandsflowers:blocks/block_dye_glass_blue_green"
+    }
+}

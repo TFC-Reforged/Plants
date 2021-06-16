@@ -1,5 +1,5 @@
 package shadows.plants2.gen.forgotten;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -97,4 +97,4 @@ public class BushGen implements IWorldGenerator {
 
 	}
 
-}
+}*/

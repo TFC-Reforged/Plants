@@ -25,9 +25,8 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import shadows.placebo.registry.RegistryInformationV2;
 import shadows.placebo.util.RecipeHelper;
-import shadows.plants2.compat.AAIntegration;
+//import shadows.plants2.compat.AAIntegration;
 import shadows.plants2.compat.CrafttweakerIntegration;
-import shadows.plants2.compat.ForestryIntegration;
 import shadows.plants2.data.PlantConfig;
 import shadows.plants2.data.PlantConstants;
 import shadows.plants2.gen.Decorator;
@@ -87,7 +86,7 @@ public class Plants2 {
 			if (b == null) LOGGER.error("Invalid biome entry detected in the Plants biome blacklist, " + rl);
 			else PlantConfig.COMPUTED_BIOME_BL.add(b);
 		}
-		if (Loader.isModLoaded("actuallyadditions")) AAIntegration.registerFarmerBehavior();
+		//if (Loader.isModLoaded("actuallyadditions")) AAIntegration.registerFarmerBehavior();
 	}
 
 	@EventHandler
@@ -99,9 +98,8 @@ public class Plants2 {
 		INFO.purge();
 		PlantUtil.mergeToDefaultLate();
 
-		if (Loader.isModLoaded(PlantConstants.FORESTRY_ID)) ForestryIntegration.registerFlowersToForestry();
 		if (BLOCK_CONFIG.hasChanged()) BLOCK_CONFIG.save();
 
-		if (PlantConfig.crystalForest) BiomeDictionary.addTypes(ModRegistry.CRYSTAL_FOREST, Type.MAGICAL, Type.FOREST, Type.COLD);
+		//if (PlantConfig.crystalForest) BiomeDictionary.addTypes(ModRegistry.CRYSTAL_FOREST, Type.MAGICAL, Type.FOREST, Type.COLD);
 	}
 }

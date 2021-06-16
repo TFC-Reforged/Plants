@@ -41,8 +41,8 @@ import shadows.placebo.util.EnumBlockFactory;
 import shadows.placebo.util.RecipeHelper;
 import shadows.placebo.util.StackPrimer;
 import shadows.plants2.Plants2;
-import shadows.plants2.biome.AbstractBiomeBase;
-import shadows.plants2.biome.BiomeCrystalForest;
+//import shadows.plants2.biome.AbstractBiomeBase;
+//import shadows.plants2.biome.BiomeCrystalForest;
 import shadows.plants2.block.BlockBrewingCauldron;
 import shadows.plants2.block.BlockCataplant;
 import shadows.plants2.block.BlockCustomVine;
@@ -52,54 +52,54 @@ import shadows.plants2.block.BlockEnumDoubleFlower;
 import shadows.plants2.block.BlockEnumDoubleHarvestBush;
 import shadows.plants2.block.BlockEnumFlower;
 import shadows.plants2.block.BlockEnumHarvestBush;
-import shadows.plants2.block.BlockEnumLeaves;
-import shadows.plants2.block.BlockEnumLog;
-import shadows.plants2.block.BlockEnumNetherHarvest;
-import shadows.plants2.block.BlockEnumNetherLeaves;
-import shadows.plants2.block.BlockEnumNetherLog;
-import shadows.plants2.block.BlockEnumPlanks;
-import shadows.plants2.block.BlockEnumSapling;
-import shadows.plants2.block.BlockEnumSlab;
-import shadows.plants2.block.BlockEnumStairs;
+//import shadows.plants2.block.BlockEnumLeaves;
+//import shadows.plants2.block.BlockEnumLog;
+//import shadows.plants2.block.BlockEnumNetherHarvest;
+//import shadows.plants2.block.BlockEnumNetherLeaves;
+//import shadows.plants2.block.BlockEnumNetherLog;
+//import shadows.plants2.block.BlockEnumPlanks;
+//import shadows.plants2.block.BlockEnumSapling;
+//import shadows.plants2.block.BlockEnumSlab;
+//import shadows.plants2.block.BlockEnumStairs;
 import shadows.plants2.block.BlockFlowerpot;
 import shadows.plants2.block.BlockJar;
-import shadows.plants2.block.end.BlockAakore;
-import shadows.plants2.block.end.BlockAithotus;
-import shadows.plants2.block.end.BlockAphrireroot;
-import shadows.plants2.block.end.BlockBriblebum;
-import shadows.plants2.block.end.BlockSaimbaire;
-import shadows.plants2.block.forgotten.BlockBushLeaves;
-import shadows.plants2.block.forgotten.BlockBushling;
-import shadows.plants2.block.forgotten.BlockCrystal;
-import shadows.plants2.block.forgotten.BlockCrystalGround;
-import shadows.plants2.block.forgotten.BlockCrystalTorch;
-import shadows.plants2.block.forgotten.BlockNetherSapling;
+//import shadows.plants2.block.end.BlockAakore;
+//import shadows.plants2.block.end.BlockAithotus;
+//import shadows.plants2.block.end.BlockAphrireroot;
+//import shadows.plants2.block.end.BlockBriblebum;
+//import shadows.plants2.block.end.BlockSaimbaire;
+//import shadows.plants2.block.forgotten.BlockBushLeaves;
+//import shadows.plants2.block.forgotten.BlockBushling;
+//import shadows.plants2.block.forgotten.BlockCrystal;
+//import shadows.plants2.block.forgotten.BlockCrystalGround;
+//import shadows.plants2.block.forgotten.BlockCrystalTorch;
+//import shadows.plants2.block.forgotten.BlockNetherSapling;
 import shadows.plants2.data.PlantConfig;
 import shadows.plants2.data.PlantConstants;
 import shadows.plants2.data.enums.LaterEnums.DoubleHarvestable;
 import shadows.plants2.data.enums.LaterEnums.Harvestable;
 import shadows.plants2.data.enums.LaterEnums.NetherHarvests;
-import shadows.plants2.data.enums.LaterEnums.Planks;
-import shadows.plants2.data.enums.TheBigBookOfEnums.BushSet;
+//import shadows.plants2.data.enums.LaterEnums.Planks;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.BushSet;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Crops;
-import shadows.plants2.data.enums.TheBigBookOfEnums.CrystalLogs;
-import shadows.plants2.data.enums.TheBigBookOfEnums.CrystalPlanks;
-import shadows.plants2.data.enums.TheBigBookOfEnums.Crystals;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.CrystalLogs;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.CrystalPlanks;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.Crystals;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Desert;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Double;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Generic;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Logs;
-import shadows.plants2.data.enums.TheBigBookOfEnums.NetherLogs;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.NetherLogs;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Plants;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Vines;
-import shadows.plants2.gen.EndGen;
-import shadows.plants2.gen.EnumTreeGen;
-import shadows.plants2.gen.NetherGen;
-import shadows.plants2.gen.StructureGen;
-import shadows.plants2.gen.forgotten.BushGen;
-import shadows.plants2.gen.forgotten.NetherTreeGen;
+//import shadows.plants2.gen.EndGen;
+//import shadows.plants2.gen.EnumTreeGen;
+//import shadows.plants2.gen.NetherGen;
+//import shadows.plants2.gen.StructureGen;
+//import shadows.plants2.gen.forgotten.BushGen;
+//import shadows.plants2.gen.forgotten.NetherTreeGen;
 import shadows.plants2.item.ItemColorFood;
-import shadows.plants2.item.ItemExcalibur;
+//import shadows.plants2.item.ItemExcalibur;
 import shadows.plants2.item.ItemFireFruit;
 import shadows.plants2.item.ItemFoodBase;
 import shadows.plants2.item.ItemPlantball;
@@ -162,7 +162,7 @@ public class ModRegistry {
 
 	public static final BlockEnumBush<Harvestable> HARVEST_0 = new BlockEnumHarvestBush<>("harvest_0", EnumPlantType.Plains, Harvestable.class, 0);
 	public static final BlockEnumBush<Harvestable> HARVEST_1 = new BlockEnumHarvestBush<>("harvest_1", EnumPlantType.Plains, Harvestable.class, 1);
-	public static final BlockEnumBush<NetherHarvests> NETHER_HARVEST = new BlockEnumNetherHarvest<>("nether_harvest", NetherHarvests.class, 0);
+	//public static final BlockEnumBush<NetherHarvests> NETHER_HARVEST = new BlockEnumNetherHarvest<>("nether_harvest", NetherHarvests.class, 0);
 
 	public static final BlockEnumBush<Crops> CROP_0 = new BlockEnumCrop<>("crop_0", Crops.class, 0, AMARANTHUS_H, OKRA, AMARANTHUS_H_SEEDS, OKRA_SEEDS);
 	public static final BlockEnumBush<Crops> CROP_1 = new BlockEnumCrop<>("crop_1", Crops.class, 1, PINEAPPLE, null, PINEAPPLE_SEEDS, null);
@@ -175,47 +175,47 @@ public class ModRegistry {
 	public static final Block AKEBIA_Q_VINE = new BlockCustomVine("akebia_q_vine", Vines.AKEBIA_Q, new StackPrimer(AKEBIA_Q));
 	public static final Block AMPELOPSIS_A_VINE = new BlockCustomVine("ampelopsis_a_vine", Vines.AMPELOPSIS_A, new StackPrimer(AMPELOPSIS_A));
 
-	public static final BlockEnum<NetherLogs> NETHER_LOG = new BlockEnumNetherLog<>("nether_log", NetherLogs.class, 0);
-	public static final BlockEnumSapling<NetherLogs> NETHER_SAP = new BlockNetherSapling<>("nether_sapling", NetherLogs.class, 0);
-	public static final BlockEnum<NetherLogs> NETHER_LEAF = new BlockEnumNetherLeaves<>("nether_leaves", NETHER_SAP, NetherLogs.class, 0);
+	//public static final BlockEnum<NetherLogs> NETHER_LOG = new BlockEnumNetherLog<>("nether_log", NetherLogs.class, 0);
+	//public static final BlockEnumSapling<NetherLogs> NETHER_SAP = new BlockNetherSapling<>("nether_sapling", NetherLogs.class, 0);
+	//public static final BlockEnum<NetherLogs> NETHER_LEAF = new BlockEnumNetherLeaves<>("nether_leaves", NETHER_SAP, NetherLogs.class, 0);
 
-	public static final BlockEnum<Logs> LOG_0 = new BlockEnumLog<>("log_0", Logs.class, 0);
-	public static final BlockEnumSapling<Logs> SAP_0 = new BlockEnumSapling<>("sapling_0", Logs.class, 0);
-	public static final BlockEnum<Logs> LEAF_0 = new BlockEnumLeaves<>("leaves_0", SAP_0, Logs.class, 0);
+	//public static final BlockEnum<Logs> LOG_0 = new BlockEnumLog<>("log_0", Logs.class, 0);
+	//public static final BlockEnumSapling<Logs> SAP_0 = new BlockEnumSapling<>("sapling_0", Logs.class, 0);
+	//public static final BlockEnum<Logs> LEAF_0 = new BlockEnumLeaves<>("leaves_0", SAP_0, Logs.class, 0);
 
-	public static final BlockEnum<Crystals> CRYSTAL = new BlockCrystal();
-	public static final Block GROUNDCOVER = new BlockCrystalGround();
-	public static final BlockEnum<CrystalLogs> CRYSTAL_LOG = new BlockCrystal.Logs();
-	public static final BlockEnumSapling<CrystalLogs> CRYSTAL_SAP = new BlockCrystal.Sapling();
-	public static final BlockEnum<CrystalLogs> CRYSTAL_LEAF = new BlockCrystal.Leaves();
-	public static final BlockEnum<CrystalPlanks> CRYSTAL_PLANKS = new BlockCrystal.Planks();
-	public static final EnumBlockFactory<CrystalPlanks, BlockEnumStairs> CRYSTAL_STAIRS = new EnumBlockFactory<>(e -> new BlockCrystal.Stairs(e), CrystalPlanks.values());
-	public static final EnumBlockFactory<CrystalPlanks, BlockEnumSlab> CRYSTAL_SLABS = new EnumBlockFactory<>(e -> new BlockCrystal.Slabs(e), CrystalPlanks.values());
+	//public static final BlockEnum<Crystals> CRYSTAL = new BlockCrystal();
+	//public static final Block GROUNDCOVER = new BlockCrystalGround();
+	//public static final BlockEnum<CrystalLogs> CRYSTAL_LOG = new BlockCrystal.Logs();
+	//public static final BlockEnumSapling<CrystalLogs> CRYSTAL_SAP = new BlockCrystal.Sapling();
+	//public static final BlockEnum<CrystalLogs> CRYSTAL_LEAF = new BlockCrystal.Leaves();
+	//public static final BlockEnum<CrystalPlanks> CRYSTAL_PLANKS = new BlockCrystal.Planks();
+	//public static final EnumBlockFactory<CrystalPlanks, BlockEnumStairs> CRYSTAL_STAIRS = new EnumBlockFactory<>(e -> new BlockCrystal.Stairs(e), CrystalPlanks.values());
+	//public static final EnumBlockFactory<CrystalPlanks, BlockEnumSlab> CRYSTAL_SLABS = new EnumBlockFactory<>(e -> new BlockCrystal.Slabs(e), CrystalPlanks.values());
 
-	public static final BlockEnum<Planks> PLANKS = new BlockEnumPlanks<>("planks", Planks.class, 0);
-	public static final EnumBlockFactory<Planks, BlockEnumStairs> STAIRS = new EnumBlockFactory<>(e -> new BlockEnumStairs(e, PLANKS), Planks.values());
-	public static final EnumBlockFactory<Planks, BlockEnumSlab> SLABS = new EnumBlockFactory<>(e -> new BlockEnumSlab(e, PLANKS), Planks.values());
+	//public static final BlockEnum<Planks> PLANKS = new BlockEnumPlanks<>("planks", Planks.class, 0);
+	//public static final EnumBlockFactory<Planks, BlockEnumStairs> STAIRS = new EnumBlockFactory<>(e -> new BlockEnumStairs(e, PLANKS), Planks.values());
+	//public static final EnumBlockFactory<Planks, BlockEnumSlab> SLABS = new EnumBlockFactory<>(e -> new BlockEnumSlab(e, PLANKS), Planks.values());
 
-	public static final BlockEnum<BushSet> BUSH = new BlockBushLeaves();
-	public static final BlockEnumBush<BushSet> BUSHLING = new BlockBushling();
+	//public static final BlockEnum<BushSet> BUSH = new BlockBushLeaves();
+	//public static final BlockEnumBush<BushSet> BUSHLING = new BlockBushling();
 
 	public static final BlockFlowerpot FLOWERPOT = new BlockFlowerpot();
 	public static final BlockJar JAR = new BlockJar();
 
 	public static final BlockCataplant CATAPLANT = new BlockCataplant();
 
-	public static final WorldGenerator ASH_TREE = new NetherTreeGen<>(NETHER_LOG, NETHER_LEAF, NetherLogs.ASH);
-	public static final WorldGenerator BLAZE_TREE = new NetherTreeGen<>(NETHER_LOG, NETHER_LEAF, NetherLogs.BLAZE);
+	//public static final WorldGenerator ASH_TREE = new NetherTreeGen<>(NETHER_LOG, NETHER_LEAF, NetherLogs.ASH);
+	//public static final WorldGenerator BLAZE_TREE = new NetherTreeGen<>(NETHER_LOG, NETHER_LEAF, NetherLogs.BLAZE);
 
-	public static final WorldGenAbstractTree KAURI_TREE = new StructureGen(new BlockPos(-4, 0, -4), Logs.BLACK_KAURI, Type.HOT, Type.SAVANNA, Type.DRY);
+	/*public static final WorldGenAbstractTree KAURI_TREE = new StructureGen(new BlockPos(-4, 0, -4), Logs.BLACK_KAURI, Type.HOT, Type.SAVANNA, Type.DRY);
 	public static final WorldGenAbstractTree PINE_TREE = new StructureGen(new BlockPos(-7, 0, -7), Logs.BRAZILLIAN_PINE, Type.JUNGLE, Type.SAVANNA);
 	public static final WorldGenAbstractTree INCENSE_TREE = new StructureGen(new BlockPos(-2, 0, -2), Logs.INCENSE_CEDAR, Type.SNOWY, Type.COLD, Type.CONIFEROUS, Type.FOREST);
 	public static final WorldGenAbstractTree MURRAY_TREE = new StructureGen(new BlockPos(-3, 0, -3), Logs.MURRAY_PINE, Type.SNOWY, Type.COLD, Type.CONIFEROUS, Type.FOREST);
 
 	public static final WorldGenAbstractTree CRYSTAL_TREE = new EnumTreeGen<>(false, 4, CRYSTAL_LOG, CRYSTAL_LEAF, CrystalLogs.CRYSTAL, false);
 	public static final WorldGenAbstractTree DARK_CRYSTAL_TREE = new EnumTreeGen<>(false, 4, CRYSTAL_LOG, CRYSTAL_LEAF, CrystalLogs.DARK_CRYSTAL, false);
-
-	public static final Biome CRYSTAL_FOREST = new BiomeCrystalForest();
+*/
+	//public static final Biome CRYSTAL_FOREST = new BiomeCrystalForest();
 
 	public static final PotionType WITHER = new PotionTypeBase("wither", new PotionEffect(MobEffects.WITHER, 3600));
 	public static final PotionType REGEN_HEAL = new PotionTypeBase("regen_heal", new PotionEffect(MobEffects.REGENERATION, 1600), new PotionEffect(MobEffects.INSTANT_HEALTH));
@@ -236,13 +236,13 @@ public class ModRegistry {
 	public static final Item DARK_CRYSTAL_HOE = new ItemHoeBase("dark_crystal_hoe", Plants2.INFO, MAT_DARK_CRYSTAL);
 	public static final Item DARK_CRYSTAL_SWORD = new ItemSwordBase("dark_crystal_sword", Plants2.INFO, MAT_DARK_CRYSTAL);
 
-	public static final BlockAphrireroot APHRIREROOT = new BlockAphrireroot();
+	/*public static final BlockAphrireroot APHRIREROOT = new BlockAphrireroot();
 	public static final BlockAakore AAKORE = new BlockAakore();
 	public static final BlockBriblebum BRIBLEBUM = new BlockBriblebum();
 	public static final BlockSaimbaire SAIMBAIRE = new BlockSaimbaire();
 	public static final BlockAithotus AITHOTUS = new BlockAithotus();
 	public static final BlockCrystalTorch CRYSTAL_TORCH = new BlockCrystalTorch();
-
+*/
 	@SubscribeEvent
 	public void onBlockRegister(Register<Block> e) {
 		Plants2.INFO.getBlockList().register(e.getRegistry());
@@ -251,7 +251,7 @@ public class ModRegistry {
 	@SubscribeEvent
 	public void onItemRegister(Register<Item> e) {
 		Plants2.INFO.getItemList().register(e.getRegistry());
-		if (PlantConfig.excalibur && Loader.isModLoaded(PlantConstants.BOTANIA_ID)) e.getRegistry().register(new ItemExcalibur());
+		//if (PlantConfig.excalibur && Loader.isModLoaded(PlantConstants.BOTANIA_ID)) e.getRegistry().register(new ItemExcalibur());
 	}
 
 	@SubscribeEvent
@@ -265,11 +265,11 @@ public class ModRegistry {
 		Plants2.INFO.getPotionTypeList().register(e.getRegistry());
 	}
 
-	@SubscribeEvent //TODO: Placebo: Implement IRegistryCallback so lists can return <T extends IForgeRegistryEntry<T> & IRegistryCallback>
+	/*@SubscribeEvent //TODO: Placebo: Implement IRegistryCallback so lists can return <T extends IForgeRegistryEntry<T> & IRegistryCallback>
 	public void onBiomeRegister(Register<Biome> event) {
 		for (Biome b : Plants2.INFO.getBiomeList())
 			((AbstractBiomeBase) b).register(event.getRegistry());
-	}
+	}*/
 
 	public static void oreDict(FMLInitializationEvent e) {
 		OreDictionary.registerOre("dyeBlue", Generic.DYE_BLUE.get());
@@ -307,11 +307,11 @@ public class ModRegistry {
 
 	public static void generators(FMLPostInitializationEvent e) {
 		if (!PlantConfig.gen) return;
-		if (PlantConfig.bushGen) GameRegistry.registerWorldGenerator(new BushGen(), 25);
-		if (PlantConfig.netherTreeGen) GameRegistry.registerWorldGenerator(new NetherTreeGen.TreeGenerator(), 20);
-		if (PlantConfig.treeGen) GameRegistry.registerWorldGenerator(new EnumTreeGen.TreeGenerator(), 15);
-		if (PlantConfig.netherFlowerGen) GameRegistry.registerWorldGenerator(new NetherGen(), 30);
-		if (PlantConfig.endGen) GameRegistry.registerWorldGenerator(new EndGen(), 30);
+		//if (PlantConfig.bushGen) GameRegistry.registerWorldGenerator(new BushGen(), 25);
+		//if (PlantConfig.netherTreeGen) GameRegistry.registerWorldGenerator(new NetherTreeGen.TreeGenerator(), 20);
+		//if (PlantConfig.treeGen) GameRegistry.registerWorldGenerator(new EnumTreeGen.TreeGenerator(), 15);
+		//if (PlantConfig.netherFlowerGen) GameRegistry.registerWorldGenerator(new NetherGen(), 30);
+		//if (PlantConfig.endGen) GameRegistry.registerWorldGenerator(new EndGen(), 30);
 	}
 
 	public static void tiles(FMLPreInitializationEvent e) {

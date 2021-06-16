@@ -1,5 +1,5 @@
 package shadows.plants2.block;
-
+/*
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -286,4 +286,4 @@ public class BlockEnumLeaves<E extends Enum<E> & ITreeEnum> extends BlockEnum<E>
 	public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
 		return !Minecraft.getMinecraft().gameSettings.fancyGraphics && blockAccess.getBlockState(pos.offset(side)).getBlock() == this ? false : super.shouldSideBeRendered(blockState, blockAccess, pos, side);
 	}
-}
+}*/

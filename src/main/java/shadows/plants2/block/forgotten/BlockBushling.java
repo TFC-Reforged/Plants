@@ -1,5 +1,5 @@
 package shadows.plants2.block.forgotten;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.IGrowable;
@@ -174,4 +174,4 @@ public class BlockBushling extends BlockEnumBush<BushSet> implements IGrowable, 
 	public void initRecipes(Register<IRecipe> event) {
 	}
 
-}
+}*/

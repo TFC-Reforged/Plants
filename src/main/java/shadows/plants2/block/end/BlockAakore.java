@@ -1,5 +1,5 @@
 package shadows.plants2.block.end;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.state.IBlockState;
@@ -56,3 +56,4 @@ public class BlockAakore extends BlockEndBush {
 	}
 
 }
+*/

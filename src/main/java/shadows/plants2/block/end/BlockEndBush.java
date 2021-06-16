@@ -1,5 +1,5 @@
 package shadows.plants2.block.end;
-
+/*
 import java.util.List;
 import java.util.Random;
 
@@ -77,4 +77,4 @@ public abstract class BlockEndBush extends BushBase {
 		tooltip.add(Placebo.PROXY.translate("plants2." + getRegistryName().getPath() + ".tooltip"));
 	}
 
-}
+}*/

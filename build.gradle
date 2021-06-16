@@ -52,9 +52,9 @@ repositories {
 }
 
 dependencies {
-	deobfCompile "mezz.jei:jei_1.12.2:+"
-	deobfCompile "mcp.mobius.waila:Hwyla:1.8+"
-	deobfCompile "net.sengir.forestry:forestry_1.12.2:5.8.0.285"
+	//deobfCompile "mezz.jei:jei_1.12.2:+"
+	//deobfCompile "mcp.mobius.waila:Hwyla:1.8+"
+    //deobfCompile "net.sengir.forestry:forestry_1.12.2:5.8.0.285"
 	deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.0.+"
 }
 

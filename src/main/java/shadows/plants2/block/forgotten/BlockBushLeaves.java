@@ -1,5 +1,5 @@
 package shadows.plants2.block.forgotten;
-
+/*
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -173,4 +173,4 @@ public class BlockBushLeaves extends BlockEnum<BushSet> implements IGrowable, IS
 		return 30;
 	}
 
-}
+}*/

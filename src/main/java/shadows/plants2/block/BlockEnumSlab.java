@@ -1,5 +1,5 @@
 package shadows.plants2.block;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -287,4 +287,4 @@ public class BlockEnumSlab extends BlockBasic implements IHasRecipe {
 		}
 
 	}
-}
+}*/

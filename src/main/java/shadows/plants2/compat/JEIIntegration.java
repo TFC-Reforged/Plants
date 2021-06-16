@@ -1,5 +1,5 @@
 package shadows.plants2.compat;
-
+/* плохо себя вел
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
@@ -18,4 +18,4 @@ public class JEIIntegration implements IModPlugin {
 		registry.addIngredientInfo(new ItemStack(ModRegistry.PLANTBALL), VanillaTypes.ITEM, "info.plants2.plantball", "", "", "info.plants2.plantball.2");
 	}
 
-}
+}*/

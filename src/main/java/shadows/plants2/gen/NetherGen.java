@@ -1,5 +1,5 @@
 package shadows.plants2.gen;
-
+/*
 import java.util.Random;
 
 import net.minecraft.util.math.BlockPos;
@@ -29,4 +29,4 @@ public class NetherGen implements IWorldGenerator {
 				PlantUtil.genFlowerPatchForNether(world, pos, random, PlantUtil.NETHER.get(random.nextInt(PlantUtil.NETHER.size())));
 		}
 	}
-}
+}*/

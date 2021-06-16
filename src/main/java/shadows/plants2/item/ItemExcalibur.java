@@ -8,7 +8,7 @@
  * File Created @ [Mar 29, 2015, 10:12:50 PM (GMT)]
  */
 package shadows.plants2.item;
-
+/*
 import java.util.List;
 import java.util.Random;
 
@@ -249,3 +249,4 @@ public class ItemExcalibur extends ItemSword implements ILensEffect, IManaUsingI
 		Plants2.HELPER.addShapeless(this, ForgeRegistries.ITEMS.getValue(new ResourceLocation(PlantConstants.BOTANIA_ID, "kingkey")));
 	}
 }
+*/

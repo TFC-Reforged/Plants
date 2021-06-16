@@ -1,5 +1,5 @@
 package shadows.plants2.compat;
-
+/*
 import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 
 public class AAIntegration {
@@ -8,4 +8,4 @@ public class AAIntegration {
 		ActuallyAdditionsAPI.addFarmerBehavior(new HarvestBushFarmerBehavior());
 	}
 
-}
+}*/

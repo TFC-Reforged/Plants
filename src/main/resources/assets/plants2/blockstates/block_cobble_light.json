@@ -1,0 +1,10 @@
+{
+        "variants": {
+                "type=cobble": {
+                        "model": "ferdinandsflowers:cobble_lights/block_cobble_light_cobble"
+                },
+                "type=mossy": {
+                        "model": "ferdinandsflowers:cobble_lights/block_cobble_light_mossy"
+                }
+        }
+}

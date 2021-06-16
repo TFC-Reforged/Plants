@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "glass",
+      "enabled": "true"
+    }
+  ],
+
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X#",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    },
+    "X": {
+    "item": "ferdinandsflowers:flower_dye",
+    "data": 14
+    }
+  },
+  "result": {
+    "item": "ferdinandsflowers:block_dye_glass",
+    "data": 7,
+    "count":8
+  }
+}

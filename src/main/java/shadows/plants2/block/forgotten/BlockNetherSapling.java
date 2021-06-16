@@ -1,5 +1,5 @@
 package shadows.plants2.block.forgotten;
-
+/*
 import net.minecraft.block.BlockNetherrack;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
@@ -34,3 +34,4 @@ public class BlockNetherSapling<E extends Enum<E> & ITreeEnum> extends BlockEnum
 	}
 
 }
+*/

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ferdinandsflowers:blocks/block_dye_glass_blue_bell"
+    }
+}

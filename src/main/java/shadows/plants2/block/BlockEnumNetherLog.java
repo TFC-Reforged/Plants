@@ -1,5 +1,5 @@
 package shadows.plants2.block;
-
+/*
 import net.minecraft.block.SoundType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -27,3 +27,4 @@ public class BlockEnumNetherLog<E extends Enum<E> & ITreeEnum> extends BlockEnum
 	}
 
 }
+*/

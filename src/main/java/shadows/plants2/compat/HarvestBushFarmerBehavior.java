@@ -1,5 +1,5 @@
 package shadows.plants2.compat;
-
+/*
 import de.ellpeck.actuallyadditions.api.farmer.FarmerResult;
 import de.ellpeck.actuallyadditions.api.farmer.IFarmerBehavior;
 import de.ellpeck.actuallyadditions.api.internal.IFarmer;
@@ -74,4 +74,4 @@ public class HarvestBushFarmerBehavior implements IFarmerBehavior {
 		return b instanceof BlockEnumDoubleHarvestBush;
 	}
 
-}
+}*/

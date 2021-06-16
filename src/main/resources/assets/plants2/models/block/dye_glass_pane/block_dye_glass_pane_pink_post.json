@@ -1,0 +1,7 @@
+{
+    "parent": "block/pane_post",
+    "textures": {
+        "edge": "ferdinandsflowers:blocks/block_dye_glass_pane_pink_post",
+        "pane": "ferdinandsflowers:blocks/block_dye_glass_pink"
+    }
+}

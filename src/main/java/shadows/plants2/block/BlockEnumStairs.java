@@ -1,5 +1,5 @@
 package shadows.plants2.block;
-
+/*
 import net.minecraft.block.BlockStairs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -67,4 +67,4 @@ public class BlockEnumStairs extends BlockStairs implements IHasModel, IHasRecip
 		return e.isNether() ? 0 : 5;
 	}
 
-}
+}*/

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ferdinandsflowers:block_cff_flowers",
+      "data": 10
+    }
+  ],
+  "result": {
+    "item": "ferdinandsflowers:flower_dyeb",
+    "data": 8,
+    "count": 1
+  }
+}

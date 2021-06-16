@@ -69,12 +69,12 @@ public class ClientProxy implements IProxy {
 			return color == -1 ? BLUE : color;
 		}, ModRegistry.BREWING_CAULDRON);
 
-		Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler((state, world, pos, tint) -> {
+		/*Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler((state, world, pos, tint) -> {
 			return GROUND_COLOR;
 		}, ModRegistry.GROUNDCOVER);
 		Minecraft.getMinecraft().getItemColors().registerItemColorHandler((stack, tint) -> {
 			return GROUND_COLOR;
-		}, ModRegistry.GROUNDCOVER);
+		}, ModRegistry.GROUNDCOVER);*/
 
 		//Vanilla Copy :: Added line to avoid crash with nested pot
 		IBlockColor color = (state, world, pos, tint) -> {

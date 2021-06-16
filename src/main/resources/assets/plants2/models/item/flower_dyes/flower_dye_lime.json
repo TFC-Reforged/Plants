@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "ferdinandsflowers:items/flower_dye_lime"
+	}
+}

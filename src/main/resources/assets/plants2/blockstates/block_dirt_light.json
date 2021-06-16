@@ -1,0 +1,10 @@
+{
+        "variants": {
+                "type=dirt": {
+                        "model": "ferdinandsflowers:dirt_lights/block_dirt_light_dirt"
+                },
+                "type=coarse": {
+                        "model": "ferdinandsflowers:dirt_lights/block_dirt_light_coarse"
+                }
+        }
+}

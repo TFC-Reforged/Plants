@@ -1,5 +1,5 @@
 package shadows.plants2.block;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.BlockNetherrack;
@@ -93,4 +93,4 @@ public class BlockEnumNetherHarvest<E extends Enum<E> & IHarvestableEnum> extend
 		return 0;
 	}
 
-}
+}*/

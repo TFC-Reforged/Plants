@@ -1,5 +1,5 @@
 package shadows.plants2.block;
-
+/*
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -61,3 +61,4 @@ public class BlockEnumPlanks<E extends Enum<E> & IPlankEnum> extends BlockEnum<E
 	}
 
 }
+*/

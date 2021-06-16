@@ -1,5 +1,5 @@
 package shadows.plants2.block.forgotten;
-
+/*
 import java.util.Random;
 
 import net.minecraft.block.BlockTorch;
@@ -70,3 +70,4 @@ public class BlockCrystalTorch extends BlockTorch implements IHasModel, IHasReci
 	}
 
 }
+*/

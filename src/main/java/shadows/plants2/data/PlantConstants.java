@@ -10,11 +10,6 @@ public class PlantConstants {
 
 	public static final PropertyBool INV = PropertyBool.create("inventory");
 	public static final PropertyBool ZINV = PropertyBool.create("zinventory");
-	public static final String BOTANIA_ID = "botania";
-	public static final String FORESTRY_ID = "forestry";
-	public static final String TF_ID = "twilightforest";
-	public static final String AA_ID = "actuallyadditions";
-	public static final String BOTANY_ID = "botany";
 
 	public static final CreativeTabs TAB = new CreativeTabs("plants") {
 

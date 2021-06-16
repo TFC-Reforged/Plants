@@ -9,7 +9,7 @@ import shadows.placebo.util.RecipeHelper;
 import shadows.placebo.util.StackPrimer;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Generic;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Logs;
-import shadows.plants2.data.enums.TheBigBookOfEnums.NetherLogs;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.NetherLogs;
 import shadows.plants2.init.ModRegistry;
 
 public class LaterEnums {
@@ -125,7 +125,7 @@ public class LaterEnums {
 		}
 	}
 
-	public static enum Planks implements IPlankEnum {
+	/*public static enum Planks implements IPlankEnum {
 		ASH(new StackPrimer(ModRegistry.NETHER_LOG, 1, NetherLogs.ASH.getMetadata())),
 		BLAZE(new StackPrimer(ModRegistry.NETHER_LOG, 1, NetherLogs.BLAZE.getMetadata())),
 		BLACK_KAURI(new StackPrimer(ModRegistry.LOG_0, 1, Logs.BLACK_KAURI.getMetadata())),
@@ -160,6 +160,6 @@ public class LaterEnums {
 		public boolean isNether() {
 			return primer.getBlock() == ModRegistry.NETHER_LOG;
 		}
-	}
+	}*/
 
 }

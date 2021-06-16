@@ -668,6 +668,541 @@
 				"textures": {
 					"cross": "plants2:blocks/end/small_flower_aithotus"
 				}
+			},
+			"dark_osto": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_dark_osto"
+				}
+			},
+			"dark_venus": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_dark_venus"
+				}
+			},
+			"desert_albuca": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_albuca"
+				}
+			},
+			"desert_clover": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_clover"
+				}
+			},
+			"desert_cornflower": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_cornflower"
+				}
+			},
+			"desert_flag": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_flag"
+				}
+			},
+			"desert_flame_pea_diff": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_flame_pea_diff"
+				}
+			},
+			"desert_flame_pea": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_flame_pea"
+				}
+			},
+			"desert_notch": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_notch"
+				}
+			},
+			"desert_paintbrush": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_paintbrush"
+				}
+			},
+			"desert_sturt_pea": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_sturt_pea"
+				}
+			},
+			"desert_tinsel": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_tinsel"
+				}
+			},
+			"desert_tinsel_wht": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_tinsel_wht"
+				}
+			},
+			"desert_tumble_weed": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_tumble_weed"
+				}
+			},
+			"desert_verbena_diff": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_verbena_diff"
+				}
+			},
+			"desert_verbena": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_verbena"
+				}
+			},
+			"desert_yellows": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_yellows"
+				}
+			},
+			"desert_yucca": {
+				"textures": {
+					"cross": "plants2:blocks/new/block_cff_desert_yucca"
+				}
+			},
+			"flowers_bachbutton": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_bachbutton"
+				}
+			},
+			"flowersb_daylilydiff": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_daylilydiff"
+				}
+			},
+			"flowersb_daylily": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_daylily"
+				}
+			},
+			"flowersb_echinacea": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_echinacea"
+				}
+			},
+			"flowersb_freeorange": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_freeorange"
+				}
+			},
+			"flowersb_freered": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_freered"
+				}
+			},
+			"flowersb_freeyellow": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_freeyellow"
+				}
+			},
+			"flowersb_hyacinth": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_hyacinth"
+				}
+			},
+			"flowers_bleedheart": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_bleedheart"
+				}
+			},
+			"flowersb_lilyvalley": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_lilyvalley"
+				}
+			},
+			"flowersb_lupinorange": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_lupinorange"
+				}
+			},
+			"flowersb_lupinpurp": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_lupinpurp"
+				}
+			},
+			"flowersb_lupinyell": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_lupinyell"
+				}
+			},
+			"flowersb_narcissus": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_narcissus"
+				}
+			},
+			"flowersb_nasturtium": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_nasturtium"
+				}
+			},
+			"flowersb_pansy": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_violet"
+				}
+			},
+			"flowersb_wolfsbane": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_wolfsbane"
+				}
+			},
+			"flowers_capoppy": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_capoppy"
+				}
+			},
+			"flowersc_borage": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_borage"
+				}
+			},
+			"flowersc_corydalis": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_corydalis"
+				}
+			},
+			"flowersc_geranium_light": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_geranium_light"
+				}
+			},
+			"flowersc_geranium_pink": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_geranium_pink"
+				}
+			},
+			"flowersc_geranium_red": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_geranium_red"
+				}
+			},
+			"flowersc_gilia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_gilia"
+				}
+			},
+			"flowersc_lewisia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_lewisia"
+				}
+			},
+			"flowersc_lobelia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_lobelia"
+				}
+			},
+			"flowers_cosmos": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_cosmos"
+				}
+			},
+			"flowersc_perriwinkle_diff": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_perriwinkle_diff"
+				}
+			},
+			"flowersc_perriwinkle": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_perriwinkle"
+				}
+			},
+			"flowersc_petticoat": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_petticoat"
+				}
+			},
+			"flowersc_pitcher": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_pitcher"
+				}
+			},
+			"flowersc_redclover_diff": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_redclover_diff"
+				}
+			},
+			"flowersc_redclover_mid": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_redclover_mid"
+				}
+			},
+			"flowersc_redclover": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_redclover"
+				}
+			},
+			"flowers_crocusmix": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_crocusmix"
+				}
+			},
+			"flowers_crocuspurp": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_crocuspurp"
+				}
+			},
+			"flowers_crocusyell": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_crocusyell"
+				}
+			},
+			"flowersc_sticky_monkey": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersc_sticky_monkey"
+				}
+			},
+			"flowers_daffodil": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_daffodil"
+				}
+			},
+			"flowers_daffyellow": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_daffyellow"
+				}
+			},
+			"flowers_dahlia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_dahlia"
+				}
+			},
+			"flowers_daisypurp": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_daisypurp"
+				}
+			},
+			"flowers_daisywht": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_daisywht"
+				}
+			},
+			"flowersd_chrys": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_chrys"
+				}
+			},
+			"flowersd_commelina": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_commelina"
+				}
+			},
+			"flowersd_corydalis_blue": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_corydalis_blue"
+				}
+			},
+			"flowersd_cosmos_mix": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_cosmos_mix"
+				}
+			},
+			"flowersd_cosmos_orange": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_cosmos_orange"
+				}
+			},
+			"flowersd_cosmos_yellow": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_cosmos_yellow"
+				}
+			},
+			"flowersd_cyan": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_cyan"
+				}
+			},
+			"flowersd_forget_light": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_forget_light"
+				}
+			},
+			"flowersd_lily_wht": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_lily_wht"
+				}
+			},
+			"flowersd_magenta": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_magenta"
+				}
+			},
+			"flowersd_mallow": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_mallow"
+				}
+			},
+			"flowersd_morning": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_morning"
+				}
+			},
+			"flowersd_orchid": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_orchid"
+				}
+			},
+			"flowersd_parrot": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_parrot"
+				}
+			},
+			"flowersd_poppy": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_poppy"
+				}
+			},
+			"flowersd_salvia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersd_salvia"
+				}
+			},
+			"flowerse_baneberry": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_baneberry"
+				}
+			},
+			"flowerse_borage_blue": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_borage_blue"
+				}
+			},
+			"flowerse_button_blue": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_button_blue"
+				}
+			},
+			"flowerse_button_light": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_button_light"
+				}
+			},
+			"flowerse_clover_side": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_clover_side"
+				}
+			},
+			"flowerse_cowslip": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_cowslip"
+				}
+			},
+			"flowerse_lobelia_blue": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_lobelia_blue"
+				}
+			},
+			"flowerse_lobelia_light": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_lobelia_light"
+				}
+			},
+			"flowerse_mint": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_mint"
+				}
+			},
+			"flowerse_sage": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_sage"
+				}
+			},
+			"flowerse_salvia_magenta": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_salvia_magenta"
+				}
+			},
+			"flowerse_zinnia_magenta": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_zinnia_magenta"
+				}
+			},
+			"flowerse_zinnia_mix": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_zinnia_mix"
+				}
+			},
+			"flowerse_zinnia_stripe": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_zinnia_stripe"
+				}
+			},
+			"flowerse_zinnia_sunny": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowerse_zinnia_sunny"
+				}
+			},
+			"flowers_forget": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_forget"
+				}
+			},
+			"flowers_fuchsia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_fuchsia"
+				}
+			},
+			"flowers_lantana": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_lantana"
+				}
+			},
+			"flowers_lilypurp": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowers_lilypurp"
+				}
+			},
+			"fungus_basket": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_basket"
+				}
+			},
+			"fungus_coral": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_coral"
+				}
+			},
+			"fungus_crinoline": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_crinoline"
+				}
+			},
+			"fungus_fingers_one": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_fingers_one"
+				}
+			},
+			"fungus_fingers": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_fingers"
+				}
+			},
+			"fungus_pixie_blue": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_pixie_blue"
+				}
+			},
+			"fungus_pixie_cyan": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_fungus_pixie_cyan"
+				}
+			},
+			"ouch_claw": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_ouch_claw"
+				}
+			},
+			"ouch_claw_spike": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_ouch_claw_spike"
+				}
+			},
+			"ouch_hedgehog": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_ouch_hedgehog"
+				}
+			},
+			"ouch_parodia": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_ouch_parodia"
+				}
 			}
 		},
 		"inventory": {

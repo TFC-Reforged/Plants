@@ -1,5 +1,5 @@
 package shadows.plants2.block.end;
-
+/*
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -48,4 +48,4 @@ public class BlockAithotus extends BlockEndBush {
 		return 0x9092F9;
 	}
 
-}
+}*/
