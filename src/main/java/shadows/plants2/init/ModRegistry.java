@@ -30,8 +30,8 @@ import shadows.placebo.util.StackPrimer;
 import shadows.plants2.Plants2;
 import shadows.plants2.block.*;
 import shadows.plants2.data.PlantConfig;
-import shadows.plants2.data.enums.LaterEnums.DoubleHarvestable;
-import shadows.plants2.data.enums.LaterEnums.Harvestable;
+//import shadows.plants2.data.enums.LaterEnums.DoubleHarvestable;
+//import shadows.plants2.data.enums.LaterEnums.Harvestable;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Double;
 import shadows.plants2.data.enums.TheBigBookOfEnums.*;
 import shadows.plants2.item.*;
@@ -61,7 +61,7 @@ public class ModRegistry {
     public static final ItemBigEnum<Generic> GENERIC = new ItemBigEnum<>("generic", Generic.values(), Plants2.INFO);
     public static final Item PLANTBALL = new ItemPlantball();
 
-    public static final Item OKRA = new ItemFoodBase("okra", 3, 1.3f);
+    /*public static final Item OKRA = new ItemFoodBase("okra", 3, 1.3f);
     public static final Item PINEAPPLE = new ItemFoodBase("pineapple", 9, 0.6f, new PotionEffect(MobEffects.RESISTANCE, 400, 5), 0.01F);
     public static final Item AMARANTHUS_H = new ItemFoodBase("amaranthus_h", 5, 0.3f);
     public static final Item AMBROSIA_A = new ItemFoodBase("ambrosia_a", 3, 0.5f, new PotionEffect(MobEffects.REGENERATION, 200, 3), 0.06F);
@@ -90,21 +90,21 @@ public class ModRegistry {
     public static final Item AMARANTHUS_H_SEEDS = new ItemSeed<>("amaranthus_h_seeds", EnumPlantType.Crop, "plants2:crop_0", Crops.AMARANTHUS_H);
     public static final Item OKRA_SEEDS = new ItemSeed<>("okra_seeds", EnumPlantType.Crop, "plants2:crop_0", Crops.OKRA);
     public static final Item PINEAPPLE_SEEDS = new ItemSeed<>("pineapple_seeds", EnumPlantType.Crop, "plants2:crop_1", Crops.PINEAPPLE);
-
-    public static final BlockEnumBush<Harvestable> HARVEST_0 = new BlockEnumHarvestBush<>("harvest_0", EnumPlantType.Plains, Harvestable.class, 0);
-    public static final BlockEnumBush<Harvestable> HARVEST_1 = new BlockEnumHarvestBush<>("harvest_1", EnumPlantType.Plains, Harvestable.class, 1);
+*/
+    //public static final BlockEnumBush<Harvestable> HARVEST_0 = new BlockEnumHarvestBush<>("harvest_0", EnumPlantType.Plains, Harvestable.class, 0);
+    //public static final BlockEnumBush<Harvestable> HARVEST_1 = new BlockEnumHarvestBush<>("harvest_1", EnumPlantType.Plains, Harvestable.class, 1);
     //public static final BlockEnumBush<NetherHarvests> NETHER_HARVEST = new BlockEnumNetherHarvest<>("nether_harvest", NetherHarvests.class, 0);
 
-    public static final BlockEnumBush<Crops> CROP_0 = new BlockEnumCrop<>("crop_0", Crops.class, 0, AMARANTHUS_H, OKRA, AMARANTHUS_H_SEEDS, OKRA_SEEDS);
-    public static final BlockEnumBush<Crops> CROP_1 = new BlockEnumCrop<>("crop_1", Crops.class, 1, PINEAPPLE, null, PINEAPPLE_SEEDS, null);
+    //public static final BlockEnumBush<Crops> CROP_0 = new BlockEnumCrop<>("crop_0", Crops.class, 0, AMARANTHUS_H, OKRA, AMARANTHUS_H_SEEDS, OKRA_SEEDS);
+    //public static final BlockEnumBush<Crops> CROP_1 = new BlockEnumCrop<>("crop_1", Crops.class, 1, PINEAPPLE, null, PINEAPPLE_SEEDS, null);
 
-    public static final BlockEnumBush<DoubleHarvestable> DOUBLE_HARVEST_0 = new BlockEnumDoubleHarvestBush<>("double_harvest_0", EnumPlantType.Plains, DoubleHarvestable.class, 0);
+    //public static final BlockEnumBush<DoubleHarvestable> DOUBLE_HARVEST_0 = new BlockEnumDoubleHarvestBush<>("double_harvest_0", EnumPlantType.Plains, DoubleHarvestable.class, 0);
 
     public static final Block ADLUMIA_F = new BlockCustomVine("adlumia_f", Vines.ADLUMIA_F);
     public static final Block AFGEKIA_M = new BlockCustomVine("afgekia_m", Vines.AFGEKIA_M);
     public static final Block ANDROSACE_A = new BlockCustomVine("androsace_a", Vines.ANDROSACE_A);
-    public static final Block AKEBIA_Q_VINE = new BlockCustomVine("akebia_q_vine", Vines.AKEBIA_Q, new StackPrimer(AKEBIA_Q));
-    public static final Block AMPELOPSIS_A_VINE = new BlockCustomVine("ampelopsis_a_vine", Vines.AMPELOPSIS_A, new StackPrimer(AMPELOPSIS_A));
+    //public static final Block AKEBIA_Q_VINE = new BlockCustomVine("akebia_q_vine", Vines.AKEBIA_Q, new StackPrimer(AKEBIA_Q));
+    //public static final Block AMPELOPSIS_A_VINE = new BlockCustomVine("ampelopsis_a_vine", Vines.AMPELOPSIS_A, new StackPrimer(AMPELOPSIS_A));
 
     //public static final BlockEnum<NetherLogs> NETHER_LOG = new BlockEnumNetherLog<>("nether_log", NetherLogs.class, 0);
     //public static final BlockEnumSapling<NetherLogs> NETHER_SAP = new BlockNetherSapling<>("nether_sapling", NetherLogs.class, 0);
@@ -187,7 +187,7 @@ public class ModRegistry {
 
     @SubscribeEvent
     public void onRecipeRegister(Register<IRecipe> e) {
-        recipes(e);
+        //recipes(e);
         Plants2.INFO.getRecipeList().register(e.getRegistry());
     }
 
@@ -230,10 +230,10 @@ public class ModRegistry {
             if (item instanceof IHasRecipe) ((IHasRecipe) item).initRecipes(e);
         }
         Plants2.HELPER.addSimpleShapeless(new ItemStack(Items.STRING, 2), Generic.COTTON.get(), 5);
-        RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, Generic.SMOLDERBERRY.get(), PotionTypes.FIRE_RESISTANCE);
-        RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, Generic.EMBERROOT.get(), PotionTypes.STRENGTH);
-        RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, PHYTOLACCA_A, WITHER);
-        RecipeHelper.addPotionRecipe(PotionTypes.HEALING, AMBROSIA_A, REGEN_HEAL);
+        //RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, Generic.SMOLDERBERRY.get(), PotionTypes.FIRE_RESISTANCE);
+        //RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, Generic.EMBERROOT.get(), PotionTypes.STRENGTH);
+        //RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, PHYTOLACCA_A, WITHER);
+        //RecipeHelper.addPotionRecipe(PotionTypes.HEALING, AMBROSIA_A, REGEN_HEAL);
     }
 
     public static void generators(FMLPostInitializationEvent e) {

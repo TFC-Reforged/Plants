@@ -11,7 +11,7 @@ import shadows.plants2.init.ModRegistry;
 
 public class LaterEnums {
 
-    public enum Harvestable implements IHarvestableEnum {
+    /*public enum Harvestable implements IHarvestableEnum {
 
         ACTAEA_P(new StackPrimer(ModRegistry.ACTAEA_P)),
         ALTERNANTHERA_F(new StackPrimer(ModRegistry.ALTERNANTHERA_F)),
@@ -123,7 +123,7 @@ public class LaterEnums {
         public void set(IForgeRegistryEntry<?> ifre) {
             thing = ifre;
         }
-    }
+    }*/
 
 	/*public static enum Planks implements IPlankEnum {
 		ASH(new StackPrimer(ModRegistry.NETHER_LOG, 1, NetherLogs.ASH.getMetadata())),
