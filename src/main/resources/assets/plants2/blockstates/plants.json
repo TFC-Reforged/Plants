@@ -669,11 +669,6 @@
 					"cross": "plants2:blocks/end/small_flower_aithotus"
 				}
 			},
-			"dark_osto": {
-				"textures": {
-					"cross": "plants2:blocks/new/block_cff_dark_osto"
-				}
-			},
 			"dark_venus": {
 				"textures": {
 					"cross": "plants2:blocks/new/block_cff_dark_venus"
@@ -732,11 +727,6 @@
 			"desert_tinsel_wht": {
 				"textures": {
 					"cross": "plants2:blocks/new/block_cff_desert_tinsel_wht"
-				}
-			},
-			"desert_tumble_weed": {
-				"textures": {
-					"cross": "plants2:blocks/new/block_cff_desert_tumble_weed"
 				}
 			},
 			"desert_verbena_diff": {
@@ -834,9 +824,14 @@
 						"cross": "plants2:blocks/new/block_cff_flowersb_nasturtium"
 				}
 			},
-			"flowersb_pansy": {
+			"flowersb_violet": {
 				"textures": {
 						"cross": "plants2:blocks/new/block_cff_flowersb_violet"
+				}
+			},
+			"flowersb_pansy": {
+				"textures": {
+						"cross": "plants2:blocks/new/block_cff_flowersb_pansy"
 				}
 			},
 			"flowersb_wolfsbane": {

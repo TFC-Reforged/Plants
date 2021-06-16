@@ -41,9 +41,9 @@ import shadows.plants2.tile.TileFlowerpot;
 
 public class ModRegistry {
 
-    public static final ToolMaterial MAT_CRYSTAL = EnumHelper.addToolMaterial("crystal", 1, 128, 7.0F, 2, 22);
-    public static final ToolMaterial MAT_DARK_CRYSTAL = EnumHelper.addToolMaterial("dark_crystal", 3, 1000, 7.0F, 3, 8);
-    public static final EnumPlantType END = EnumPlantType.getPlantType("end");
+    //public static final ToolMaterial MAT_CRYSTAL = EnumHelper.addToolMaterial("crystal", 1, 128, 7.0F, 2, 22);
+    //public static final ToolMaterial MAT_DARK_CRYSTAL = EnumHelper.addToolMaterial("dark_crystal", 3, 1000, 7.0F, 3, 8);
+    //public static final EnumPlantType END = EnumPlantType.getPlantType("end");
 
     public static final BlockEnumBush<Plants> PLANT_0 = new BlockEnumFlower<>("cosmetic_0", EnumPlantType.Plains, Plants.class, 0);
     public static final BlockEnumBush<Plants> PLANT_1 = new BlockEnumFlower<>("cosmetic_1", EnumPlantType.Plains, Plants.class, 1);
@@ -155,7 +155,7 @@ public class ModRegistry {
 
     public static final Block BREWING_CAULDRON = new BlockBrewingCauldron();
 
-    public static final Item CRYSTAL_PICKAXE = new ItemPickaxeBase("crystal_pickaxe", Plants2.INFO, MAT_CRYSTAL);
+    /*public static final Item CRYSTAL_PICKAXE = new ItemPickaxeBase("crystal_pickaxe", Plants2.INFO, MAT_CRYSTAL);
     public static final Item CRYSTAL_AXE = new ItemAxeBase("crystal_axe", Plants2.INFO, MAT_CRYSTAL);
     public static final Item CRYSTAL_SHOVEL = new ItemShovelBase("crystal_shovel", Plants2.INFO, MAT_CRYSTAL);
     public static final Item CRYSTAL_HOE = new ItemHoeBase("crystal_hoe", Plants2.INFO, MAT_CRYSTAL);
@@ -165,7 +165,7 @@ public class ModRegistry {
     public static final Item DARK_CRYSTAL_AXE = new ItemAxeBase("dark_crystal_axe", Plants2.INFO, MAT_DARK_CRYSTAL);
     public static final Item DARK_CRYSTAL_SHOVEL = new ItemShovelBase("dark_crystal_shovel", Plants2.INFO, MAT_DARK_CRYSTAL);
     public static final Item DARK_CRYSTAL_HOE = new ItemHoeBase("dark_crystal_hoe", Plants2.INFO, MAT_DARK_CRYSTAL);
-    public static final Item DARK_CRYSTAL_SWORD = new ItemSwordBase("dark_crystal_sword", Plants2.INFO, MAT_DARK_CRYSTAL);
+    public static final Item DARK_CRYSTAL_SWORD = new ItemSwordBase("dark_crystal_sword", Plants2.INFO, MAT_DARK_CRYSTAL);*/
 
     /*public static final BlockAphrireroot APHRIREROOT = new BlockAphrireroot();
     public static final BlockAakore AAKORE = new BlockAakore();
@@ -218,8 +218,8 @@ public class ModRegistry {
             }
         }
 
-        MAT_CRYSTAL.setRepairItem(Generic.CRYSTAL_CHUNK.get());
-        MAT_DARK_CRYSTAL.setRepairItem(Generic.DARK_CRYSTAL_CHUNK.get());
+        //MAT_CRYSTAL.setRepairItem(Generic.CRYSTAL_CHUNK.get());
+        //MAT_DARK_CRYSTAL.setRepairItem(Generic.DARK_CRYSTAL_CHUNK.get());
     }
 
     public static void recipes(Register<IRecipe> e) {
