@@ -1,7 +1,5 @@
 package shadows.plants2.block;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.SoundType;
@@ -28,54 +26,56 @@ import shadows.plants2.data.PlantConstants;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Vines;
 import shadows.plants2.util.PlantUtil;
 
+import javax.annotation.Nullable;
+
 public class BlockCustomVine extends BlockVine implements IHasModel {
 
-	private final StackPrimer[] drops;
-	private final Vines vine;
-	public static final PropertyEnum<Vines> VINE = PropertyEnum.create("zvine", Vines.class);
+    private final StackPrimer[] drops;
+    private final Vines vine;
+    public static final PropertyEnum<Vines> VINE = PropertyEnum.create("zvine", Vines.class);
 
-	public BlockCustomVine(String name, Vines vine, StackPrimer... drops) {
-		setRegistryName(name);
-		setTranslationKey(Plants2.MODID + "." + name);
-		setCreativeTab(PlantConstants.TAB);
-		setSoundType(SoundType.PLANT);
-		setHardness(0.2F);
-		this.drops = drops;
-		this.vine = vine;
-		setDefaultState(getDefaultState().withProperty(VINE, vine));
-		Plants2.INFO.getBlockList().add(this);
-		Plants2.INFO.getItemList().add(new ItemBlockBase(this));
-		PlantUtil.VINES.add(this);
-		vine.set(this);
-	}
+    public BlockCustomVine(String name, Vines vine, StackPrimer... drops) {
+        setRegistryName(name);
+        setTranslationKey(Plants2.MODID + "." + name);
+        setCreativeTab(PlantConstants.TAB);
+        setSoundType(SoundType.PLANT);
+        setHardness(0.2F);
+        this.drops = drops;
+        this.vine = vine;
+        setDefaultState(getDefaultState().withProperty(VINE, vine));
+        Plants2.INFO.getBlockList().add(this);
+        Plants2.INFO.getItemList().add(new ItemBlockBase(this));
+        PlantUtil.VINES.add(this);
+        vine.set(this);
+    }
 
-	@Override
-	public void initModels(ModelRegistryEvent e) {
-		PlaceboUtil.sMRL("vines", this, 0, "zvine=" + vine.getName());
-		Placebo.PROXY.useRenamedMapper(this, "vines");
-	}
+    @Override
+    public void initModels(ModelRegistryEvent e) {
+        PlaceboUtil.sMRL("vines", this, 0, "zvine=" + vine.getName());
+        Placebo.PROXY.useRenamedMapper(this, "vines");
+    }
 
-	@Override
-	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, @Nullable ItemStack stack) {
-		for (StackPrimer p : drops)
-			if (world.rand.nextInt(4) == 0) spawnAsEntity(world, pos, p.genStack());
-		super.harvestBlock(world, player, pos, state, te, stack);
-	}
+    @Override
+    public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, @Nullable ItemStack stack) {
+        for (StackPrimer p : drops)
+            if (world.rand.nextInt(4) == 0) spawnAsEntity(world, pos, p.genStack());
+        super.harvestBlock(world, player, pos, state, te, stack);
+    }
 
-	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { UP, NORTH, EAST, SOUTH, WEST, VINE });
-	}
+    @Override
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, UP, NORTH, EAST, SOUTH, WEST, VINE);
+    }
 
-	@Override
-	public boolean canAttachTo(World world, BlockPos pos, EnumFacing facing) {
-		Block block = world.getBlockState(pos.up()).getBlock();
-		return isAcceptableNeighbor(world, pos.offset(facing.getOpposite()), facing) && (block == Blocks.AIR || block == this || isAcceptableNeighbor(world, pos.up(), EnumFacing.UP));
-	}
+    @Override
+    public boolean canAttachTo(World world, BlockPos pos, EnumFacing facing) {
+        Block block = world.getBlockState(pos.up()).getBlock();
+        return isAcceptableNeighbor(world, pos.offset(facing.getOpposite()), facing) && (block == Blocks.AIR || block == this || isAcceptableNeighbor(world, pos.up(), EnumFacing.UP));
+    }
 
-	protected boolean isAcceptableNeighbor(World world, BlockPos pos, EnumFacing facing) {
-		IBlockState iblockstate = world.getBlockState(pos);
-		return iblockstate.getBlockFaceShape(world, pos, facing) == BlockFaceShape.SOLID && !isExceptBlockForAttaching(iblockstate.getBlock());
-	}
+    protected boolean isAcceptableNeighbor(World world, BlockPos pos, EnumFacing facing) {
+        IBlockState iblockstate = world.getBlockState(pos);
+        return iblockstate.getBlockFaceShape(world, pos, facing) == BlockFaceShape.SOLID && !isExceptBlockForAttaching(iblockstate.getBlock());
+    }
 
 }

@@ -8,16 +8,16 @@ import shadows.plants2.init.ModRegistry;
 
 public class PlantConstants {
 
-	public static final PropertyBool INV = PropertyBool.create("inventory");
-	public static final PropertyBool ZINV = PropertyBool.create("zinventory");
+    public static final PropertyBool INV = PropertyBool.create("inventory");
+    public static final PropertyBool ZINV = PropertyBool.create("zinventory");
 
-	public static final CreativeTabs TAB = new CreativeTabs("plants") {
+    public static final CreativeTabs TAB = new CreativeTabs("plants") {
 
-		@Override
-		public ItemStack createIcon() {
-			return new ItemStack(ModRegistry.PLANT_1, 1, Plants.ALLIUM_C.ordinal() % 16);
-		}
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModRegistry.PLANT_1, 1, Plants.ALLIUM_C.ordinal() % 16);
+        }
 
-	};
+    };
 
 }

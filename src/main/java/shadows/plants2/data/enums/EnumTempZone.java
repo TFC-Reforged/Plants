@@ -3,36 +3,37 @@ package shadows.plants2.data.enums;
 import net.minecraft.world.biome.Biome;
 
 public enum EnumTempZone {
-	TROPICAL(0.8f, 1.2f),
-	TEMPERATE(0.5f, 1.5f),
-	COLD(-0.5f, 0.3f),
-	COOL(0.0f, 0.8f),
-	FROZEN(-5.0f, 0.0f),
-	HOT(1.5f, 2.0f),
-	BURNING(2.0f, 5.0f),
-	ALL(Float.NEGATIVE_INFINITY, Float.POSITIVE_INFINITY),;
+    TROPICAL(0.8f, 1.2f),
+    TEMPERATE(0.5f, 1.5f),
+    COLD(-0.5f, 0.3f),
+    COOL(0.0f, 0.8f),
+    FROZEN(-5.0f, 0.0f),
+    HOT(1.5f, 2.0f),
+    BURNING(2.0f, 5.0f),
+    ALL(Float.NEGATIVE_INFINITY, Float.POSITIVE_INFINITY),
+    ;
 
-	private float tempmax;
-	private float tempmin;
+    private final float tempmax;
+    private final float tempmin;
 
-	EnumTempZone(float min, float max) {
-		tempmax = max;
-		tempmin = min;
+    EnumTempZone(float min, float max) {
+        tempmax = max;
+        tempmin = min;
 
-	}
+    }
 
-	public float getMax() {
-		return tempmax;
-	}
+    public float getMax() {
+        return tempmax;
+    }
 
-	public float getMin() {
-		return tempmin;
-	}
+    public float getMin() {
+        return tempmin;
+    }
 
-	public boolean isBiomeValid(Biome b) {
-		float k = b.getDefaultTemperature();
-		return k <= tempmax && k >= tempmin;
-	}
+    public boolean isBiomeValid(Biome b) {
+        float k = b.getDefaultTemperature();
+        return k <= tempmax && k >= tempmin;
+    }
 }
 
 /*

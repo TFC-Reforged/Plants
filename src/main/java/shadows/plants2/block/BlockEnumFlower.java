@@ -14,20 +14,21 @@ import shadows.plants2.util.PlantUtil;
 
 public class BlockEnumFlower<E extends Enum<E> & IFlowerEnum> extends BlockEnumBush<E> implements IHasRecipe, IColorProvider {
 
-	public BlockEnumFlower(String name, EnumPlantType type, Class<E> enumClass, int predicate) {
-		super(name, type, enumClass, predicate);
-	}
+    public BlockEnumFlower(String name, EnumPlantType type, Class<E> enumClass, int predicate) {
+        super(name, type, enumClass, predicate);
+    }
 
-	@Override
-	public void initRecipes(Register<IRecipe> event) {
-		for (E e : getTypes()) {
-			if (e.useForRecipes()) Plants2.HELPER.addShapeless(PlantUtil.getDyeForEnum(e.getColor(), 1), new ItemStack(this, 1, e.getMetadata()));
-		}
-	}
+    @Override
+    public void initRecipes(Register<IRecipe> event) {
+        for (E e : getTypes()) {
+            if (e.useForRecipes())
+                Plants2.HELPER.addShapeless(PlantUtil.getDyeForEnum(e.getColor(), 1), new ItemStack(this, 1, e.getMetadata()));
+        }
+    }
 
-	@Override
-	public EnumDyeColor getColor(IBlockState state) {
-		return state.getValue(getProperty()).getColor();
-	}
+    @Override
+    public EnumDyeColor getColor(IBlockState state) {
+        return state.getValue(getProperty()).getColor();
+    }
 
 }

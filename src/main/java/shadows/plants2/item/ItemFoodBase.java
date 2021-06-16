@@ -9,24 +9,24 @@ import shadows.plants2.data.PlantConstants;
 
 public class ItemFoodBase extends ItemFood implements IHasModel {
 
-	protected final int heal;
+    protected final int heal;
 
-	public ItemFoodBase(String name, int amount, float saturationMultiplier) {
-		super(amount, saturationMultiplier, false);
-		setTranslationKey(Plants2.MODID + "." + name);
-		heal = Plants2.CONFIG.getInt("Food Value - " + name, "Food", amount, 1, 20, "The amount of hunger a " + name + " will restore.");
-		setRegistryName(name);
-		setCreativeTab(PlantConstants.TAB);
-		Plants2.INFO.getItemList().add(this);
-	}
+    public ItemFoodBase(String name, int amount, float saturationMultiplier) {
+        super(amount, saturationMultiplier, false);
+        setTranslationKey(Plants2.MODID + "." + name);
+        heal = Plants2.CONFIG.getInt("Food Value - " + name, "Food", amount, 1, 20, "The amount of hunger a " + name + " will restore.");
+        setRegistryName(name);
+        setCreativeTab(PlantConstants.TAB);
+        Plants2.INFO.getItemList().add(this);
+    }
 
-	public ItemFoodBase(String name, int amount, float saturationMultiplier, PotionEffect potion, float potionChance) {
-		this(name, amount, saturationMultiplier);
-		setPotionEffect(potion, potionChance);
-	}
+    public ItemFoodBase(String name, int amount, float saturationMultiplier, PotionEffect potion, float potionChance) {
+        this(name, amount, saturationMultiplier);
+        setPotionEffect(potion, potionChance);
+    }
 
-	@Override
-	public int getHealAmount(ItemStack stack) {
-		return heal;
-	}
+    @Override
+    public int getHealAmount(ItemStack stack) {
+        return heal;
+    }
 }

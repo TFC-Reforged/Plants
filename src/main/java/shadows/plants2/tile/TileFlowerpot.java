@@ -15,72 +15,72 @@ import net.minecraft.world.World;
 
 public class TileFlowerpot extends TileEntityFlowerPot {
 
-	protected IBlockState state = Blocks.AIR.getDefaultState();
-	protected ItemStack stack = ItemStack.EMPTY;
+    protected IBlockState state = Blocks.AIR.getDefaultState();
+    protected ItemStack stack = ItemStack.EMPTY;
 
-	@Override
-	public void readFromNBT(NBTTagCompound tag) {
-		super.readFromNBT(tag);
-		state = NBTUtil.readBlockState(tag.getCompoundTag("state"));
-		stack = new ItemStack(tag.getCompoundTag("stack"));
-	}
+    @Override
+    public void readFromNBT(NBTTagCompound tag) {
+        super.readFromNBT(tag);
+        state = NBTUtil.readBlockState(tag.getCompoundTag("state"));
+        stack = new ItemStack(tag.getCompoundTag("stack"));
+    }
 
-	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound tag) {
-		super.writeToNBT(tag);
-		tag.setTag("state", NBTUtil.writeBlockState(new NBTTagCompound(), state));
-		tag.setTag("stack", stack.writeToNBT(new NBTTagCompound()));
-		return tag;
-	}
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound tag) {
+        super.writeToNBT(tag);
+        tag.setTag("state", NBTUtil.writeBlockState(new NBTTagCompound(), state));
+        tag.setTag("stack", stack.writeToNBT(new NBTTagCompound()));
+        return tag;
+    }
 
-	@Override
-	public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
-		state = Block.getStateById(pkt.getNbtCompound().getInteger("stateid"));
-		world.markBlockRangeForRenderUpdate(pos, pos);
-	}
+    @Override
+    public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
+        state = Block.getStateById(pkt.getNbtCompound().getInteger("stateid"));
+        world.markBlockRangeForRenderUpdate(pos, pos);
+    }
 
-	@Override
-	public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
-		return oldState.getBlock() != newState.getBlock();
-	}
+    @Override
+    public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
+        return oldState.getBlock() != newState.getBlock();
+    }
 
-	@Override
-	public ItemStack getFlowerItemStack() {
-		return stack.copy();
-	}
+    @Override
+    public ItemStack getFlowerItemStack() {
+        return stack.copy();
+    }
 
-	@Override
-	public Item getFlowerPotItem() {
-		return stack.getItem();
-	}
+    @Override
+    public Item getFlowerPotItem() {
+        return stack.getItem();
+    }
 
-	@Override
-	public int getFlowerPotData() {
-		return stack.getMetadata();
-	}
+    @Override
+    public int getFlowerPotData() {
+        return stack.getMetadata();
+    }
 
-	@Override
-	public void setItemStack(ItemStack stack) {
-		this.stack = stack.copy();
-	}
+    @Override
+    public void setItemStack(ItemStack stack) {
+        this.stack = stack.copy();
+    }
 
-	public void setState(IBlockState state) {
-		this.state = state;
-	}
+    public void setState(IBlockState state) {
+        this.state = state;
+    }
 
-	public IBlockState getState() {
-		return state;
-	}
+    public IBlockState getState() {
+        return state;
+    }
 
-	public ItemStack getStack() {
-		return stack;
-	}
+    public ItemStack getStack() {
+        return stack;
+    }
 
-	@Override
-	public SPacketUpdateTileEntity getUpdatePacket() {
-		NBTTagCompound tag = new NBTTagCompound();
-		tag.setInteger("stateid", Block.getStateId(state));
-		return new SPacketUpdateTileEntity(pos, 150, tag);
-	}
+    @Override
+    public SPacketUpdateTileEntity getUpdatePacket() {
+        NBTTagCompound tag = new NBTTagCompound();
+        tag.setInteger("stateid", Block.getStateId(state));
+        return new SPacketUpdateTileEntity(pos, 150, tag);
+    }
 
 }

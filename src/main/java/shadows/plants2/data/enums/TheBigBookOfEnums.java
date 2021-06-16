@@ -1,62 +1,48 @@
 package shadows.plants2.data.enums;
 
-import java.util.concurrent.ThreadLocalRandom;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-import shadows.placebo.Placebo;
 import shadows.placebo.interfaces.IFlowerEnum;
-import shadows.placebo.interfaces.IParticleProvider;
-import shadows.placebo.interfaces.IPlankEnum;
-import shadows.placebo.interfaces.IPostInitUpdate;
 import shadows.placebo.interfaces.IPropertyEnum;
 import shadows.placebo.interfaces.ITreeEnum;
 import shadows.placebo.util.RecipeHelper;
-import shadows.placebo.util.StackPrimer;
 import shadows.plants2.init.ModRegistry;
 
 public class TheBigBookOfEnums {
 
-	public static enum Logs implements ITreeEnum {
-		BLACK_KAURI,
-		BRAZILLIAN_PINE,
-		INCENSE_CEDAR,
-		MURRAY_PINE;
+    public enum Logs implements ITreeEnum {
+        BLACK_KAURI,
+        BRAZILLIAN_PINE,
+        INCENSE_CEDAR,
+        MURRAY_PINE;
 
-		private WorldGenerator treeGen;
+        private WorldGenerator treeGen;
 
-		@Override
-		public void setTreeGen(WorldGenerator gen) {
-			treeGen = gen;
-		}
+        @Override
+        public void setTreeGen(WorldGenerator gen) {
+            treeGen = gen;
+        }
 
-		@Override
-		public WorldGenerator getTreeGen() {
-			return treeGen;
-		}
+        @Override
+        public WorldGenerator getTreeGen() {
+            return treeGen;
+        }
 
-		IForgeRegistryEntry<?> thing = null;
+        IForgeRegistryEntry<?> thing = null;
 
-		@Override
-		public ItemStack get() {
-			return RecipeHelper.makeStack(thing, 1, getMetadata());
-		}
+        @Override
+        public ItemStack get() {
+            return RecipeHelper.makeStack(thing, 1, getMetadata());
+        }
 
-		@Override
-		public void set(IForgeRegistryEntry<?> ifre) {
-			thing = ifre;
-		}
+        @Override
+        public void set(IForgeRegistryEntry<?> ifre) {
+            thing = ifre;
+        }
 
-	}
+    }
 
 	/*public static enum NetherLogs implements ITreeEnum, IParticleProvider {
 		ASH(EnumParticleTypes.SMOKE_LARGE),
@@ -91,427 +77,432 @@ public class TheBigBookOfEnums {
 
 	}*/
 
-	public static enum Plants implements IFlowerEnum {
-		ABELIOPHYLLUM_D(false, EnumDyeColor.WHITE),
-		ABROMA_A(true, EnumDyeColor.RED),
-		ABUTILON_I(true, EnumDyeColor.WHITE),
-		ACAENA_S(true, EnumDyeColor.ORANGE),
-		ACALYPHA_A(true, EnumDyeColor.PINK),
-		ACALYPHA_R(false, EnumDyeColor.RED),
-		ACANTHOLIMON_G(true, EnumDyeColor.MAGENTA),
-		ACHILLEA(true, EnumDyeColor.RED),
-		ACHIMENES_E(true, EnumDyeColor.RED),
-		ACINOS_A(true, EnumDyeColor.PURPLE),
-		ACIPHYLLA_G(true, EnumDyeColor.SILVER),
-		ADENOPHORA_T(true, EnumDyeColor.MAGENTA),
-		ADONIS_A(true, EnumDyeColor.ORANGE),
-		AECHMEA_A(true, EnumDyeColor.RED),
-		AESCHYNANTHUS_S(true, EnumDyeColor.RED),
-		AETHIONEMA_S(true, EnumDyeColor.PINK),
-		AGAPANTHUS_A(true, EnumDyeColor.BLUE),
-		AGERATUM_C(true, EnumDyeColor.SILVER),
-		AGROSTEMMA_G(true, EnumDyeColor.MAGENTA),
-		AIRA_C(true, EnumDyeColor.SILVER),
-		AJUGA_A(true, EnumDyeColor.PURPLE),
-		ALBUCA_F(true, EnumDyeColor.GREEN),
-		ALCEA_B(true, EnumDyeColor.BROWN),
-		ALKANNA_T(true, EnumDyeColor.BLUE),
-		ALLIARIA_P(true, EnumDyeColor.WHITE),
-		ALLIUM_C(true, EnumDyeColor.PURPLE),
-		ALOE_B(false, EnumDyeColor.ORANGE),
-		ALOPECURUS_G(false, EnumDyeColor.YELLOW),
-		ALSOBIA_D(false, EnumDyeColor.WHITE),
-		ALSTROEMERIA_P(true, EnumDyeColor.RED),
-		ALYOGYNE_H(true, EnumDyeColor.RED),
-		AMARYLLIS_B(true, EnumDyeColor.PINK),
-		AMBROSIA_T(true, EnumDyeColor.YELLOW),
-		AMESIELLA_P(true, EnumDyeColor.WHITE),
-		AMMOBIUM_A(true, EnumDyeColor.WHITE),
-		AMPHIPAPPUS(true, EnumDyeColor.YELLOW),
-		ANACYCLUS_V(true, EnumDyeColor.YELLOW),
-		ANAGALLIS_A(true, EnumDyeColor.ORANGE),
-		ANCHUSA_A(true, EnumDyeColor.BLUE),
-		ARGOCOFFEEOPSIS_L(true, EnumDyeColor.PINK),
-		ASCLEPIAS_S(true, EnumDyeColor.MAGENTA),
-		ASCLEPIAS_T(true, EnumDyeColor.ORANGE),
-		ASPALATHUS_V(true, EnumDyeColor.YELLOW),
-		ASTILBE_C(false, EnumDyeColor.PINK),
-		BARBAREA_V(true, EnumDyeColor.YELLOW),
-		BEGONIA_E(true, EnumDyeColor.PINK),
-		BRACHYSTELMA_S(true, EnumDyeColor.BROWN),
-		CARDAMINE_C(true, EnumDyeColor.WHITE),
-		CEPHALOPHYLLUM_P(true, EnumDyeColor.RED),
-		CHRYSANTHEMUM_M(true, EnumDyeColor.PINK),
-		CLOVE(false, EnumDyeColor.RED),
-		CORYDALIS(true, EnumDyeColor.MAGENTA),
-		CORYDALIS_F(true, EnumDyeColor.YELLOW),
-		CRASSULA_S(true, EnumDyeColor.SILVER),
-		DISA_F(true, EnumDyeColor.RED),
-		EPIPOGIUM_A(true, EnumDyeColor.PINK),
-		FABACEAE(true, EnumDyeColor.PURPLE),
-		GALANTHUS(true, EnumDyeColor.WHITE),
-		HELIOTROPIUM_P(true, EnumDyeColor.YELLOW),
-		HELLEBORE(true, EnumDyeColor.PURPLE),
-		HESPERIS_M(true, EnumDyeColor.PINK),
-		IMPATIENS_C(false, EnumDyeColor.ORANGE),
-		ISOLEPIS_B(false, EnumDyeColor.GREEN),
-		NARTHECIUM_A(true, EnumDyeColor.YELLOW),
-		NEMESIA_M(false, EnumDyeColor.YELLOW),
-		PEONY(true, EnumDyeColor.PINK),
-		PLUCHEA_G(true, EnumDyeColor.PINK),
-		PSORALEA_C(true, EnumDyeColor.PURPLE),
-		PSORALEA_M(false, EnumDyeColor.BLUE),
-		PUERARIA_M(true, EnumDyeColor.MAGENTA),
-		RHANTERIUM_E(true, EnumDyeColor.YELLOW),
-		RORIPPA_S(false, EnumDyeColor.YELLOW),
-		RUDBECKIA_H(true, EnumDyeColor.YELLOW),
-		STREBLORRHIZA_S(false, EnumDyeColor.GRAY),
-		SUMATRA_D(false, EnumDyeColor.BROWN),
-		THISMIA_A(false, EnumDyeColor.ORANGE),
-		TRILLIUM(true, EnumDyeColor.WHITE),
-		VERATRUM_V(false, EnumDyeColor.GREEN),
-		VERONICA_A(true, EnumDyeColor.LIGHT_BLUE),
-		VIOLA_C(true, EnumDyeColor.PURPLE),
-		ALLIUM_DRUMSTICK(true, EnumDyeColor.PINK),
-		BACHELORS_BUTTON(true, EnumDyeColor.BLUE),
-		BILLY_BUTTONS(true, EnumDyeColor.YELLOW),
-		DELPHINIUM_BELLADONNA(true, EnumDyeColor.BLUE),
-		FERNFLOWER_YARROW(true, EnumDyeColor.YELLOW),
-		GERBERA_DAISY(true, EnumDyeColor.PINK),
-		HYDRANGEA(true, EnumDyeColor.PURPLE),
-		RED_ROVER(true, EnumDyeColor.RED),
-		SNAPDRAGON(true, EnumDyeColor.RED),
-		STAR_OF_BETHLEHEM(true, EnumDyeColor.WHITE),
-		BARREN_STRAWBERRY(true, EnumDyeColor.LIME),
-		BEARDTONGUE(true, EnumDyeColor.MAGENTA),
-		FAIRY_LILY(true, EnumDyeColor.WHITE),
-		ROYAL_BLUEBELL(true, EnumDyeColor.PURPLE),
-		SANDBOG_DEATH_CAMAS(true, EnumDyeColor.SILVER),
-		SNOWY_RIVER_WESTRINGIA(true, EnumDyeColor.GRAY),
-		WELDENIA_CANDIDA(true, EnumDyeColor.WHITE),
-		WILD_RICE(false, EnumDyeColor.LIME),
-		YELLOWROOT(true, EnumDyeColor.MAGENTA), // new ->
-		DARK_OSTO(true, EnumDyeColor.MAGENTA),
-		DARK_VENUS(true, EnumDyeColor.MAGENTA),
-		DESERT_ALBUCA(true, EnumDyeColor.MAGENTA),
-		DESERT_CLOVER(true, EnumDyeColor.MAGENTA),
-		DESERT_CORNFLOWER(true, EnumDyeColor.MAGENTA),
-		DESERT_FLAG(true, EnumDyeColor.MAGENTA),
-		DESERT_FLAME_PEA_DIFF(true, EnumDyeColor.MAGENTA),
-		DESERT_FLAME_PEA(true, EnumDyeColor.MAGENTA),
-		DESERT_NOTCH(true, EnumDyeColor.MAGENTA),
-		DESERT_PAINTBRUSH(true, EnumDyeColor.MAGENTA),
-		DESERT_STURT_PEA(true, EnumDyeColor.MAGENTA),
-		DESERT_TINSEL(true, EnumDyeColor.MAGENTA),
-		DESERT_TINSEL_WHT(true, EnumDyeColor.MAGENTA),
-		DESERT_TUMBLE_WEED(true, EnumDyeColor.MAGENTA),
-		DESERT_VERBENA_DIFF(true, EnumDyeColor.MAGENTA),
-		DESERT_VERBENA(true, EnumDyeColor.MAGENTA),
-		DESERT_YELLOWS(true, EnumDyeColor.MAGENTA),
-		DESERT_YUCCA(true, EnumDyeColor.MAGENTA),
-		FLOWERS_BACHBUTTON(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_DAYLILYDIFF(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_DAYLILY(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_ECHINACEA(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_FREEORANGE(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_FREERED(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_FREEYELLOW(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_HYACINTH(true, EnumDyeColor.MAGENTA),
-		FLOWERS_BLEEDHEART(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_LILYVALLEY(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_LUPINORANGE(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_LUPINPURP(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_LUPINYELL(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_NARCISSUS(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_NASTURTIUM(true, EnumDyeColor.MAGENTA),//
-		FLOWERSB_PANSY(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_VIOLET(true, EnumDyeColor.MAGENTA),
-		FLOWERSB_WOLFSBANE(true, EnumDyeColor.MAGENTA),
-		FLOWERS_CAPOPPY(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_BORAGE(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_CORYDALIS(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_GERANIUM_LIGHT(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_GERANIUM_PINK(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_GERANIUM_RED(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_GILIA(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_LEWISIA(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_LOBELIA(true, EnumDyeColor.MAGENTA),
-		FLOWERS_COSMOS(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_PERRIWINKLE_DIFF(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_PERRIWINKLE(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_PETTICOAT(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_PITCHER(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_REDCLOVER_DIFF(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_REDCLOVER_MID(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_REDCLOVER(true, EnumDyeColor.MAGENTA),
-		FLOWERS_CROCUSMIX(true, EnumDyeColor.MAGENTA),
-		FLOWERS_CROCUSPURP(true, EnumDyeColor.MAGENTA),
-		FLOWERS_CROCUSYELL(true, EnumDyeColor.MAGENTA),
-		FLOWERSC_STICKY_MONKEY(true, EnumDyeColor.MAGENTA),
-		FLOWERS_DAFFODIL(true, EnumDyeColor.MAGENTA),
-		FLOWERS_DAFFYELLOW(true, EnumDyeColor.MAGENTA),
-		FLOWERS_DAHLIA(true, EnumDyeColor.MAGENTA),
-		FLOWERS_DAISYPURP(true, EnumDyeColor.MAGENTA),
-		FLOWERS_DAISYWHT(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_CHRYS(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_COMMELINA(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_CORYDALIS_BLUE(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_COSMOS_MIX(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_COSMOS_ORANGE(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_COSMOS_YELLOW(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_CYAN(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_FORGET_LIGHT(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_LILY_WHT(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_MAGENTA(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_MALLOW(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_MORNING(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_ORCHID(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_PARROT(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_POPPY(true, EnumDyeColor.MAGENTA),
-		FLOWERSD_SALVIA(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_BANEBERRY(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_BORAGE_BLUE(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_BUTTON_BLUE(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_BUTTON_LIGHT(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_CLOVER_SIDE(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_COWSLIP(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_LOBELIA_BLUE(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_LOBELIA_LIGHT(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_MINT(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_SAGE(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_SALVIA_MAGENTA(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_ZINNIA_MAGENTA(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_ZINNIA_MIX(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_ZINNIA_STRIPE(true, EnumDyeColor.MAGENTA),
-		FLOWERSE_ZINNIA_SUNNY(true, EnumDyeColor.MAGENTA),
-		FLOWERS_FORGET(true, EnumDyeColor.MAGENTA),
-		FLOWERS_FUCHSIA(true, EnumDyeColor.MAGENTA),
-		FLOWERS_LANTANA(true, EnumDyeColor.MAGENTA),
-		FLOWERS_LILYPURP(true, EnumDyeColor.MAGENTA),
-		FUNGUS_BASKET(true, EnumDyeColor.MAGENTA),
-		FUNGUS_CORAL(true, EnumDyeColor.MAGENTA),
-		FUNGUS_CRINOLINE(true, EnumDyeColor.MAGENTA),
-		FUNGUS_FINGERS_ONE(true, EnumDyeColor.MAGENTA),
-		FUNGUS_FINGERS(true, EnumDyeColor.MAGENTA),
-		FUNGUS_PIXIE_BLUE(true, EnumDyeColor.MAGENTA),
-		FUNGUS_PIXIE_CYAN(true, EnumDyeColor.MAGENTA),
-		OUCH_CLAW(true, EnumDyeColor.MAGENTA),
-		OUCH_CLAW_SPIKE(true, EnumDyeColor.MAGENTA),
-		OUCH_HEDGEHOG(true, EnumDyeColor.MAGENTA),
-		OUCH_PARODIA(true, EnumDyeColor.MAGENTA),
-		ZENOBIA(true, EnumDyeColor.SILVER), // old
-		CAMBRIDGE_BLUE(true, EnumDyeColor.CYAN),;
+    public enum Plants implements IFlowerEnum {
+        ABELIOPHYLLUM_D(false, EnumDyeColor.WHITE),
+        ABROMA_A(true, EnumDyeColor.RED),
+        ABUTILON_I(true, EnumDyeColor.WHITE),
+        ACAENA_S(true, EnumDyeColor.ORANGE),
+        ACALYPHA_A(true, EnumDyeColor.PINK),
+        ACALYPHA_R(false, EnumDyeColor.RED),
+        ACANTHOLIMON_G(true, EnumDyeColor.MAGENTA),
+        ACHILLEA(true, EnumDyeColor.RED),
+        ACHIMENES_E(true, EnumDyeColor.RED),
+        ACINOS_A(true, EnumDyeColor.PURPLE),
+        ACIPHYLLA_G(true, EnumDyeColor.SILVER),
+        ADENOPHORA_T(true, EnumDyeColor.MAGENTA),
+        ADONIS_A(true, EnumDyeColor.ORANGE),
+        AECHMEA_A(true, EnumDyeColor.RED),
+        AESCHYNANTHUS_S(true, EnumDyeColor.RED),
+        AETHIONEMA_S(true, EnumDyeColor.PINK),
+        AGAPANTHUS_A(true, EnumDyeColor.BLUE),
+        AGERATUM_C(true, EnumDyeColor.SILVER),
+        AGROSTEMMA_G(true, EnumDyeColor.MAGENTA),
+        AIRA_C(true, EnumDyeColor.SILVER),
+        AJUGA_A(true, EnumDyeColor.PURPLE),
+        ALBUCA_F(true, EnumDyeColor.GREEN),
+        ALCEA_B(true, EnumDyeColor.BROWN),
+        ALKANNA_T(true, EnumDyeColor.BLUE),
+        ALLIARIA_P(true, EnumDyeColor.WHITE),
+        ALLIUM_C(true, EnumDyeColor.PURPLE),
+        ALOE_B(false, EnumDyeColor.ORANGE),
+        ALOPECURUS_G(false, EnumDyeColor.YELLOW),
+        ALSOBIA_D(false, EnumDyeColor.WHITE),
+        ALSTROEMERIA_P(true, EnumDyeColor.RED),
+        ALYOGYNE_H(true, EnumDyeColor.RED),
+        AMARYLLIS_B(true, EnumDyeColor.PINK),
+        AMBROSIA_T(true, EnumDyeColor.YELLOW),
+        AMESIELLA_P(true, EnumDyeColor.WHITE),
+        AMMOBIUM_A(true, EnumDyeColor.WHITE),
+        AMPHIPAPPUS(true, EnumDyeColor.YELLOW),
+        ANACYCLUS_V(true, EnumDyeColor.YELLOW),
+        ANAGALLIS_A(true, EnumDyeColor.ORANGE),
+        ANCHUSA_A(true, EnumDyeColor.BLUE),
+        ARGOCOFFEEOPSIS_L(true, EnumDyeColor.PINK),
+        ASCLEPIAS_S(true, EnumDyeColor.MAGENTA),
+        ASCLEPIAS_T(true, EnumDyeColor.ORANGE),
+        ASPALATHUS_V(true, EnumDyeColor.YELLOW),
+        ASTILBE_C(false, EnumDyeColor.PINK),
+        BARBAREA_V(true, EnumDyeColor.YELLOW),
+        BEGONIA_E(true, EnumDyeColor.PINK),
+        BRACHYSTELMA_S(true, EnumDyeColor.BROWN),
+        CARDAMINE_C(true, EnumDyeColor.WHITE),
+        CEPHALOPHYLLUM_P(true, EnumDyeColor.RED),
+        CHRYSANTHEMUM_M(true, EnumDyeColor.PINK),
+        CLOVE(false, EnumDyeColor.RED),
+        CORYDALIS(true, EnumDyeColor.MAGENTA),
+        CORYDALIS_F(true, EnumDyeColor.YELLOW),
+        CRASSULA_S(true, EnumDyeColor.SILVER),
+        DISA_F(true, EnumDyeColor.RED),
+        EPIPOGIUM_A(true, EnumDyeColor.PINK),
+        FABACEAE(true, EnumDyeColor.PURPLE),
+        GALANTHUS(true, EnumDyeColor.WHITE),
+        HELIOTROPIUM_P(true, EnumDyeColor.YELLOW),
+        HELLEBORE(true, EnumDyeColor.PURPLE),
+        HESPERIS_M(true, EnumDyeColor.PINK),
+        IMPATIENS_C(false, EnumDyeColor.ORANGE),
+        ISOLEPIS_B(false, EnumDyeColor.GREEN),
+        NARTHECIUM_A(true, EnumDyeColor.YELLOW),
+        NEMESIA_M(false, EnumDyeColor.YELLOW),
+        PEONY(true, EnumDyeColor.PINK),
+        PLUCHEA_G(true, EnumDyeColor.PINK),
+        PSORALEA_C(true, EnumDyeColor.PURPLE),
+        PSORALEA_M(false, EnumDyeColor.BLUE),
+        PUERARIA_M(true, EnumDyeColor.MAGENTA),
+        RHANTERIUM_E(true, EnumDyeColor.YELLOW),
+        RORIPPA_S(false, EnumDyeColor.YELLOW),
+        RUDBECKIA_H(true, EnumDyeColor.YELLOW),
+        STREBLORRHIZA_S(false, EnumDyeColor.GRAY),
+        SUMATRA_D(false, EnumDyeColor.BROWN),
+        THISMIA_A(false, EnumDyeColor.ORANGE),
+        TRILLIUM(true, EnumDyeColor.WHITE),
+        VERATRUM_V(false, EnumDyeColor.GREEN),
+        VERONICA_A(true, EnumDyeColor.LIGHT_BLUE),
+        VIOLA_C(true, EnumDyeColor.PURPLE),
+        ALLIUM_DRUMSTICK(true, EnumDyeColor.PINK),
+        BACHELORS_BUTTON(true, EnumDyeColor.BLUE),
+        BILLY_BUTTONS(true, EnumDyeColor.YELLOW),
+        DELPHINIUM_BELLADONNA(true, EnumDyeColor.BLUE),
+        FERNFLOWER_YARROW(true, EnumDyeColor.YELLOW),
+        GERBERA_DAISY(true, EnumDyeColor.PINK),
+        HYDRANGEA(true, EnumDyeColor.PURPLE),
+        RED_ROVER(true, EnumDyeColor.RED),
+        SNAPDRAGON(true, EnumDyeColor.RED),
+        STAR_OF_BETHLEHEM(true, EnumDyeColor.WHITE),
+        BARREN_STRAWBERRY(true, EnumDyeColor.LIME),
+        BEARDTONGUE(true, EnumDyeColor.MAGENTA),
+        FAIRY_LILY(true, EnumDyeColor.WHITE),
+        ROYAL_BLUEBELL(true, EnumDyeColor.PURPLE),
+        SANDBOG_DEATH_CAMAS(true, EnumDyeColor.SILVER),
+        SNOWY_RIVER_WESTRINGIA(true, EnumDyeColor.GRAY),
+        WELDENIA_CANDIDA(true, EnumDyeColor.WHITE),
+        WILD_RICE(false, EnumDyeColor.LIME),
+        YELLOWROOT(true, EnumDyeColor.MAGENTA), // new ->
+        DARK_OSTO(true, EnumDyeColor.MAGENTA),
+        DARK_VENUS(true, EnumDyeColor.MAGENTA),
+        DESERT_ALBUCA(true, EnumDyeColor.MAGENTA),
+        DESERT_CLOVER(true, EnumDyeColor.MAGENTA),
+        DESERT_CORNFLOWER(true, EnumDyeColor.MAGENTA),
+        DESERT_FLAG(true, EnumDyeColor.MAGENTA),
+        DESERT_FLAME_PEA_DIFF(true, EnumDyeColor.MAGENTA),
+        DESERT_FLAME_PEA(true, EnumDyeColor.MAGENTA),
+        DESERT_NOTCH(true, EnumDyeColor.MAGENTA),
+        DESERT_PAINTBRUSH(true, EnumDyeColor.MAGENTA),
+        DESERT_STURT_PEA(true, EnumDyeColor.MAGENTA),
+        DESERT_TINSEL(true, EnumDyeColor.MAGENTA),
+        DESERT_TINSEL_WHT(true, EnumDyeColor.MAGENTA),
+        DESERT_TUMBLE_WEED(true, EnumDyeColor.MAGENTA),
+        DESERT_VERBENA_DIFF(true, EnumDyeColor.MAGENTA),
+        DESERT_VERBENA(true, EnumDyeColor.MAGENTA),
+        DESERT_YELLOWS(true, EnumDyeColor.MAGENTA),
+        DESERT_YUCCA(true, EnumDyeColor.MAGENTA),
+        FLOWERS_BACHBUTTON(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_DAYLILYDIFF(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_DAYLILY(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_ECHINACEA(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_FREEORANGE(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_FREERED(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_FREEYELLOW(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_HYACINTH(true, EnumDyeColor.MAGENTA),
+        FLOWERS_BLEEDHEART(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_LILYVALLEY(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_LUPINORANGE(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_LUPINPURP(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_LUPINYELL(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_NARCISSUS(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_NASTURTIUM(true, EnumDyeColor.MAGENTA),//
+        FLOWERSB_PANSY(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_VIOLET(true, EnumDyeColor.MAGENTA),
+        FLOWERSB_WOLFSBANE(true, EnumDyeColor.MAGENTA),
+        FLOWERS_CAPOPPY(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_BORAGE(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_CORYDALIS(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_GERANIUM_LIGHT(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_GERANIUM_PINK(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_GERANIUM_RED(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_GILIA(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_LEWISIA(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_LOBELIA(true, EnumDyeColor.MAGENTA),
+        FLOWERS_COSMOS(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_PERRIWINKLE_DIFF(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_PERRIWINKLE(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_PETTICOAT(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_PITCHER(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_REDCLOVER_DIFF(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_REDCLOVER_MID(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_REDCLOVER(true, EnumDyeColor.MAGENTA),
+        FLOWERS_CROCUSMIX(true, EnumDyeColor.MAGENTA),
+        FLOWERS_CROCUSPURP(true, EnumDyeColor.MAGENTA),
+        FLOWERS_CROCUSYELL(true, EnumDyeColor.MAGENTA),
+        FLOWERSC_STICKY_MONKEY(true, EnumDyeColor.MAGENTA),
+        FLOWERS_DAFFODIL(true, EnumDyeColor.MAGENTA),
+        FLOWERS_DAFFYELLOW(true, EnumDyeColor.MAGENTA),
+        FLOWERS_DAHLIA(true, EnumDyeColor.MAGENTA),
+        FLOWERS_DAISYPURP(true, EnumDyeColor.MAGENTA),
+        FLOWERS_DAISYWHT(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_CHRYS(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_COMMELINA(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_CORYDALIS_BLUE(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_COSMOS_MIX(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_COSMOS_ORANGE(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_COSMOS_YELLOW(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_CYAN(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_FORGET_LIGHT(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_LILY_WHT(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_MAGENTA(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_MALLOW(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_MORNING(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_ORCHID(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_PARROT(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_POPPY(true, EnumDyeColor.MAGENTA),
+        FLOWERSD_SALVIA(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_BANEBERRY(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_BORAGE_BLUE(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_BUTTON_BLUE(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_BUTTON_LIGHT(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_CLOVER_SIDE(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_COWSLIP(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_LOBELIA_BLUE(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_LOBELIA_LIGHT(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_MINT(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_SAGE(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_SALVIA_MAGENTA(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_ZINNIA_MAGENTA(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_ZINNIA_MIX(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_ZINNIA_STRIPE(true, EnumDyeColor.MAGENTA),
+        FLOWERSE_ZINNIA_SUNNY(true, EnumDyeColor.MAGENTA),
+        FLOWERS_FORGET(true, EnumDyeColor.MAGENTA),
+        FLOWERS_FUCHSIA(true, EnumDyeColor.MAGENTA),
+        FLOWERS_LANTANA(true, EnumDyeColor.MAGENTA),
+        FLOWERS_LILYPURP(true, EnumDyeColor.MAGENTA),
+        FUNGUS_BASKET(true, EnumDyeColor.MAGENTA),
+        FUNGUS_CORAL(true, EnumDyeColor.MAGENTA),
+        FUNGUS_CRINOLINE(true, EnumDyeColor.MAGENTA),
+        FUNGUS_FINGERS_ONE(true, EnumDyeColor.MAGENTA),
+        FUNGUS_FINGERS(true, EnumDyeColor.MAGENTA),
+        FUNGUS_PIXIE_BLUE(true, EnumDyeColor.MAGENTA),
+        FUNGUS_PIXIE_CYAN(true, EnumDyeColor.MAGENTA),
+        OUCH_CLAW(true, EnumDyeColor.MAGENTA),
+        OUCH_CLAW_SPIKE(true, EnumDyeColor.MAGENTA),
+        OUCH_HEDGEHOG(true, EnumDyeColor.MAGENTA),
+        OUCH_PARODIA(true, EnumDyeColor.MAGENTA),
+        ZENOBIA(true, EnumDyeColor.SILVER), // old
+        CAMBRIDGE_BLUE(true, EnumDyeColor.CYAN),
+        ;
 
-		EnumDyeColor color;
-		boolean flowers;
+        EnumDyeColor color;
+        boolean flowers;
 
-		Plants(boolean flowers, EnumDyeColor c) {
-			color = c;
-			this.flowers = flowers;
-		}
+        Plants(boolean flowers, EnumDyeColor c) {
+            color = c;
+            this.flowers = flowers;
+        }
 
-		@Override
-		public EnumDyeColor getColor() {
-			return color;
-		}
+        @Override
+        public EnumDyeColor getColor() {
+            return color;
+        }
 
-		@Override
-		public boolean useForRecipes() {
-			return true;
-		}
+        @Override
+        public boolean useForRecipes() {
+            return true;
+        }
 
-		@Override
-		public boolean hasFlowers() {
-			return flowers;
-		}
+        @Override
+        public boolean hasFlowers() {
+            return flowers;
+        }
 
-		IForgeRegistryEntry<?> thing = null;
+        IForgeRegistryEntry<?> thing = null;
 
-		@Override
-		public ItemStack get() {
-			return RecipeHelper.makeStack(thing, 1, getMetadata());
-		}
+        @Override
+        public ItemStack get() {
+            return RecipeHelper.makeStack(thing, 1, getMetadata());
+        }
 
-		@Override
-		public void set(IForgeRegistryEntry<?> ifre) {
-			thing = ifre;
-		}
+        @Override
+        public void set(IForgeRegistryEntry<?> ifre) {
+            thing = ifre;
+        }
 
-	}
+    }
 
-	public static enum Desert implements IFlowerEnum {
-		APACHE_PLUME(true, EnumDyeColor.PURPLE),
-		ARIZONA_POPPY(true, EnumDyeColor.YELLOW),
-		ASIAN_MUSTARD(true, EnumDyeColor.LIME),
-		BIGELOWS_MONKEY_FLOWER(true, EnumDyeColor.MAGENTA),
-		BLACKTACK_PHACELIA(true, EnumDyeColor.PURPLE),
-		BLAZING_STAR(true, EnumDyeColor.YELLOW),
-		BLUE_FLAX(true, EnumDyeColor.LIGHT_BLUE),
-		BRISTLY_FIDDLENECK(true, EnumDyeColor.YELLOW),
-		BROWN_EYES(true, EnumDyeColor.BROWN),
-		BUCKBRUSH(true, EnumDyeColor.SILVER),
-		BUTTON_BRITTLEBUSH(true, EnumDyeColor.LIME),
-		CANAIGRE(true, EnumDyeColor.ORANGE),
-		CHOCOLATE_DROPS(false, EnumDyeColor.BLUE),
-		CHUPAROSA(false, EnumDyeColor.ORANGE),
-		CLUSTERED_BROOMRAPE(true, EnumDyeColor.YELLOW),
-		COULTERS_JEWELFLOWER(true, EnumDyeColor.BROWN),
-		DISTANT_SCORPIONWEED(true, EnumDyeColor.PURPLE),
-		NEGLECTED_SCORPIONWEED(true, EnumDyeColor.BROWN),
-		SAGEBRUSH(false, EnumDyeColor.GREEN),
-		SAN_ANGELO_YUCCA(false, EnumDyeColor.GREEN),;
+    public enum Desert implements IFlowerEnum {
+        APACHE_PLUME(true, EnumDyeColor.PURPLE),
+        ARIZONA_POPPY(true, EnumDyeColor.YELLOW),
+        ASIAN_MUSTARD(true, EnumDyeColor.LIME),
+        BIGELOWS_MONKEY_FLOWER(true, EnumDyeColor.MAGENTA),
+        BLACKTACK_PHACELIA(true, EnumDyeColor.PURPLE),
+        BLAZING_STAR(true, EnumDyeColor.YELLOW),
+        BLUE_FLAX(true, EnumDyeColor.LIGHT_BLUE),
+        BRISTLY_FIDDLENECK(true, EnumDyeColor.YELLOW),
+        BROWN_EYES(true, EnumDyeColor.BROWN),
+        BUCKBRUSH(true, EnumDyeColor.SILVER),
+        BUTTON_BRITTLEBUSH(true, EnumDyeColor.LIME),
+        CANAIGRE(true, EnumDyeColor.ORANGE),
+        CHOCOLATE_DROPS(false, EnumDyeColor.BLUE),
+        CHUPAROSA(false, EnumDyeColor.ORANGE),
+        CLUSTERED_BROOMRAPE(true, EnumDyeColor.YELLOW),
+        COULTERS_JEWELFLOWER(true, EnumDyeColor.BROWN),
+        DISTANT_SCORPIONWEED(true, EnumDyeColor.PURPLE),
+        NEGLECTED_SCORPIONWEED(true, EnumDyeColor.BROWN),
+        SAGEBRUSH(false, EnumDyeColor.GREEN),
+        SAN_ANGELO_YUCCA(false, EnumDyeColor.GREEN),
+        ;
 
-		EnumDyeColor color;
-		boolean flowers;
+        EnumDyeColor color;
+        boolean flowers;
 
-		Desert(boolean flowers, EnumDyeColor c) {
-			color = c;
-			this.flowers = flowers;
-		}
+        Desert(boolean flowers, EnumDyeColor c) {
+            color = c;
+            this.flowers = flowers;
+        }
 
-		@Override
-		public EnumDyeColor getColor() {
-			return color;
-		}
+        @Override
+        public EnumDyeColor getColor() {
+            return color;
+        }
 
-		@Override
-		public boolean useForRecipes() {
-			return true;
-		}
+        @Override
+        public boolean useForRecipes() {
+            return true;
+        }
 
-		@Override
-		public boolean hasFlowers() {
-			return flowers;
-		}
+        @Override
+        public boolean hasFlowers() {
+            return flowers;
+        }
 
-		IForgeRegistryEntry<?> thing = null;
+        IForgeRegistryEntry<?> thing = null;
 
-		@Override
-		public ItemStack get() {
-			return RecipeHelper.makeStack(thing, 1, getMetadata());
-		}
+        @Override
+        public ItemStack get() {
+            return RecipeHelper.makeStack(thing, 1, getMetadata());
+        }
 
-		@Override
-		public void set(IForgeRegistryEntry<?> ifre) {
-			thing = ifre;
-		}
+        @Override
+        public void set(IForgeRegistryEntry<?> ifre) {
+            thing = ifre;
+        }
 
-	}
+    }
 
-	public static enum Double implements IFlowerEnum {
-		ABELIA_C(true, EnumDyeColor.WHITE),
-		ABRONIA_A(true, EnumDyeColor.PURPLE),
-		ACANTHUS_B(true, EnumDyeColor.PINK),
-		ADENOCARPUS_F(true, EnumDyeColor.YELLOW),
-		AGONIS_T(true, EnumDyeColor.WHITE),
-		ALONSOA_M(true, EnumDyeColor.RED),
-		BULBIL_BUGLELILY(true, EnumDyeColor.ORANGE),;
+    public enum Double implements IFlowerEnum {
+        ABELIA_C(true, EnumDyeColor.WHITE),
+        ABRONIA_A(true, EnumDyeColor.PURPLE),
+        ACANTHUS_B(true, EnumDyeColor.PINK),
+        ADENOCARPUS_F(true, EnumDyeColor.YELLOW),
+        AGONIS_T(true, EnumDyeColor.WHITE),
+        ALONSOA_M(true, EnumDyeColor.RED),
+        BULBIL_BUGLELILY(true, EnumDyeColor.ORANGE),
+        ;
 
-		EnumDyeColor color;
-		boolean flowers;
+        EnumDyeColor color;
+        boolean flowers;
 
-		Double(boolean flowers, EnumDyeColor c) {
-			color = c;
-			this.flowers = flowers;
-		}
+        Double(boolean flowers, EnumDyeColor c) {
+            color = c;
+            this.flowers = flowers;
+        }
 
-		@Override
-		public EnumDyeColor getColor() {
-			return color;
-		}
+        @Override
+        public EnumDyeColor getColor() {
+            return color;
+        }
 
-		@Override
-		public int getPredicateIndex() {
-			return ordinal() / 8;
-		}
+        @Override
+        public int getPredicateIndex() {
+            return ordinal() / 8;
+        }
 
-		@Override
-		public boolean useForRecipes() {
-			return true;
-		}
+        @Override
+        public boolean useForRecipes() {
+            return true;
+        }
 
-		@Override
-		public int getMetadata() {
-			return ordinal() % 8;
-		}
+        @Override
+        public int getMetadata() {
+            return ordinal() % 8;
+        }
 
-		@Override
-		public boolean hasFlowers() {
-			return flowers;
-		}
+        @Override
+        public boolean hasFlowers() {
+            return flowers;
+        }
 
-		IForgeRegistryEntry<?> thing = null;
+        IForgeRegistryEntry<?> thing = null;
 
-		@Override
-		public ItemStack get() {
-			return RecipeHelper.makeStack(thing, 1, getMetadata());
-		}
+        @Override
+        public ItemStack get() {
+            return RecipeHelper.makeStack(thing, 1, getMetadata());
+        }
 
-		@Override
-		public void set(IForgeRegistryEntry<?> ifre) {
-			thing = ifre;
-		}
+        @Override
+        public void set(IForgeRegistryEntry<?> ifre) {
+            thing = ifre;
+        }
 
-	}
+    }
 
-	public static enum Generic implements IPropertyEnum {
-		COTTON,
-		DYE_BLACK,
-		DYE_BLUE,
-		DYE_BROWN,
-		DYE_WHITE,
-		CRYSTAL_SHARD,
-		CRYSTAL_CHUNK,
-		DARK_CRYSTAL_SHARD,
-		DARK_CRYSTAL_CHUNK,
-		CRYSTAL_STICK,
-		BLAZE_PETAL,
-		MAGMA_JELLY,
-		SMOLDERBERRY,
-		EMBERROOT,;
+    public enum Generic implements IPropertyEnum {
+        COTTON,
+        DYE_BLACK,
+        DYE_BLUE,
+        DYE_BROWN,
+        DYE_WHITE,
+        CRYSTAL_SHARD,
+        CRYSTAL_CHUNK,
+        DARK_CRYSTAL_SHARD,
+        DARK_CRYSTAL_CHUNK,
+        CRYSTAL_STICK,
+        BLAZE_PETAL,
+        MAGMA_JELLY,
+        SMOLDERBERRY,
+        EMBERROOT,
+        ;
 
-		@Override
-		public ItemStack get() {
-			return new ItemStack(ModRegistry.GENERIC, 1, ordinal());
-		}
-	}
+        @Override
+        public ItemStack get() {
+            return new ItemStack(ModRegistry.GENERIC, 1, ordinal());
+        }
+    }
 
-	public static enum Vines implements IPropertyEnum {
-		ADLUMIA_F,
-		AFGEKIA_M,
-		ANDROSACE_A,
-		AKEBIA_Q,
-		AMPELOPSIS_A;
+    public enum Vines implements IPropertyEnum {
+        ADLUMIA_F,
+        AFGEKIA_M,
+        ANDROSACE_A,
+        AKEBIA_Q,
+        AMPELOPSIS_A;
 
-		IForgeRegistryEntry<?> thing = null;
+        IForgeRegistryEntry<?> thing = null;
 
-		@Override
-		public ItemStack get() {
-			return RecipeHelper.makeStack(thing);
-		}
+        @Override
+        public ItemStack get() {
+            return RecipeHelper.makeStack(thing);
+        }
 
-		@Override
-		public void set(IForgeRegistryEntry<?> ifre) {
-			thing = ifre;
-		}
-	}
+        @Override
+        public void set(IForgeRegistryEntry<?> ifre) {
+            thing = ifre;
+        }
+    }
 
-	public static enum Crops implements IPropertyEnum {
-		AMARANTHUS_H,
-		OKRA,
-		PINEAPPLE,;
+    public enum Crops implements IPropertyEnum {
+        AMARANTHUS_H,
+        OKRA,
+        PINEAPPLE,
+        ;
 
-		@Override
-		public int getPredicateIndex() {
-			return ordinal() / 2;
-		}
+        @Override
+        public int getPredicateIndex() {
+            return ordinal() / 2;
+        }
 
-		@Override
-		public ItemStack get() {
-			return ItemStack.EMPTY;
-		}
+        @Override
+        public ItemStack get() {
+            return ItemStack.EMPTY;
+        }
 
-	}
+    }
 
 	/*public static enum BushSet implements IPropertyEnum, IPostInitUpdate {
 		BLACKBERRY("plants2:blackberry"),

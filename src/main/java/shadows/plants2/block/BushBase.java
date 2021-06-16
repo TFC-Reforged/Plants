@@ -1,8 +1,5 @@
 package shadows.plants2.block;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
@@ -26,109 +23,113 @@ import shadows.plants2.Plants2;
 import shadows.plants2.data.PlantConfig;
 import shadows.plants2.util.PlantUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class BushBase extends BlockBush implements IHasModel, IShearable, IPostInitUpdate, ISpecialPlacement {
 
-	protected final EnumPlantType type;
-	public static final AxisAlignedBB AABB = new AxisAlignedBB(0.2D, 0.0D, 0.2D, 0.8D, 0.75D, 0.8D);
+    protected final EnumPlantType type;
+    public static final AxisAlignedBB AABB = new AxisAlignedBB(0.2D, 0.0D, 0.2D, 0.8D, 0.75D, 0.8D);
 
-	public BushBase(String name, EnumPlantType type) {
-		setRegistryName(name);
-		setTranslationKey(Plants2.INFO.getID() + "." + name);
-		setCreativeTab(Plants2.INFO.getDefaultTab());
-		this.type = type;
-		setTickRandomly(false);
-		setSoundType(SoundType.PLANT);
-		Plants2.INFO.getBlockList().add(this);
-		ItemBlock ib = createItemBlock();
-		if (ib != null) Plants2.INFO.getItemList().add(ib);
-		Placebo.UPDATES.add(this);
-	}
+    public BushBase(String name, EnumPlantType type) {
+        setRegistryName(name);
+        setTranslationKey(Plants2.INFO.getID() + "." + name);
+        setCreativeTab(Plants2.INFO.getDefaultTab());
+        this.type = type;
+        setTickRandomly(false);
+        setSoundType(SoundType.PLANT);
+        Plants2.INFO.getBlockList().add(this);
+        ItemBlock ib = createItemBlock();
+        if (ib != null) Plants2.INFO.getItemList().add(ib);
+        Placebo.UPDATES.add(this);
+    }
 
-	public BushBase(String name) {
-		this(name, EnumPlantType.Plains);
-	}
+    public BushBase(String name) {
+        this(name, EnumPlantType.Plains);
+    }
 
-	public ItemBlock createItemBlock() {
-		return new ItemBlockBase(this);
-	}
+    public ItemBlock createItemBlock() {
+        return new ItemBlockBase(this);
+    }
 
-	@Override
-	protected boolean canSustainBush(IBlockState state) {
-		return false; //nah
-	}
+    @Override
+    protected boolean canSustainBush(IBlockState state) {
+        return false; //nah
+    }
 
-	@Override
-	public boolean canPlaceBlockAt(World world, BlockPos pos) {
-		return world.getBlockState(pos).getBlock().isReplaceable(world, pos) && canBlockStay(world, pos, getDefaultState());
-	}
+    @Override
+    public boolean canPlaceBlockAt(World world, BlockPos pos) {
+        return world.getBlockState(pos).getBlock().isReplaceable(world, pos) && canBlockStay(world, pos, getDefaultState());
+    }
 
-	@Override
-	public boolean canBlockStay(World world, BlockPos pos, IBlockState state) {
-		IBlockState soil = world.getBlockState(pos.down());
-		return soil.getBlock().canSustainPlant(soil, world, pos.down(), EnumFacing.UP, this) || isValidSoil(world, pos.down(), state, soil);
-	}
+    @Override
+    public boolean canBlockStay(World world, BlockPos pos, IBlockState state) {
+        IBlockState soil = world.getBlockState(pos.down());
+        return soil.getBlock().canSustainPlant(soil, world, pos.down(), EnumFacing.UP, this) || isValidSoil(world, pos.down(), state, soil);
+    }
 
-	/**
-	 * Method used for checking additional soils.  If this returns false, placement falls back to EnumPlantType checks.
-	 * @return If this soil state is acceptable.
-	 */
-	public boolean isValidSoil(World world, BlockPos pos, IBlockState state, IBlockState soil) {
-		return false;
-	}
+    /**
+     * Method used for checking additional soils.  If this returns false, placement falls back to EnumPlantType checks.
+     *
+     * @return If this soil state is acceptable.
+     */
+    public boolean isValidSoil(World world, BlockPos pos, IBlockState state, IBlockState soil) {
+        return false;
+    }
 
-	@Override
-	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		return AABB;
-	}
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        return AABB;
+    }
 
-	@Override
-	public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos) {
-		return type;
-	}
+    @Override
+    public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos) {
+        return type;
+    }
 
-	@Override
-	public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos) {
-		return PlantConfig.needShears;
-	}
+    @Override
+    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos) {
+        return PlantConfig.needShears;
+    }
 
-	@Override
-	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
-		return getActualDrops(world, pos, world.getBlockState(pos), fortune);
-	}
+    @Override
+    public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
+        return getActualDrops(world, pos, world.getBlockState(pos), fortune);
+    }
 
-	@Override
-	public void getDrops(NonNullList<ItemStack> list, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-		if (!PlantConfig.needShears) list.addAll(getActualDrops(world, pos, state, fortune));
-	}
+    @Override
+    public void getDrops(NonNullList<ItemStack> list, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+        if (!PlantConfig.needShears) list.addAll(getActualDrops(world, pos, state, fortune));
+    }
 
-	public List<ItemStack> getActualDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-		List<ItemStack> k = new ArrayList<>();
-		k.add(new ItemStack(getItemDropped(state, RANDOM, fortune), quantityDropped(RANDOM), damageDropped(state)));
-		return k;
-	}
+    public List<ItemStack> getActualDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+        List<ItemStack> k = new ArrayList<>();
+        k.add(new ItemStack(getItemDropped(state, RANDOM, fortune), quantityDropped(RANDOM), damageDropped(state)));
+        return k;
+    }
 
-	@Override
-	public boolean placeStateAt(IBlockState state, World world, BlockPos pos) {
-		return world.setBlockState(pos, state);
-	}
+    @Override
+    public boolean placeStateAt(IBlockState state, World world, BlockPos pos) {
+        return world.setBlockState(pos, state);
+    }
 
-	protected void addStatesToList() {
-		PlantUtil.TYPE_TO_STATES.get(type).add(getDefaultState());
-	}
+    protected void addStatesToList() {
+        PlantUtil.TYPE_TO_STATES.get(type).add(getDefaultState());
+    }
 
-	@Override
-	public void postInit(FMLPostInitializationEvent e) {
-		addStatesToList();
-	}
+    @Override
+    public void postInit(FMLPostInitializationEvent e) {
+        addStatesToList();
+    }
 
-	@Override
-	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
-		return 100;
-	}
+    @Override
+    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
+        return 100;
+    }
 
-	@Override
-	public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
-		return 60;
-	}
+    @Override
+    public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
+        return 60;
+    }
 
 }

@@ -18,165 +18,166 @@ import shadows.plants2.util.ColorToPotionUtil;
 
 public class TileBrewingCauldron extends TileEntity {
 
-	public static final String C = "colors";
-	public static final String W1 = "wart1";
-	public static final String W2 = "wart2";
-	public static final String WL = "water_level";
-	public static final String BE = "being_extracted";
-	public static final String G = "gunpowder";
-	public static final String DB = "dragon_breath";
+    public static final String C = "colors";
+    public static final String W1 = "wart1";
+    public static final String W2 = "wart2";
+    public static final String WL = "water_level";
+    public static final String BE = "being_extracted";
+    public static final String G = "gunpowder";
+    public static final String DB = "dragon_breath";
 
-	public static final ItemStack EMPTYNBT = new ItemStack((Item) null);
-	static {
-		EMPTYNBT.setTagCompound(new NBTTagCompound());
-	}
+    public static final ItemStack EMPTYNBT = new ItemStack((Item) null);
 
-	protected EnumDyeColor[] colors = new EnumDyeColor[6];
-	protected boolean hasFirstWart = false;
-	protected boolean hasSecondWart = false;
-	protected int waterLevel = 0;
-	protected boolean beingExtracted = false;
-	protected boolean gunpowder = false;
-	protected boolean dragBreath = false;
+    static {
+        EMPTYNBT.setTagCompound(new NBTTagCompound());
+    }
 
-	protected ItemStack generatedPotion = EMPTYNBT;
+    protected EnumDyeColor[] colors = new EnumDyeColor[6];
+    protected boolean hasFirstWart = false;
+    protected boolean hasSecondWart = false;
+    protected int waterLevel = 0;
+    protected boolean beingExtracted = false;
+    protected boolean gunpowder = false;
+    protected boolean dragBreath = false;
 
-	@Override
-	public void readFromNBT(NBTTagCompound tag) {
-		super.readFromNBT(tag);
-		colors = ColorToPotionUtil.intsToColorArray(tag.getIntArray(C));
-		hasFirstWart = tag.getBoolean(W1);
-		hasSecondWart = tag.getBoolean(W2);
-		waterLevel = tag.getInteger(WL);
-		beingExtracted = tag.getBoolean(BE);
-		gunpowder = tag.getBoolean(G);
-		dragBreath = tag.getBoolean(DB);
-		generatedPotion = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation(tag.getString("item"))), 1, tag.getInteger("meta"));
-		generatedPotion.setTagCompound(tag.getCompoundTag("stack_nbt"));
-	}
+    protected ItemStack generatedPotion = EMPTYNBT;
 
-	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound tag) {
-		super.writeToNBT(tag);
-		tag.setIntArray(C, ColorToPotionUtil.colorsToIntArray(colors));
-		tag.setBoolean(W1, hasFirstWart);
-		tag.setBoolean(W2, hasSecondWart);
-		tag.setInteger(WL, waterLevel);
-		tag.setBoolean(BE, beingExtracted);
-		tag.setString("item", generatedPotion.getItem().getRegistryName().toString());
-		tag.setInteger("meta", generatedPotion.getMetadata());
-		tag.setTag("stack_nbt", generatedPotion.getTagCompound());
-		tag.setBoolean(G, gunpowder);
-		tag.setBoolean(DB, dragBreath);
-		return tag;
-	}
+    @Override
+    public void readFromNBT(NBTTagCompound tag) {
+        super.readFromNBT(tag);
+        colors = ColorToPotionUtil.intsToColorArray(tag.getIntArray(C));
+        hasFirstWart = tag.getBoolean(W1);
+        hasSecondWart = tag.getBoolean(W2);
+        waterLevel = tag.getInteger(WL);
+        beingExtracted = tag.getBoolean(BE);
+        gunpowder = tag.getBoolean(G);
+        dragBreath = tag.getBoolean(DB);
+        generatedPotion = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation(tag.getString("item"))), 1, tag.getInteger("meta"));
+        generatedPotion.setTagCompound(tag.getCompoundTag("stack_nbt"));
+    }
 
-	@Override
-	public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
-		readFromNBT(pkt.getNbtCompound());
-		world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos).withProperty(BlockCauldron.LEVEL, waterLevel), 3);
-	}
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound tag) {
+        super.writeToNBT(tag);
+        tag.setIntArray(C, ColorToPotionUtil.colorsToIntArray(colors));
+        tag.setBoolean(W1, hasFirstWart);
+        tag.setBoolean(W2, hasSecondWart);
+        tag.setInteger(WL, waterLevel);
+        tag.setBoolean(BE, beingExtracted);
+        tag.setString("item", generatedPotion.getItem().getRegistryName().toString());
+        tag.setInteger("meta", generatedPotion.getMetadata());
+        tag.setTag("stack_nbt", generatedPotion.getTagCompound());
+        tag.setBoolean(G, gunpowder);
+        tag.setBoolean(DB, dragBreath);
+        return tag;
+    }
 
-	@Override
-	public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
-		return oldState.getBlock() != newState.getBlock();
-	}
+    @Override
+    public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
+        readFromNBT(pkt.getNbtCompound());
+        world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos).withProperty(BlockCauldron.LEVEL, waterLevel), 3);
+    }
 
-	@Override
-	public NBTTagCompound getUpdateTag() {
-		return writeToNBT(new NBTTagCompound());
-	}
+    @Override
+    public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
+        return oldState.getBlock() != newState.getBlock();
+    }
 
-	@Override
-	public SPacketUpdateTileEntity getUpdatePacket() {
-		return new SPacketUpdateTileEntity(pos, 150, getUpdateTag());
-	}
+    @Override
+    public NBTTagCompound getUpdateTag() {
+        return writeToNBT(new NBTTagCompound());
+    }
 
-	public void setColor(int index, EnumDyeColor color) {
-		if (index < 0 || index > 5) throw new ArrayIndexOutOfBoundsException("The colors array has a size of 6");
-		colors[index] = color;
-		markDirty();
-	}
+    @Override
+    public SPacketUpdateTileEntity getUpdatePacket() {
+        return new SPacketUpdateTileEntity(pos, 150, getUpdateTag());
+    }
 
-	public void setFirstWart(boolean set) {
-		hasFirstWart = set;
-		markDirty();
-	}
+    public void setColor(int index, EnumDyeColor color) {
+        if (index < 0 || index > 5) throw new ArrayIndexOutOfBoundsException("The colors array has a size of 6");
+        colors[index] = color;
+        markDirty();
+    }
 
-	public void setSecondWart(boolean set) {
-		hasSecondWart = set;
-		markDirty();
-	}
+    public void setFirstWart(boolean set) {
+        hasFirstWart = set;
+        markDirty();
+    }
 
-	public void setWaterLevel(int level) {
-		waterLevel = level;
-		markDirty();
-	}
+    public void setSecondWart(boolean set) {
+        hasSecondWart = set;
+        markDirty();
+    }
 
-	public void setExtracting(boolean set) {
-		beingExtracted = set;
-		markDirty();
-	}
+    public void setWaterLevel(int level) {
+        waterLevel = level;
+        markDirty();
+    }
 
-	public void setDragBreath(boolean set) {
-		dragBreath = set;
-		markDirty();
-	}
+    public void setExtracting(boolean set) {
+        beingExtracted = set;
+        markDirty();
+    }
 
-	public void setGunpowder(boolean set) {
-		gunpowder = set;
-		markDirty();
-	}
+    public void setDragBreath(boolean set) {
+        dragBreath = set;
+        markDirty();
+    }
 
-	public void setPotion(ItemStack stack) {
-		generatedPotion = stack;
-		markDirty();
-	}
+    public void setGunpowder(boolean set) {
+        gunpowder = set;
+        markDirty();
+    }
 
-	public boolean isBeingExtracted() {
-		return beingExtracted;
-	}
+    public void setPotion(ItemStack stack) {
+        generatedPotion = stack;
+        markDirty();
+    }
 
-	public EnumDyeColor[] getColors() {
-		return colors;
-	}
+    public boolean isBeingExtracted() {
+        return beingExtracted;
+    }
 
-	public boolean hasMaxWater() {
-		return waterLevel == 3;
-	}
+    public EnumDyeColor[] getColors() {
+        return colors;
+    }
 
-	public int getWaterLevel() {
-		return waterLevel;
-	}
+    public boolean hasMaxWater() {
+        return waterLevel == 3;
+    }
 
-	public boolean hasFirstWart() {
-		return hasFirstWart;
-	}
+    public int getWaterLevel() {
+        return waterLevel;
+    }
 
-	public boolean hasNetherWart() {
-		return hasFirstWart && hasSecondWart;
-	}
+    public boolean hasFirstWart() {
+        return hasFirstWart;
+    }
 
-	public Item getPotionItem() {
-		if (gunpowder) return Items.SPLASH_POTION;
-		if (dragBreath) return Items.LINGERING_POTION;
-		else return Items.POTIONITEM;
-	}
+    public boolean hasNetherWart() {
+        return hasFirstWart && hasSecondWart;
+    }
 
-	public ItemStack getPotion() {
-		return generatedPotion.copy();
-	}
+    public Item getPotionItem() {
+        if (gunpowder) return Items.SPLASH_POTION;
+        if (dragBreath) return Items.LINGERING_POTION;
+        else return Items.POTIONITEM;
+    }
 
-	public void reset() {
-		colors = new EnumDyeColor[6];
-		hasFirstWart = false;
-		hasSecondWart = false;
-		waterLevel = 0;
-		beingExtracted = false;
-		generatedPotion = EMPTYNBT;
-		gunpowder = false;
-		dragBreath = false;
-		markDirty();
-	}
+    public ItemStack getPotion() {
+        return generatedPotion.copy();
+    }
+
+    public void reset() {
+        colors = new EnumDyeColor[6];
+        hasFirstWart = false;
+        hasSecondWart = false;
+        waterLevel = 0;
+        beingExtracted = false;
+        generatedPotion = EMPTYNBT;
+        gunpowder = false;
+        dragBreath = false;
+        markDirty();
+    }
 
 }

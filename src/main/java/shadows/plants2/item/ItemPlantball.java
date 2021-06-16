@@ -1,11 +1,5 @@
 package shadows.plants2.item;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Nullable;
-
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
@@ -30,103 +24,103 @@ import shadows.plants2.Plants2;
 import shadows.plants2.data.PlantConfig;
 import shadows.plants2.util.PlantUtil;
 
+import javax.annotation.Nullable;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public final class ItemPlantball extends ItemBase implements IHasRecipe {
 
-	public ItemPlantball() {
-		super("plantball", Plants2.INFO);
-	}
+    public ItemPlantball() {
+        super("plantball", Plants2.INFO);
+    }
 
-	@Override
-	public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-		ItemStack stack = player.getHeldItem(hand);
-		if (!stack.isEmpty() && player.canPlayerEdit(pos, facing, stack)) {
-			IBlockState worldState = world.getBlockState(pos);
-			SoundType soundtype = SoundType.PLANT;
-			IBlockState flower = PlantUtil.getFlowerState(world.rand);
-			IBlockState desert = PlantUtil.getDesertFlowerState(world.rand);
+    @Override
+    public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        ItemStack stack = player.getHeldItem(hand);
+        if (!stack.isEmpty() && player.canPlayerEdit(pos, facing, stack)) {
+            IBlockState worldState = world.getBlockState(pos);
+            SoundType soundtype = SoundType.PLANT;
+            IBlockState flower = PlantUtil.getFlowerState(world.rand);
+            IBlockState desert = PlantUtil.getDesertFlowerState(world.rand);
 
-			if (worldState.getBlock() == Blocks.MOSSY_COBBLESTONE && facing.getAxis().isHorizontal()) {
-				if (!world.isRemote) PlantUtil.placeVine(world, PlantUtil.getRandomVine(world.rand), pos, facing);
+            if (worldState.getBlock() == Blocks.MOSSY_COBBLESTONE && facing.getAxis().isHorizontal()) {
+                if (!world.isRemote) PlantUtil.placeVine(world, PlantUtil.getRandomVine(world.rand), pos, facing);
 
-				world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
+                world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
 
-				stack.shrink(1);
-				return EnumActionResult.SUCCESS;
-			}
+                stack.shrink(1);
+                return EnumActionResult.SUCCESS;
+            } else if (desert.getBlock().canPlaceBlockAt(world, pos.up())) {
+                if (isBlacklisted(desert)) return EnumActionResult.FAIL;
 
-			else if (desert.getBlock().canPlaceBlockAt(world, pos.up())) {
-				if (isBlacklisted(desert)) return EnumActionResult.FAIL;
+                if (!world.isRemote) {
+                    genFlowers(world, pos, desert);
+                    if (world.rand.nextInt(10) == 0) genFlowers(world, pos, desert);
+                }
 
-				if (!world.isRemote) {
-					genFlowers(world, pos, desert);
-					if (world.rand.nextInt(10) == 0) genFlowers(world, pos, desert);
-				}
+                world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
 
-				world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
+                stack.shrink(1);
+                return EnumActionResult.SUCCESS;
+            } else if (flower.getBlock().canPlaceBlockAt(world, pos.up())) {
+                if (isBlacklisted(flower)) return EnumActionResult.FAIL;
 
-				stack.shrink(1);
-				return EnumActionResult.SUCCESS;
-			}
+                if (!world.isRemote) {
+                    genFlowers(world, pos, flower);
+                    if (world.rand.nextInt(10) == 0) genFlowers(world, pos, flower);
+                }
 
-			else if (flower.getBlock().canPlaceBlockAt(world, pos.up())) {
-				if (isBlacklisted(flower)) return EnumActionResult.FAIL;
+                world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
 
-				if (!world.isRemote) {
-					genFlowers(world, pos, flower);
-					if (world.rand.nextInt(10) == 0) genFlowers(world, pos, flower);
-				}
+                stack.shrink(1);
+                return EnumActionResult.SUCCESS;
+            } else if (worldState.getBlock() instanceof BlockBush && !worldState.getBlock().hasTileEntity(worldState)) {
+                if (isBlacklisted(worldState)) return EnumActionResult.FAIL;
 
-				world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
+                if (PlantConfig.allBushes || worldState.getBlock().getRegistryName().getNamespace().equals(Plants2.MODID) || worldState.getBlock().getRegistryName().getNamespace().equals("minecraft")) {
 
-				stack.shrink(1);
-				return EnumActionResult.SUCCESS;
-			}
+                    if (!world.isRemote) genFlowers(world, pos, worldState);
 
-			else if (worldState.getBlock() instanceof BlockBush && !worldState.getBlock().hasTileEntity(worldState)) {
-				if (isBlacklisted(worldState)) return EnumActionResult.FAIL;
+                    world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
 
-				if (PlantConfig.allBushes || worldState.getBlock().getRegistryName().getNamespace().equals(Plants2.MODID) || worldState.getBlock().getRegistryName().getNamespace().equals("minecraft")) {
+                    stack.shrink(1);
+                    return EnumActionResult.SUCCESS;
+                }
+            }
+        }
 
-					if (!world.isRemote) genFlowers(world, pos, worldState);
+        return EnumActionResult.FAIL;
+    }
 
-					world.playSound(player, pos.up(), soundtype.getPlaceSound(), SoundCategory.BLOCKS, 1, 1);
+    private static void genFlowers(World world, BlockPos pos, IBlockState state) {
+        if (world.provider instanceof WorldProviderHell)
+            PlantUtil.genFlowerPatchForNether(world, pos, world.rand, state);
+        else PlantUtil.genSmallFlowerPatchNearby(world, pos.up(), world.rand, state);
+    }
 
-					stack.shrink(1);
-					return EnumActionResult.SUCCESS;
-				}
-			}
-		}
+    private static final Map<IBlockState, Boolean> CACHE = new HashMap<>();
 
-		return EnumActionResult.FAIL;
-	}
+    private static boolean isBlacklisted(IBlockState state) {
+        if (CACHE.getOrDefault(state, false)) return false;
+        if (PlantConfig.REGNAME_BL.contains(state.getBlock().getRegistryName())) return true;
+        if (PlantConfig.MODID_BL.contains(state.getBlock().getRegistryName().getNamespace())) return true;
+        CACHE.put(state, true);
+        return false;
+    }
 
-	private static void genFlowers(World world, BlockPos pos, IBlockState state) {
-		if (world.provider instanceof WorldProviderHell) PlantUtil.genFlowerPatchForNether(world, pos, world.rand, state);
-		else PlantUtil.genSmallFlowerPatchNearby(world, pos.up(), world.rand, state);
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
+        tooltip.add("Use on grass for plants");
+        tooltip.add("Use on moss stone for vines");
+        tooltip.add("Use on a plant to copy it");
+    }
 
-	private static Map<IBlockState, Boolean> CACHE = new HashMap<>();
-
-	private static boolean isBlacklisted(IBlockState state) {
-		if (CACHE.getOrDefault(state, false)) return false;
-		if (PlantConfig.REGNAME_BL.contains(state.getBlock().getRegistryName())) return true;
-		if (PlantConfig.MODID_BL.contains(state.getBlock().getRegistryName().getNamespace())) return true;
-		CACHE.put(state, true);
-		return false;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add("Use on grass for plants");
-		tooltip.add("Use on moss stone for vines");
-		tooltip.add("Use on a plant to copy it");
-	}
-
-	@Override
-	public void initRecipes(Register<IRecipe> e) {
-		Plants2.HELPER.addShapeless(new ItemStack(this, 5), "plant", "plant", "plant", "plant", "plant", "plant", "plant", "plant", "plant");
-		Plants2.HELPER.addShapeless(new ItemStack(this, 2), "plant", "plant", "plant", "plant");
-	}
+    @Override
+    public void initRecipes(Register<IRecipe> e) {
+        Plants2.HELPER.addShapeless(new ItemStack(this, 5), "plant", "plant", "plant", "plant", "plant", "plant", "plant", "plant", "plant");
+        Plants2.HELPER.addShapeless(new ItemStack(this, 2), "plant", "plant", "plant", "plant");
+    }
 
 }

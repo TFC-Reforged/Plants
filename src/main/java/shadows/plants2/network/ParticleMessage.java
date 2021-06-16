@@ -10,36 +10,36 @@ import shadows.plants2.Plants2;
 
 public class ParticleMessage implements IMessage {
 
-	public ParticleMessage() {
-	}
+    public ParticleMessage() {
+    }
 
-	private BlockPos pos;
+    private BlockPos pos;
 
-	public ParticleMessage(BlockPos pos) {
-		this.pos = pos;
-	}
+    public ParticleMessage(BlockPos pos) {
+        this.pos = pos;
+    }
 
-	@Override
-	public void fromBytes(ByteBuf buf) {
-		pos = BlockPos.fromLong(buf.readLong());
+    @Override
+    public void fromBytes(ByteBuf buf) {
+        pos = BlockPos.fromLong(buf.readLong());
 
-	}
+    }
 
-	@Override
-	public void toBytes(ByteBuf buf) {
-		buf.writeLong(pos.toLong());
-	}
+    @Override
+    public void toBytes(ByteBuf buf) {
+        buf.writeLong(pos.toLong());
+    }
 
-	public static class ParticleMessageHandler implements IMessageHandler<ParticleMessage, IMessage> {
+    public static class ParticleMessageHandler implements IMessageHandler<ParticleMessage, IMessage> {
 
-		@Override
-		public IMessage onMessage(ParticleMessage message, MessageContext ctx) {
-			Minecraft.getMinecraft().addScheduledTask(() -> {
-				Plants2.PROXY.doCauldronInputParticles(message.pos);
-			});
-			return null;
-		}
+        @Override
+        public IMessage onMessage(ParticleMessage message, MessageContext ctx) {
+            Minecraft.getMinecraft().addScheduledTask(() -> {
+                Plants2.PROXY.doCauldronInputParticles(message.pos);
+            });
+            return null;
+        }
 
-	}
+    }
 
 }

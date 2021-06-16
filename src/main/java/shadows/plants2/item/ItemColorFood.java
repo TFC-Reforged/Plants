@@ -11,21 +11,21 @@ import shadows.plants2.util.PlantUtil;
 
 public class ItemColorFood extends ItemFoodBase implements IColorProvider, IHasRecipe {
 
-	EnumDyeColor color;
+    EnumDyeColor color;
 
-	public ItemColorFood(String name, int amount, float saturationMultiplier, EnumDyeColor color) {
-		super(name, amount, saturationMultiplier);
-		this.color = color;
-	}
+    public ItemColorFood(String name, int amount, float saturationMultiplier, EnumDyeColor color) {
+        super(name, amount, saturationMultiplier);
+        this.color = color;
+    }
 
-	@Override
-	public EnumDyeColor getColor(IBlockState state) {
-		return color;
-	}
+    @Override
+    public EnumDyeColor getColor(IBlockState state) {
+        return color;
+    }
 
-	@Override
-	public void initRecipes(Register<IRecipe> e) {
-		Plants2.HELPER.addSimpleShapeless(PlantUtil.getDyeForEnum(color), this, 1);
-	}
+    @Override
+    public void initRecipes(Register<IRecipe> e) {
+        Plants2.HELPER.addSimpleShapeless(PlantUtil.getDyeForEnum(color), this, 1);
+    }
 
 }
