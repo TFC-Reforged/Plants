@@ -269,7 +269,8 @@ public class TheBigBookOfEnums {
         OUCH_HEDGEHOG(true, EnumDyeColor.PINK),
         OUCH_PARODIA(false, EnumDyeColor.LIME),
         ZENOBIA(true, EnumDyeColor.SILVER), // old
-        CAMBRIDGE_BLUE(true, EnumDyeColor.CYAN),;
+        CAMBRIDGE_BLUE(true, EnumDyeColor.CYAN),
+        ;
 
         EnumDyeColor color;
         boolean flowers;

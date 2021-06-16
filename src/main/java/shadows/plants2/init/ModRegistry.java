@@ -4,17 +4,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
-import net.minecraft.init.PotionTypes;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -24,26 +20,18 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import shadows.placebo.interfaces.IHasRecipe;
-import shadows.placebo.item.*;
-import shadows.placebo.util.RecipeHelper;
-import shadows.placebo.util.StackPrimer;
+import shadows.placebo.item.ItemBigEnum;
 import shadows.plants2.Plants2;
 import shadows.plants2.block.*;
 import shadows.plants2.data.PlantConfig;
-//import shadows.plants2.data.enums.LaterEnums.DoubleHarvestable;
-//import shadows.plants2.data.enums.LaterEnums.Harvestable;
 import shadows.plants2.data.enums.TheBigBookOfEnums.Double;
 import shadows.plants2.data.enums.TheBigBookOfEnums.*;
-import shadows.plants2.item.*;
-import shadows.plants2.potion.PotionTypeBase;
+import shadows.plants2.item.ItemPlantball;
+//import shadows.plants2.potion.PotionTypeBase;
 import shadows.plants2.tile.TileBrewingCauldron;
 import shadows.plants2.tile.TileFlowerpot;
 
 public class ModRegistry {
-
-    //public static final ToolMaterial MAT_CRYSTAL = EnumHelper.addToolMaterial("crystal", 1, 128, 7.0F, 2, 22);
-    //public static final ToolMaterial MAT_DARK_CRYSTAL = EnumHelper.addToolMaterial("dark_crystal", 3, 1000, 7.0F, 3, 8);
-    //public static final EnumPlantType END = EnumPlantType.getPlantType("end");
 
     public static final BlockEnumBush<Plants> PLANT_0 = new BlockEnumFlower<>("cosmetic_0", EnumPlantType.Plains, Plants.class, 0);
     public static final BlockEnumBush<Plants> PLANT_1 = new BlockEnumFlower<>("cosmetic_1", EnumPlantType.Plains, Plants.class, 1);
@@ -61,119 +49,22 @@ public class ModRegistry {
     public static final ItemBigEnum<Generic> GENERIC = new ItemBigEnum<>("generic", Generic.values(), Plants2.INFO);
     public static final Item PLANTBALL = new ItemPlantball();
 
-    /*public static final Item OKRA = new ItemFoodBase("okra", 3, 1.3f);
-    public static final Item PINEAPPLE = new ItemFoodBase("pineapple", 9, 0.6f, new PotionEffect(MobEffects.RESISTANCE, 400, 5), 0.01F);
-    public static final Item AMARANTHUS_H = new ItemFoodBase("amaranthus_h", 5, 0.3f);
-    public static final Item AMBROSIA_A = new ItemFoodBase("ambrosia_a", 3, 0.5f, new PotionEffect(MobEffects.REGENERATION, 200, 3), 0.06F);
-    public static final Item APOCYNUM_C = new ItemFoodBase("apocynum_c", 1, 2.0f);
-    public static final Item DAUCUS_C = new ItemFoodBase("daucus_c", 4, 1.1f, new PotionEffect(MobEffects.POISON, 200, 1), 0.24F);
-    public static final Item PHYTOLACCA_A = new ItemFoodBase("phytolacca_a", 5, 1.0f, new PotionEffect(MobEffects.WITHER, 160, 1), 0.89F);
-    public static final Item PLANTAGO_M = new ItemFoodBase("plantago_m", 3, 0.4f, new PotionEffect(MobEffects.ABSORPTION, 160), 0.45F);
-    public static final Item RUBUS_O = new ItemFoodBase("rubus_o", 6, 0.5f);
-    public static final Item RUBUS_P = new ItemColorFood("rubus_p", 3, 0.5f, EnumDyeColor.RED);
-    public static final Item SAFFRON = new ItemColorFood("saffron", 2, 0.2f, EnumDyeColor.ORANGE);
-    public static final Item SOLANUM_C = new ItemFoodBase("solanum_c", 2, 0.5f, new PotionEffect(MobEffects.WITHER, 900, 1), 0.9F);
-    public static final Item SOLANUM_D = new ItemFoodBase("solanum_d", 3, 0.6f, new PotionEffect(MobEffects.NAUSEA, 200, 2), 0.9F);
-    public static final Item SOLANUM_N = new ItemFoodBase("solanum_n", 5, 1.1f);
-    public static final Item ALYXIA_B = new ItemFoodBase("alyxia_b", 2, 1.4f);
-    public static final Item ACTAEA_P = new ItemFoodBase("actaea_p", 4, 1.2f, new PotionEffect(MobEffects.WITHER, 500, 3), 1F);
-    public static final Item ALTERNANTHERA_F = new ItemFoodBase("alternanthera_f", 7, 0.3f);
-    public static final Item AMPELOPSIS_A = new ItemFoodBase("ampelopsis_a", 1, 3.0f);
-    public static final Item AKEBIA_Q = new ItemFoodBase("akebia_q", 4, 1.3f);
-    public static final Item BLACKBERRY = new ItemColorFood("blackberry", 2, 1.1F, EnumDyeColor.BLACK);
-    public static final Item BLUEBERRY = new ItemColorFood("blueberry", 2, 0.9F, EnumDyeColor.LIGHT_BLUE);
-    public static final Item RASPBERRY = new ItemColorFood("raspberry", 2, 1.4F, EnumDyeColor.PINK);
-    public static final Item HUCKLEBERRY = new ItemColorFood("huckleberry", 3, 0.5F, EnumDyeColor.RED);
-    public static final Item FIRE_FRUIT = new ItemFireFruit();
-    public static final Item TAHITIAN_SPINACH = new ItemFoodBase("tahitian_spinach", 4, 0.3F, new PotionEffect(MobEffects.STRENGTH, 590, 2), 0.2F);
-
-    public static final Item AMARANTHUS_H_SEEDS = new ItemSeed<>("amaranthus_h_seeds", EnumPlantType.Crop, "plants2:crop_0", Crops.AMARANTHUS_H);
-    public static final Item OKRA_SEEDS = new ItemSeed<>("okra_seeds", EnumPlantType.Crop, "plants2:crop_0", Crops.OKRA);
-    public static final Item PINEAPPLE_SEEDS = new ItemSeed<>("pineapple_seeds", EnumPlantType.Crop, "plants2:crop_1", Crops.PINEAPPLE);
-*/
-    //public static final BlockEnumBush<Harvestable> HARVEST_0 = new BlockEnumHarvestBush<>("harvest_0", EnumPlantType.Plains, Harvestable.class, 0);
-    //public static final BlockEnumBush<Harvestable> HARVEST_1 = new BlockEnumHarvestBush<>("harvest_1", EnumPlantType.Plains, Harvestable.class, 1);
-    //public static final BlockEnumBush<NetherHarvests> NETHER_HARVEST = new BlockEnumNetherHarvest<>("nether_harvest", NetherHarvests.class, 0);
-
-    //public static final BlockEnumBush<Crops> CROP_0 = new BlockEnumCrop<>("crop_0", Crops.class, 0, AMARANTHUS_H, OKRA, AMARANTHUS_H_SEEDS, OKRA_SEEDS);
-    //public static final BlockEnumBush<Crops> CROP_1 = new BlockEnumCrop<>("crop_1", Crops.class, 1, PINEAPPLE, null, PINEAPPLE_SEEDS, null);
-
-    //public static final BlockEnumBush<DoubleHarvestable> DOUBLE_HARVEST_0 = new BlockEnumDoubleHarvestBush<>("double_harvest_0", EnumPlantType.Plains, DoubleHarvestable.class, 0);
-
     public static final Block ADLUMIA_F = new BlockCustomVine("adlumia_f", Vines.ADLUMIA_F);
     public static final Block AFGEKIA_M = new BlockCustomVine("afgekia_m", Vines.AFGEKIA_M);
     public static final Block ANDROSACE_A = new BlockCustomVine("androsace_a", Vines.ANDROSACE_A);
-    //public static final Block AKEBIA_Q_VINE = new BlockCustomVine("akebia_q_vine", Vines.AKEBIA_Q, new StackPrimer(AKEBIA_Q));
-    //public static final Block AMPELOPSIS_A_VINE = new BlockCustomVine("ampelopsis_a_vine", Vines.AMPELOPSIS_A, new StackPrimer(AMPELOPSIS_A));
 
-    //public static final BlockEnum<NetherLogs> NETHER_LOG = new BlockEnumNetherLog<>("nether_log", NetherLogs.class, 0);
-    //public static final BlockEnumSapling<NetherLogs> NETHER_SAP = new BlockNetherSapling<>("nether_sapling", NetherLogs.class, 0);
-    //public static final BlockEnum<NetherLogs> NETHER_LEAF = new BlockEnumNetherLeaves<>("nether_leaves", NETHER_SAP, NetherLogs.class, 0);
+    //public static final BlockFlowerpot FLOWERPOT = new BlockFlowerpot();
+    //public static final BlockJar JAR = new BlockJar();
 
-    //public static final BlockEnum<Logs> LOG_0 = new BlockEnumLog<>("log_0", Logs.class, 0);
-    //public static final BlockEnumSapling<Logs> SAP_0 = new BlockEnumSapling<>("sapling_0", Logs.class, 0);
-    //public static final BlockEnum<Logs> LEAF_0 = new BlockEnumLeaves<>("leaves_0", SAP_0, Logs.class, 0);
+    //public static final BlockCataplant CATAPLANT = new BlockCataplant();
 
-    //public static final BlockEnum<Crystals> CRYSTAL = new BlockCrystal();
-    //public static final Block GROUNDCOVER = new BlockCrystalGround();
-    //public static final BlockEnum<CrystalLogs> CRYSTAL_LOG = new BlockCrystal.Logs();
-    //public static final BlockEnumSapling<CrystalLogs> CRYSTAL_SAP = new BlockCrystal.Sapling();
-    //public static final BlockEnum<CrystalLogs> CRYSTAL_LEAF = new BlockCrystal.Leaves();
-    //public static final BlockEnum<CrystalPlanks> CRYSTAL_PLANKS = new BlockCrystal.Planks();
-    //public static final EnumBlockFactory<CrystalPlanks, BlockEnumStairs> CRYSTAL_STAIRS = new EnumBlockFactory<>(e -> new BlockCrystal.Stairs(e), CrystalPlanks.values());
-    //public static final EnumBlockFactory<CrystalPlanks, BlockEnumSlab> CRYSTAL_SLABS = new EnumBlockFactory<>(e -> new BlockCrystal.Slabs(e), CrystalPlanks.values());
-
-    //public static final BlockEnum<Planks> PLANKS = new BlockEnumPlanks<>("planks", Planks.class, 0);
-    //public static final EnumBlockFactory<Planks, BlockEnumStairs> STAIRS = new EnumBlockFactory<>(e -> new BlockEnumStairs(e, PLANKS), Planks.values());
-    //public static final EnumBlockFactory<Planks, BlockEnumSlab> SLABS = new EnumBlockFactory<>(e -> new BlockEnumSlab(e, PLANKS), Planks.values());
-
-    //public static final BlockEnum<BushSet> BUSH = new BlockBushLeaves();
-    //public static final BlockEnumBush<BushSet> BUSHLING = new BlockBushling();
-
-    public static final BlockFlowerpot FLOWERPOT = new BlockFlowerpot();
-    public static final BlockJar JAR = new BlockJar();
-
-    public static final BlockCataplant CATAPLANT = new BlockCataplant();
-
-    //public static final WorldGenerator ASH_TREE = new NetherTreeGen<>(NETHER_LOG, NETHER_LEAF, NetherLogs.ASH);
-    //public static final WorldGenerator BLAZE_TREE = new NetherTreeGen<>(NETHER_LOG, NETHER_LEAF, NetherLogs.BLAZE);
-
-	/*public static final WorldGenAbstractTree KAURI_TREE = new StructureGen(new BlockPos(-4, 0, -4), Logs.BLACK_KAURI, Type.HOT, Type.SAVANNA, Type.DRY);
-	public static final WorldGenAbstractTree PINE_TREE = new StructureGen(new BlockPos(-7, 0, -7), Logs.BRAZILLIAN_PINE, Type.JUNGLE, Type.SAVANNA);
-	public static final WorldGenAbstractTree INCENSE_TREE = new StructureGen(new BlockPos(-2, 0, -2), Logs.INCENSE_CEDAR, Type.SNOWY, Type.COLD, Type.CONIFEROUS, Type.FOREST);
-	public static final WorldGenAbstractTree MURRAY_TREE = new StructureGen(new BlockPos(-3, 0, -3), Logs.MURRAY_PINE, Type.SNOWY, Type.COLD, Type.CONIFEROUS, Type.FOREST);
-
-	public static final WorldGenAbstractTree CRYSTAL_TREE = new EnumTreeGen<>(false, 4, CRYSTAL_LOG, CRYSTAL_LEAF, CrystalLogs.CRYSTAL, false);
-	public static final WorldGenAbstractTree DARK_CRYSTAL_TREE = new EnumTreeGen<>(false, 4, CRYSTAL_LOG, CRYSTAL_LEAF, CrystalLogs.DARK_CRYSTAL, false);
-*/
-    //public static final Biome CRYSTAL_FOREST = new BiomeCrystalForest();
-
-    public static final PotionType WITHER = new PotionTypeBase("wither", new PotionEffect(MobEffects.WITHER, 3600));
+    /*public static final PotionType WITHER = new PotionTypeBase("wither", new PotionEffect(MobEffects.WITHER, 3600));
     public static final PotionType REGEN_HEAL = new PotionTypeBase("regen_heal", new PotionEffect(MobEffects.REGENERATION, 1600), new PotionEffect(MobEffects.INSTANT_HEALTH));
     public static final PotionType CAULDRON_BREW = new PotionTypeBase("cauldron_brew");
-    public static final PotionType LEV = new PotionTypeBase("levitation", new PotionEffect(MobEffects.LEVITATION, 400));
+    public static final PotionType LEV = new PotionTypeBase("levitation", new PotionEffect(MobEffects.LEVITATION, 400));*/
 
-    public static final Block BREWING_CAULDRON = new BlockBrewingCauldron();
+    //public static final Block BREWING_CAULDRON = new BlockBrewingCauldron();
 
-    /*public static final Item CRYSTAL_PICKAXE = new ItemPickaxeBase("crystal_pickaxe", Plants2.INFO, MAT_CRYSTAL);
-    public static final Item CRYSTAL_AXE = new ItemAxeBase("crystal_axe", Plants2.INFO, MAT_CRYSTAL);
-    public static final Item CRYSTAL_SHOVEL = new ItemShovelBase("crystal_shovel", Plants2.INFO, MAT_CRYSTAL);
-    public static final Item CRYSTAL_HOE = new ItemHoeBase("crystal_hoe", Plants2.INFO, MAT_CRYSTAL);
-    public static final Item CRYSTAL_SWORD = new ItemSwordBase("crystal_sword", Plants2.INFO, MAT_CRYSTAL);
-
-    public static final Item DARK_CRYSTAL_PICKAXE = new ItemPickaxeBase("dark_crystal_pickaxe", Plants2.INFO, MAT_DARK_CRYSTAL);
-    public static final Item DARK_CRYSTAL_AXE = new ItemAxeBase("dark_crystal_axe", Plants2.INFO, MAT_DARK_CRYSTAL);
-    public static final Item DARK_CRYSTAL_SHOVEL = new ItemShovelBase("dark_crystal_shovel", Plants2.INFO, MAT_DARK_CRYSTAL);
-    public static final Item DARK_CRYSTAL_HOE = new ItemHoeBase("dark_crystal_hoe", Plants2.INFO, MAT_DARK_CRYSTAL);
-    public static final Item DARK_CRYSTAL_SWORD = new ItemSwordBase("dark_crystal_sword", Plants2.INFO, MAT_DARK_CRYSTAL);*/
-
-    /*public static final BlockAphrireroot APHRIREROOT = new BlockAphrireroot();
-    public static final BlockAakore AAKORE = new BlockAakore();
-    public static final BlockBriblebum BRIBLEBUM = new BlockBriblebum();
-    public static final BlockSaimbaire SAIMBAIRE = new BlockSaimbaire();
-    public static final BlockAithotus AITHOTUS = new BlockAithotus();
-    public static final BlockCrystalTorch CRYSTAL_TORCH = new BlockCrystalTorch();
-*/
     @SubscribeEvent
     public void onBlockRegister(Register<Block> e) {
         Plants2.INFO.getBlockList().register(e.getRegistry());
@@ -182,12 +73,10 @@ public class ModRegistry {
     @SubscribeEvent
     public void onItemRegister(Register<Item> e) {
         Plants2.INFO.getItemList().register(e.getRegistry());
-        //if (PlantConfig.excalibur && Loader.isModLoaded(PlantConstants.BOTANIA_ID)) e.getRegistry().register(new ItemExcalibur());
     }
 
     @SubscribeEvent
     public void onRecipeRegister(Register<IRecipe> e) {
-        //recipes(e);
         Plants2.INFO.getRecipeList().register(e.getRegistry());
     }
 
@@ -195,12 +84,6 @@ public class ModRegistry {
     public void onPotionRegister(Register<PotionType> e) {
         Plants2.INFO.getPotionTypeList().register(e.getRegistry());
     }
-
-	/*@SubscribeEvent //TODO: Placebo: Implement IRegistryCallback so lists can return <T extends IForgeRegistryEntry<T> & IRegistryCallback>
-	public void onBiomeRegister(Register<Biome> event) {
-		for (Biome b : Plants2.INFO.getBiomeList())
-			((AbstractBiomeBase) b).register(event.getRegistry());
-	}*/
 
     public static void oreDict(FMLInitializationEvent e) {
         OreDictionary.registerOre("dyeBlue", Generic.DYE_BLUE.get());
@@ -217,9 +100,6 @@ public class ModRegistry {
                 OreDictionary.registerOre("plant", new ItemStack(block, 1, OreDictionary.WILDCARD_VALUE));
             }
         }
-
-        //MAT_CRYSTAL.setRepairItem(Generic.CRYSTAL_CHUNK.get());
-        //MAT_DARK_CRYSTAL.setRepairItem(Generic.DARK_CRYSTAL_CHUNK.get());
     }
 
     public static void recipes(Register<IRecipe> e) {
@@ -230,19 +110,10 @@ public class ModRegistry {
             if (item instanceof IHasRecipe) ((IHasRecipe) item).initRecipes(e);
         }
         Plants2.HELPER.addSimpleShapeless(new ItemStack(Items.STRING, 2), Generic.COTTON.get(), 5);
-        //RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, Generic.SMOLDERBERRY.get(), PotionTypes.FIRE_RESISTANCE);
-        //RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, Generic.EMBERROOT.get(), PotionTypes.STRENGTH);
-        //RecipeHelper.addPotionRecipe(PotionTypes.AWKWARD, PHYTOLACCA_A, WITHER);
-        //RecipeHelper.addPotionRecipe(PotionTypes.HEALING, AMBROSIA_A, REGEN_HEAL);
     }
 
     public static void generators(FMLPostInitializationEvent e) {
         if (!PlantConfig.gen) return;
-        //if (PlantConfig.bushGen) GameRegistry.registerWorldGenerator(new BushGen(), 25);
-        //if (PlantConfig.netherTreeGen) GameRegistry.registerWorldGenerator(new NetherTreeGen.TreeGenerator(), 20);
-        //if (PlantConfig.treeGen) GameRegistry.registerWorldGenerator(new EnumTreeGen.TreeGenerator(), 15);
-        //if (PlantConfig.netherFlowerGen) GameRegistry.registerWorldGenerator(new NetherGen(), 30);
-        //if (PlantConfig.endGen) GameRegistry.registerWorldGenerator(new EndGen(), 30);
     }
 
     public static void tiles(FMLPreInitializationEvent e) {

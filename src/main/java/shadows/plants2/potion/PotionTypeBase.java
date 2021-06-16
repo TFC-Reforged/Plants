@@ -1,5 +1,5 @@
 package shadows.plants2.potion;
-
+/*
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionType;
 import shadows.plants2.Plants2;
@@ -12,4 +12,4 @@ public class PotionTypeBase extends PotionType {
         Plants2.INFO.getPotionTypeList().add(this);
     }
 
-}
+}*/

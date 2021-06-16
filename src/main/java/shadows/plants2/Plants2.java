@@ -82,7 +82,6 @@ public class Plants2 {
             if (b == null) LOGGER.error("Invalid biome entry detected in the Plants biome blacklist, " + rl);
             else PlantConfig.COMPUTED_BIOME_BL.add(b);
         }
-        //if (Loader.isModLoaded("actuallyadditions")) AAIntegration.registerFarmerBehavior();
     }
 
     @EventHandler
@@ -95,7 +94,5 @@ public class Plants2 {
         PlantUtil.mergeToDefaultLate();
 
         if (BLOCK_CONFIG.hasChanged()) BLOCK_CONFIG.save();
-
-        //if (PlantConfig.crystalForest) BiomeDictionary.addTypes(ModRegistry.CRYSTAL_FOREST, Type.MAGICAL, Type.FOREST, Type.COLD);
     }
 }

@@ -58,7 +58,7 @@ public class ColorToPotionUtil {
 
     public static ItemStack genPotionStack(TileBrewingCauldron cauldron) {
         ItemStack stack = new ItemStack(cauldron.getPotionItem());
-        PotionUtils.addPotionToItemStack(stack, ModRegistry.CAULDRON_BREW);
+        //PotionUtils.addPotionToItemStack(stack, ModRegistry.CAULDRON_BREW);
         Map<Potion, Integer> numPots = new HashMap<>();
         for (Potion pot : colorsToPotionArray(cauldron.getColors())) {
             numPots.put(pot, numPots.getOrDefault(pot, 0) + 1);
