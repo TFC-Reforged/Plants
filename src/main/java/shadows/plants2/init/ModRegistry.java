@@ -40,6 +40,16 @@ public class ModRegistry {
     public static final BlockEnumBush<Plants> PLANT_4 = new BlockEnumFlower<>("cosmetic_4", EnumPlantType.Plains, Plants.class, 4);
     public static final BlockEnumBush<Plants> PLANT_5 = new BlockEnumFlower<>("cosmetic_5", EnumPlantType.Plains, Plants.class, 5);
     public static final BlockEnumBush<Plants> PLANT_6 = new BlockEnumFlower<>("cosmetic_6", EnumPlantType.Plains, Plants.class, 6);
+    public static final BlockEnumBush<Plants> PLANT_7 = new BlockEnumFlower<>("cosmetic_7", EnumPlantType.Plains, Plants.class, 7);
+    public static final BlockEnumBush<Plants> PLANT_8 = new BlockEnumFlower<>("cosmetic_8", EnumPlantType.Plains, Plants.class, 8);
+    public static final BlockEnumBush<Plants> PLANT_9 = new BlockEnumFlower<>("cosmetic_9", EnumPlantType.Plains, Plants.class, 9);
+    public static final BlockEnumBush<Plants> PLANT_10 = new BlockEnumFlower<>("cosmetic_10", EnumPlantType.Plains, Plants.class, 10);
+    public static final BlockEnumBush<Plants> PLANT_11 = new BlockEnumFlower<>("cosmetic_11", EnumPlantType.Plains, Plants.class, 11);
+    //public static final BlockEnumBush<Plants> PLANT_12 = new BlockEnumFlower<>("cosmetic_12", EnumPlantType.Plains, Plants.class, 12);
+    //public static final BlockEnumBush<Plants> PLANT_13 = new BlockEnumFlower<>("cosmetic_13", EnumPlantType.Plains, Plants.class, 13);
+    //public static final BlockEnumBush<Plants> PLANT_14 = new BlockEnumFlower<>("cosmetic_14", EnumPlantType.Plains, Plants.class, 14);
+    //public static final BlockEnumBush<Plants> PLANT_15 = new BlockEnumFlower<>("cosmetic_15", EnumPlantType.Plains, Plants.class, 15);
+    //public static final BlockEnumBush<Plants> PLANT_16 = new BlockEnumFlower<>("cosmetic_16", EnumPlantType.Plains, Plants.class, 16);
 
     public static final BlockEnumBush<Desert> DESERT_0 = new BlockEnumFlower<>("desert_0", EnumPlantType.Desert, Desert.class, 0);
     public static final BlockEnumBush<Desert> DESERT_1 = new BlockEnumFlower<>("desert_1", EnumPlantType.Desert, Desert.class, 1);

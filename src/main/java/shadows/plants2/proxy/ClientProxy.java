@@ -53,7 +53,7 @@ public class ClientProxy implements IProxy {
     public static final int GROUND_COLOR = 0xA3CBF7;
     public static final int BLUE = 0x4749FF;
 
-    @Override
+    /*@Override
     public void init(FMLInitializationEvent e) {
         Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler((state, world, pos, tint) -> {
             if (tint != 1) return -1;
@@ -63,7 +63,7 @@ public class ClientProxy implements IProxy {
             TileBrewingCauldron caul = (TileBrewingCauldron) t;
             int color = ColorToPotionUtil.getColorMultiplier(caul.getColors(), caul.hasFirstWart());
             return color == -1 ? BLUE : color;
-        }, ModRegistry.BREWING_CAULDRON);
+        }, ModRegistry.BREWING_CAULDRON);*/
 
 		/*Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler((state, world, pos, tint) -> {
 			return GROUND_COLOR;
@@ -73,7 +73,7 @@ public class ClientProxy implements IProxy {
 		}, ModRegistry.GROUNDCOVER);*/
 
         //Vanilla Copy :: Added line to avoid crash with nested pot
-        IBlockColor color = (state, world, pos, tint) -> {
+        /*IBlockColor color = (state, world, pos, tint) -> {
             if (world != null && pos != null) {
                 TileEntity tileentity = world.getTileEntity(pos);
                 if (tileentity instanceof TileFlowerpot && ((TileFlowerpot) tileentity).getState().getBlock() != state.getBlock()) {
@@ -88,7 +88,7 @@ public class ClientProxy implements IProxy {
         Map<IRegistryDelegate<Block>, IBlockColor> blockBois = ReflectionHelper.getPrivateValue(BlockColors.class, Minecraft.getMinecraft().getBlockColors(), "blockColorMap");
         blockBois.put(Blocks.FLOWER_POT.delegate, color);
         blockBois.put(ModRegistry.JAR.delegate, color);
-    }
+    }*/
 
     @Override
     public void postInit(FMLPostInitializationEvent e) {

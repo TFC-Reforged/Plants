@@ -44,39 +44,6 @@ public class TheBigBookOfEnums {
 
     }
 
-	/*public static enum NetherLogs implements ITreeEnum, IParticleProvider {
-		ASH(EnumParticleTypes.SMOKE_LARGE),
-		BLAZE(EnumParticleTypes.FLAME);
-
-		private WorldGenerator treeGen;
-		private EnumParticleTypes particle;
-
-		NetherLogs(EnumParticleTypes particle) {
-			this.particle = particle;
-		}
-
-		@Override
-		public void setTreeGen(WorldGenerator gen) {
-			treeGen = gen;
-		}
-
-		@Override
-		public WorldGenerator getTreeGen() {
-			return treeGen;
-		}
-
-		@Override
-		public EnumParticleTypes getParticle() {
-			return particle;
-		}
-
-		@Override
-		public ItemStack get() {
-			return new ItemStack(ModRegistry.NETHER_LOG, 1, ordinal());
-		}
-
-	}*/
-
     public enum Plants implements IFlowerEnum {
         ABELIOPHYLLUM_D(false, EnumDyeColor.WHITE),
         ALLIUM_C(true, EnumDyeColor.PURPLE),

@@ -300,7 +300,64 @@ tile.plants2.yellowroot.name=Ксанториза простейшая
 tile.plants2.zenobia.name=Зеновия
 tile.plants2.cambridge_blue.name=Лобелия длинночерешковая
 
-//Новые растения, примерный перевод
+// Новые растения
+tile.plants2.dark_venus.name=Венерина мухоловка
+tile.plants2.flowers_bachbutton.name=Василёк
+tile.plants2.flowersb_daylilydiff.name=Лилейник
+tile.plants2.flowersb_daylily.name=Лилейник
+tile.plants2.flowersb_echinacea.name=Эхинацея
+tile.plants2.flowersb_freeorange.name=Фрезия ораньжевая
+tile.plants2.flowersb_freered.name=Фрезия красная
+tile.plants2.flowersb_freeyellow.name=Фрезия желтая
+tile.plants2.flowersb_hyacinth.name=Виноградый гиацинт
+tile.plants2.flowers_bleedheart.name=Кровоточащее сердце
+tile.plants2.flowersb_lilyvalley.name=Ландыш
+tile.plants2.flowersb_lupinorange.name=Люпин ораньжевый
+tile.plants2.flowersb_lupinpurp.name=Люпин фиолетовый
+tile.plants2.flowersb_lupinyell.name=Люпин желтый
+tile.plants2.flowersb_narcissus.name=Нарцисс
+tile.plants2.flowersb_nasturtium.name=Настурция
+tile.plants2.flowersb_pansy.name=Анютины глазки
+tile.plants2.flowersb_violet.name=Фиалка
+tile.plants2.flowersb_wolfsbane.name=Борец
+tile.plants2.flowers_capoppy.name=Калифорнийский мак
+tile.plants2.flowersc_borage.name=Бурачник
+tile.plants2.flowersc_corydalis.name=Хохлатка желтая
+tile.plants2.flowersc_geranium_light.name=Герань светло-розовая
+tile.plants2.flowersc_geranium_pink.name=Герань розовая
+tile.plants2.flowersc_geranium_red.name=Герань красная
+tile.plants2.flowersc_gilia.name=Гилия
+tile.plants2.flowersc_lewisia.name=Левизия
+tile.plants2.flowersc_lobelia.name=Лобелия
+tile.plants2.flowers_cosmos.name=Космея
+tile.plants2.flowersc_perriwinkle_diff.name=Пенниройал
+tile.plants2.flowersc_perriwinkle.name=Пенниройал
+tile.plants2.flowersc_petticoat.name=Роза петтикот
+tile.plants2.flowersc_pitcher.name=Саррацения
+tile.plants2.flowersc_redclover_diff.name=Клевер фиолетовый
+tile.plants2.flowersc_redclover_mid.name=Клевер розовый
+tile.plants2.flowersc_redclover.name=Клевер красный
+tile.plants2.flowers_crocusmix.name=Крокус смешанный
+tile.plants2.flowers_crocuspurp.name=Крокус пурпурный
+tile.plants2.flowers_crocusyell.name=Крокус желтый
+tile.plants2.flowersc_sticky_monkey.name=Монстера липкая
+tile.plants2.flowers_daffodil.name=Нарцисс белый
+tile.plants2.flowers_daffyellow.name=Нарцисс желтый
+tile.plants2.flowers_dahlia.name=Георгина
+tile.plants2.flowers_daisypurp.name=Африканская ромашка фиолетовая
+tile.plants2.flowers_daisywht.name=Африканская ромашка
+tile.plants2.flowersd_chrys.name=Хризантема
+tile.plants2.flowersd_commelina.name=Коммелина
+tile.plants2.flowersd_corydalis_blue.name=Хохлатка голубая
+tile.plants2.flowersd_cosmos_mix.name=Космея смешанная
+tile.plants2.flowersd_cosmos_orange.name=Космея ораньжевая
+tile.plants2.flowersd_cosmos_yellow.name=Космея желтая
+tile.plants2.flowersd_cyan.name=Гиацинт голубой
+tile.plants2.flowersd_forget_light.name=Забытый огонек
+tile.plants2.flowersd_lily_wht.name=Калла
+
+
+// Новые растения КРИВОЙ ПЕРЕВОД
 
 tile.block_cff_flowers.fuchsia.name=Фуксия
 tile.block_cff_flowers.lantana.name=Лантана
