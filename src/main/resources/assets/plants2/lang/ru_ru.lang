@@ -394,134 +394,17 @@ tile.plants2.ouch_hedgehog.name=Эхиноцереус энгельмана
 tile.plants2.ouch_parodia.name=Пародия
 
 tile.plants2.desert_cornflower.name=Австралийский василек
-tile.plants2.desert_albuca.name=Альбука
-tile.plants2.desert_clover.name=Клевер
-tile.plants2.desert_flag.name=
-tile.plants2.desert_flame_pea_diff.name=
-tile.plants2.desert_flame_pea.name=
-tile.plants2.desert_notch.name=
-tile.plants2.desert_paintbrush.name=
-tile.plants2.desert_sturt_pea.name=
-tile.plants2.desert_tinsel.name=
-tile.plants2.desert_tinsel_wht.name=
-tile.plants2.desert_verbena_diff.name=
-tile.plants2.desert_verbena.name=
-tile.plants2.desert_yellows.name=
-tile.plants2.desert_yucca.name=
-
-// Новые растения КРИВОЙ ПЕРЕВОД
-
-tile.block_cff_flowers.fuchsia.name=Фуксия
-tile.block_cff_flowers.lantana.name=Лантана
-tile.block_cff_flowers.daisypurp.name=Фиолетовая Африканская ромашка
-tile.block_cff_flowers.daisywht.name=Африканская ромашка
-tile.block_cff_flowers.bachbutton.name=Кнопка бакалавра
-tile.block_cff_flowers.bleedheart.name=Кровоточащее сердце
-tile.block_cff_flowers.capoppy.name=Калифорнийский мак
-tile.block_cff_flowers.lilypurp.name=Фиолетовый Калла Лили
-tile.block_cff_flowers.cosmos.name=Вселенная
-tile.block_cff_flowers.crocusmix.name=Смешивание крокуса
-tile.block_cff_flowers.crocuspurp.name=Фиолетовый Крокус
-tile.block_cff_flowers.crocusyell.name=Желтый Крокус
-tile.block_cff_flowers.daffyellow.name=Желтый нарцисс
-tile.block_cff_flowers.daffodil.name=Белый нарцисс
-tile.block_cff_flowers.dahlia.name=Георгин
-tile.block_cff_flowers.forget.name=Не забудьте меня
-
-tile.plants2.violet.name=Форг Фиолетовый
-tile.plants2.daylily.name=День Лилии
-tile.plants2.daylilydiff.name=Еще один день Лили
-tile.plants2.echinacea.name=Эхинацея
-tile.plants2.freeorange.name=Оранжевая Фрезия
-tile.plants2.freered.name=Красная Фрезия
-tile.plants2.freeyellow.name=Желтая Фрезия
-tile.plants2.hyacinth.name=Виноградый гиацинт
-tile.plants2.lilyvalley.name=Ландыш
-tile.plants2.lupinorange.name=Оранжевый Липин
-tile.plants2.lupinpurp.name=Фиолетовый Липин
-tile.plants2.lupinyell.name=Желтый Липин
-tile.plants2.narcissus.name=Нарцисс
-tile.plants2.nasturtium.name=Настурция
-tile.plants2.pansy.name=Анютины глазки
-tile.plants2.wolfsbane.name=Бэйн волка
-
-tile.plants2.borage.name=Бурачник
-tile.plants2.corydalis.name=Хохлатка
-tile.plants2.gilia.name=Высоты птичьего полета
-tile.plants2.geranium_pink.name=Розовый герань
-tile.plants2.geranium_light.name=Светло-розовый герань
-tile.plants2.geranium_red.name=Красный герань
-tile.plants2.lewisia.name=Левзеи
-tile.plants2.lobelia.name=Королевский синий Лобелия
-tile.plants2.perriwinkle.name=Барвинок
-tile.plants2.perriwinkle_diff.name=Еще один Барвинок
-tile.plants2.petticoat.name=Розовый юбка
-tile.plants2.pitcher.name=Плотоядное растение
-tile.plants2.redclover.name=Красный клевер
-tile.plants2.redclover_diff.name=Пурпурный клевер
-tile.plants2.redclover_mid.name=Розовый клевер
-tile.plants2.sticky_monkey.name=Липкая обезьяна
-
-tile.plants2.mallow.name=Бордовые Мальвы
-tile.plants2.parrot.name=Цветок-Попугай
-tile.plants2.poppy.name=Красный мак
-tile.plants2.cosmos_mix.name=Космос Микс
-tile.plants2.cosmos_orange.name=Оранжевый космос
-tile.plants2.cosmos_yellow.name=Желтый космос
-tile.plants2.lily_wht.name=Калла
-tile.plants2.chrys.name=Хризантема
-tile.plants2.orchid.name=Орхидея
-tile.plants2.salvia.name=Шалфей
-
-tile.plants2.albuca.name=Albuca Namaquensis
-tile.plants2.sturt_pea.name=Стёртый пустынный горох
-tile.plants2.tumble_weed.name=Сушильный Сорняк
-tile.plants2.yellows.name=Желтые оттенки
-tile.plants2.flame_pea.name=Австралийский пламя гороха
-tile.plants2.flame_pea_diff.name=Оранжевый австралийский огненный горох
-tile.plants2.verbena.name=Desert Sand Verbena
-tile.plants2.verbena_diff.name=Розовый Desert Sand Verbena
-tile.plants2.cornflower.name=Австралийский Василек
-tile.plants2.tinsel.name=Синяя мишура Лилия
-tile.plants2.tinsel_wht.name=Белый цветок мишуры
-tile.plants2.clover.name=Сова клевер
-tile.plants2.flag.name=Фиолетовый флаг
-tile.plants2.paintbrush.name=Пустынный Paintbrush
-tile.plants2.yucca.name=Юкка
-tile.plants2.notch.name=Сорняк скорпиона листьев выемки
-
-tile.plants2.cactus.name=Кактус
-tile.plants2.parodia.name=Parodia Muricata
-tile.plants2.hedgehog.name=Ежиковый Кактус Энгельмана
-
-
-tile.plants2.cosmos.name=Высокий космос
-tile.plants2.larkspur.name=Живокость
-tile.plants2.iris.name=Радужная оболочка
-tile.plants2.manzanita.name=Manzanita Буша
-tile.plants2.gloriosa.name=Глориоза Лилия
-tile.plants2.lupin.name=Высокий Ландыш
-
-tile.plants2.lily_tall.name=Высокие Каллы
-tile.plants2.mendo.name=Мендосинский мак
-tile.plants2.cherry.name=Декоративная вишня
-tile.plants2.quince.name=Айва
-tile.plants2.hawthorne.name=Хоторн
-tile.plants2.gladiola_red.name=Малиновый Гладиолус
-
-tile.block_cff_doublesc.gladiola.name=Гладиолус
-tile.block_cff_doublesc.gladiola_peach.name=Персик Гладиола
-tile.block_cff_doublesc.gladiola_orange.name=Оранжевый Гладиолус
-tile.block_cff_doublesc.cosmos_orange.name=Высокий оранжевый космос
-tile.block_cff_doublesc.datura.name=Дурман
-tile.block_cff_doublesc.poppy_blue.name=Гималайский синий мак
-
-tile.plants2.yucca_tall.name=Юкка цветок
-tile.plants2.cactus_flower.name=Высокий кактус
-tile.plants2.ocotillo.name=Окотильо
-tile.plants2.indigo.name=Mojave Индиго Буш
-tile.plants2.dry.name=Сухой корм
-tile.plants2.aloe.name=Мыс Алоэ
-
-tile.block_cff_dark.venus.name=Венера, Летающая ловушка
-tile.block_cff_dark.osto.name=Darkosto Traposto
+tile.plants2.desert_albuca.name=Пустынная альбука
+tile.plants2.desert_clover.name=Пустынный клевер
+tile.plants2.desert_flag.name=Пустынный флаг
+tile.plants2.desert_flame_pea_diff.name=Пустынная огненная горошина
+tile.plants2.desert_flame_pea.name=Пустынная огненная горошина
+tile.plants2.desert_notch.name=Пустынный цветок нотча
+tile.plants2.desert_paintbrush.name=Пустынная кисть
+tile.plants2.desert_sturt_pea.name=Пустынный черствый горох
+tile.plants2.desert_tinsel.name=Пустынная мишура
+tile.plants2.desert_tinsel_wht.name=Пустынная мишура
+tile.plants2.desert_verbena_diff.name=Пустынная вербена
+tile.plants2.desert_verbena.name=Пустынная вербена
+tile.plants2.desert_yellows.name=Желтый пустынный цветок
+tile.plants2.desert_yucca.name=Юкка
