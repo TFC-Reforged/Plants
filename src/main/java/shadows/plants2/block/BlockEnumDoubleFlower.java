@@ -193,7 +193,7 @@ public class BlockEnumDoubleFlower<E extends Enum<E> & IFlowerEnum> extends Bloc
         return 8;
     }
 
-    @Override
+    //@Override
     public void initRecipes(Register<IRecipe> event) {
         for (E e : getTypes()) {
             if (e.useForRecipes())

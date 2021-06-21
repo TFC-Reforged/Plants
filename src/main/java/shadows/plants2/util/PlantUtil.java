@@ -17,7 +17,7 @@ import shadows.placebo.interfaces.ISpecialPlacement;
 import shadows.plants2.Plants2;
 import shadows.plants2.block.BlockCustomVine;
 import shadows.plants2.data.PlantConfig;
-import shadows.plants2.data.enums.TheBigBookOfEnums.Generic;
+//import shadows.plants2.data.enums.TheBigBookOfEnums.Generic;
 
 import java.io.InputStream;
 import java.lang.reflect.Method;
@@ -152,18 +152,7 @@ public class PlantUtil {
     }
 
     public static ItemStack getDyeForEnum(EnumDyeColor c, int size) {
-        switch (c) {
-            case BLUE:
-                return Generic.DYE_BLUE.get();
-            case WHITE:
-                return Generic.DYE_WHITE.get();
-            case BLACK:
-                return Generic.DYE_BLACK.get();
-            case BROWN:
-                return Generic.DYE_BROWN.get();
-            default:
                 return new ItemStack(Items.DYE, size, c.getDyeDamage());
-        }
     }
 
     //Don't ask at all

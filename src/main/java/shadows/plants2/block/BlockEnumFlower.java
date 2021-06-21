@@ -12,13 +12,13 @@ import shadows.plants2.Plants2;
 import shadows.plants2.data.IColorProvider;
 import shadows.plants2.util.PlantUtil;
 
-public class BlockEnumFlower<E extends Enum<E> & IFlowerEnum> extends BlockEnumBush<E> implements IHasRecipe, IColorProvider {
+public class BlockEnumFlower<E extends Enum<E> & IFlowerEnum> extends BlockEnumBush<E>{
 
     public BlockEnumFlower(String name, EnumPlantType type, Class<E> enumClass, int predicate) {
         super(name, type, enumClass, predicate);
     }
 
-    @Override
+    //@Override
     public void initRecipes(Register<IRecipe> event) {
         for (E e : getTypes()) {
             if (e.useForRecipes())
@@ -26,7 +26,7 @@ public class BlockEnumFlower<E extends Enum<E> & IFlowerEnum> extends BlockEnumB
         }
     }
 
-    @Override
+    //@Override
     public EnumDyeColor getColor(IBlockState state) {
         return state.getValue(getProperty()).getColor();
     }

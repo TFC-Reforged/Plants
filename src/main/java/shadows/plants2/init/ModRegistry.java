@@ -58,7 +58,7 @@ public class ModRegistry {
 
     public static final BlockEnumBush<Double> DOUBLE_0 = new BlockEnumDoubleFlower<>("double_0", EnumPlantType.Plains, Double.class, 0);
 
-    public static final ItemBigEnum<Generic> GENERIC = new ItemBigEnum<>("generic", Generic.values(), Plants2.INFO);
+    //public static final ItemBigEnum<Generic> GENERIC = new ItemBigEnum<>("generic", Generic.values(), Plants2.INFO);
     public static final Item PLANTBALL = new ItemPlantball();
 
     public static final Block ADLUMIA_F = new BlockCustomVine("adlumia_f", Vines.ADLUMIA_F);
@@ -98,14 +98,14 @@ public class ModRegistry {
     }
 
     public static void oreDict(FMLInitializationEvent e) {
-        OreDictionary.registerOre("dyeBlue", Generic.DYE_BLUE.get());
+        /*OreDictionary.registerOre("dyeBlue", Generic.DYE_BLUE.get());
         OreDictionary.registerOre("dye", Generic.DYE_BLUE.get());
         OreDictionary.registerOre("dyeBlack", Generic.DYE_BLACK.get());
         OreDictionary.registerOre("dye", Generic.DYE_BLACK.get());
         OreDictionary.registerOre("dyeBrown", Generic.DYE_BROWN.get());
         OreDictionary.registerOre("dye", Generic.DYE_BROWN.get());
         OreDictionary.registerOre("dyeWhite", Generic.DYE_WHITE.get());
-        OreDictionary.registerOre("dye", Generic.DYE_WHITE.get());
+        OreDictionary.registerOre("dye", Generic.DYE_WHITE.get());*/
 
         for (Block block : ForgeRegistries.BLOCKS) {
             if (block instanceof BlockBush && Item.getItemFromBlock(block) != Items.AIR) {
@@ -121,7 +121,7 @@ public class ModRegistry {
         for (Item item : Plants2.INFO.getItemList()) {
             if (item instanceof IHasRecipe) ((IHasRecipe) item).initRecipes(e);
         }
-        Plants2.HELPER.addSimpleShapeless(new ItemStack(Items.STRING, 2), Generic.COTTON.get(), 5);
+        //Plants2.HELPER.addSimpleShapeless(new ItemStack(Items.STRING, 2), Generic.COTTON.get(), 5);
     }
 
     public static void generators(FMLPostInitializationEvent e) {

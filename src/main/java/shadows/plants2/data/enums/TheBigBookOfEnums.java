@@ -407,7 +407,7 @@ public class TheBigBookOfEnums {
         }
 
     }
-
+/*
     public enum Generic implements IPropertyEnum {
         COTTON,
         DYE_BLACK,
@@ -429,7 +429,7 @@ public class TheBigBookOfEnums {
         public ItemStack get() {
             return new ItemStack(ModRegistry.GENERIC, 1, ordinal());
         }
-    }
+    }*/
 
     public enum Vines implements IPropertyEnum {
         ADLUMIA_F,
