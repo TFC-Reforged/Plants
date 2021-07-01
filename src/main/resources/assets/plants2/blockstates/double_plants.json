@@ -33,6 +33,261 @@
 					"upper": "plants2:blocks/cosmetic/doubleplant/adenocarpus_f_top"
 				}
 			},
+			"doubles_cosmos": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubles_cosmos_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubles_cosmos_top"
+				}
+			},
+
+			"doubles_gloriosa": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubles_gloriosa_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubles_gloriosa_top"
+				}
+			},
+
+			"doubles_iris": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubles_iris_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubles_iris_top"
+				}
+			},
+
+			"doubles_larkspur": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubles_larkspur_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubles_larkspur_top"
+				}
+			},
+
+			"doubles_lupin": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubles_lupin_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubles_lupin_top"
+				}
+			},
+
+			"doubles_manzanita": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubles_manzanita_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubles_manzanita_top"
+				}
+			},
+
+			"doublesb_cherry": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesb_cherry_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesb_cherry_top"
+				}
+			},
+
+			"doublesb_gladiola_red": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesb_gladiola_red_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesb_gladiola_red_top"
+				}
+			},
+
+			"doublesb_hawthorne": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesb_hawthorne_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesb_hawthorne_top"
+				}
+			},
+
+			"doublesb_lily_tall": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesb_lily_tall_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesb_lily_tall_top"
+				}
+			},
+
+			"doublesb_mendo": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesb_mendo_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesb_mendo_top"
+				}
+			},
+
+			"doublesb_quince": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesb_quince_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesb_quince_top"
+				}
+			},
+
+			"doublesc_cosmos_orange": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesc_cosmos_orange_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesc_cosmos_orange_top"
+				}
+			},
+
+			"doublesc_datura": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesc_datura_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesc_datura_top"
+				}
+			},
+
+			"doublesc_gladiola_orange": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesc_gladiola_orange_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesc_gladiola_orange_top"
+				}
+			},
+
+			"doublesc_gladiola_peach": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesc_gladiola_peach_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesc_gladiola_peach_top"
+				}
+			},
+
+			"doublesc_gladiola": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesc_gladiola_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesc_gladiola_top"
+				}
+			},
+
+			"doublesc_poppy_blue": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesc_poppy_blue_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesc_poppy_blue_top"
+				}
+			},
+
+			"doublesd_aloe": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesd_aloe_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesd_aloe_top"
+				}
+			},
+
+			"doublesd_cactus_flower": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesd_cactus_flower_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesd_cactus_flower_top"
+				}
+			},
+
+			"doublesd_dry": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesd_dry_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesd_dry_top"
+				}
+			},
+
+			"doublesd_indigo": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesd_indigo_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesd_indigo_top"
+				}
+			},
+
+			"doublesd_ocotillo": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesd_ocotillo_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesd_ocotillo_top"
+				}
+			},
+
+			"doublesd_yucca_tall": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesd_yucca_tall_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesd_yucca_tall_top"
+				}
+			},
+
+			"doublesp_blue_bell": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesp_blue_bell_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesp_blue_bell_top"
+				}
+			},
+
+			"doublesp_blue_purple": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesp_blue_purple_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesp_blue_purple_top"
+				}
+			},
+
+			"doublesp_dark_blue": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesp_dark_blue_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesp_dark_blue_top"
+				}
+			},
+
+			"doublesp_dark_magenta": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesp_dark_magenta_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesp_dark_magenta_top"
+				}
+			},
+
+			"doublesp_magenta": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesp_magenta_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesp_magenta_top"
+				}
+			},
+
+			"doublesp_medium_pink": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doublesp_medium_pink_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doublesp_medium_pink_top"
+				}
+			},
+
+			"doubless_bear": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubless_bear_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubless_bear_top"
+				}
+			},
+
+			"doubless_dry": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubless_dry_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubless_dry_top"
+				}
+			},
+
+			"doubless_large": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubless_large_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubless_large_top"
+				}
+			},
+
+			"doubless_red": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubless_red_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubless_red_top"
+				}
+			},
+
+			"doubless_tiny": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubless_tiny_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubless_tiny_top"
+				}
+			},
+
+			"doubless_two": {
+				"textures": {
+					"lower": "plants2:blocks/new_double/block_cff_doubless_two_bottom",
+					"upper": "plants2:blocks/new_double/block_cff_doubless_two_top"
+				}
+			},
+
+
+
+
 			"agonis_t": {
 				"textures": {
 					"lower": "plants2:blocks/cosmetic/doubleplant/agonis_t_bot",

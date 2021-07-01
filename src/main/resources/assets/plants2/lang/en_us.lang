@@ -70,7 +70,7 @@ tile.plants2.ageratum_c.name=Goatweed
 tile.plants2.agrostemma_g.name=Corncockle
 tile.plants2.aira_c.name=Silver Hairgrass
 
-tile.plants2.abelia_c.name=Chinese Honeysuckle 
+tile.plants2.abelia_c.name=Chinese Honeysuckle
 tile.plants2.acanthus_b.name=Balcanicus Bear's Breeches
 tile.plants2.abronia_a.name=Heart's Delight
 tile.plants2.adenocarpus_f.name=Canary Island Flatpod
@@ -344,3 +344,288 @@ info.plants2.jar=The plant jar is very similar to the new flowerpot.  The jar is
 info.plants2.plantball=The plantball is capable of duplicating plants so that you don't have to go searching for ages to create the garden you want.  It will work (by default) on all plants without a tile entity.
 
 info.plants2.plantball.2=You can also use it to generate new plants entirely.  Use it on sand for desert plants, grass for normal plants, or on mossy cobblestone for vines.
+
+
+ferdinandsflowers.config.title=Ferdinand's Flowers Configs
+
+
+// New Flowers
+
+tile.plants2.fuchsia.name=Fuchsia
+tile.plants2.lantana.name=Lantana
+tile.plants2.daisypurp.name=Purple African Daisy
+tile.plants2.daisywht.name=African Daisy
+tile.plants2.bachbutton.name=Bachelor Button
+tile.plants2.bleedheart.name=Bleeding Heart
+tile.plants2.capoppy.name=California Poppy
+tile.plants2.lilypurp.name=Purple Calla Lily
+tile.plants2.cosmos.name=Cosmos
+tile.plants2.crocusmix.name=Crocus Mix
+tile.plants2.crocuspurp.name=Purple Crocus
+tile.plants2.crocusyell.name=Yellow Crocus
+tile.plants2.daffyellow.name=Yellow Daffodil
+tile.plants2.daffodil.name=White Daffodil
+tile.plants2.dahlia.name=Dahlia
+tile.plants2.forget.name=Forget Me Not
+
+tile.plants2.violet.name=Violet
+tile.plants2.daylily.name=Day Lily
+tile.plants2.daylilydiff.name=Another Day Lily
+tile.plants2.echinacea.name=Echinacea
+tile.plants2.freeorange.name=Orange Freesia
+tile.plants2.freered.name=Red Freesia
+tile.plants2.freeyellow.name=Yellow Freesia
+tile.plants2.hyacinth.name=Grape Hyacinth
+tile.plants2.lilyvalley.name=Lily of the Valley
+tile.plants2.lupinorange.name=Orange Lupin
+tile.plants2.lupinpurp.name=Purple Lupin
+tile.plants2.lupinyell.name=Yellow Lupin
+tile.plants2.narcissus.name=Narcissus
+tile.plants2.nasturtium.name=Nasturtium
+tile.plants2.pansy.name=Pansy
+tile.plants2.wolfsbane.name=Wolf's Bane
+
+tile.plants2.borage.name=Borage
+tile.plants2.corydalis.name=Corydalis
+tile.plants2.gilia.name=Bird's Eye Gilia
+tile.plants2.geranium_pink.name=Pink Geranium
+tile.plants2.geranium_light.name=Light Pink Geranium
+tile.plants2.geranium_red.name=Red Geranium
+tile.plants2.lewisia.name=Lewisia
+tile.plants2.lobelia.name=Royal Blue Lobelia
+tile.plants2.perriwinkle.name=Pennyroyal
+tile.plants2.perriwinkle_diff.name=Another Pennyroyal
+tile.plants2.petticoat.name=Pink Petticoat
+tile.plants2.pitcher.name=Pitcher Plant
+tile.plants2.redclover.name=Red Clover
+tile.plants2.redclover_diff.name=Magenta Clover
+tile.plants2.redclover_mid.name=Pink Clover
+tile.plants2.sticky_monkey.name=Sticky Monkey
+
+tile.plants2.mallow.name=Maroon Mallow
+tile.plants2.parrot.name=Parrot Flower
+tile.plants2.poppy.name=Red Poppy
+tile.plants2.cosmos_mix.name=Cosmos Mix
+tile.plants2.cosmos_orange.name=Orange Cosmos
+tile.plants2.cosmos_yellow.name=Yellow Cosmos
+tile.plants2.lily_wht.name=Calla Lily
+tile.plants2.chrys.name=Chrysanthemum
+tile.plants2.orchid.name=Orchid
+tile.plants2.salvia.name=Salvia
+tile.plants2.cyan.name=Cyan Hyacinth
+tile.plants2.corydalis_blue.name=Cloud Blue Corydalis
+tile.plants2.forget_light.name=Light Blue Forget Me Not
+tile.plants2.commelina.name=Commelina
+tile.plants2.morning.name=Morning Glory
+tile.plants2.magenta.name=Magenta Orchid
+
+tile.plants2.clover.name=Clover
+tile.plants2.mint.name=Peppermint
+tile.plants2.heavenly.name=Heavenly Cloud Sage
+tile.plants2.sage.name=Mexican Sage
+tile.plants2.salvia_magenta.name=Purple Magenta Salvia
+tile.plants2.baneberry.name=Baneberry
+tile.plants2.lobelia_light.name=Light Blue Lobelia
+tile.plants2.lobelia_blue.name=Medium Blue Lobelia
+tile.plants2.button_blue.name=Blue Bachelor Button
+tile.plants2.button_light.name=Blue Bell Bachelor Button
+tile.plants2.borage_blue.name=Dark Blue Borage
+tile.plants2.cowslip.name=Virginia Cowslip
+tile.plants2.zinnia_sunny.name=Sunny Zinnia
+tile.plants2.zinnia_magenta.name=Magenta Zinnia
+tile.plants2.zinnia_stripe.name=Striped Zinnia
+tile.plants2.zinnia_mix.name=Mixed Zinnia
+
+tile.plants2.fingers.name=Devil's Fingers Fungus
+tile.plants2.fingers_one.name=Devil's Fingers Single
+tile.plants2.basket.name=Basket Stinkhorn
+tile.plants2.crinoline.name=Crinoline Stinkhorn
+tile.plants2.coral.name=Violet Coral Fungus
+tile.plants2.webcap.name=Violet Webcap Mushroom
+tile.plants2.pixie_blue.name=Light Blue Pixie's Parasol
+tile.plants2.pixie_cyan.name=Cyan Pixie's Parasol
+tile.plants2.lantern.name=Jack O' Lantern Fungus
+tile.plants2.lantern_light.name=Light Jack O' Lantern Fungus
+tile.plants2.lantern_dark.name=Dark Jack O' Lantern Fungus
+tile.plants2.turkey_tan.name=Tan Turkey Tail
+tile.plants2.turkey_medium.name=Turkey Tail
+tile.plants2.turkey_brown.name=Brown Turkey Tail
+
+
+tile.plants2.albuca.name=Albuca Namaquensis
+tile.plants2.sturt_pea.name=Desert Sturt Pea
+tile.plants2.tumble_weed.name=Tumble Weed
+tile.plants2.yellows.name=Yellows
+tile.plants2.flame_pea.name=Australian Flame Pea
+tile.plants2.flame_pea_diff.name=Orange Australian Flame Pea
+tile.plants2.verbena.name=Desert Sand Verbena
+tile.plants2.verbena_diff.name=Pink Desert Sand Verbena
+tile.plants2.cornflower.name=Australian Cornflower
+tile.plants2.tinsel.name=Blue Tinsel Lily
+tile.plants2.tinsel_wht.name=White Tinsel Flower
+tile.plants2.clover.name=Owl's Clover
+tile.plants2.flag.name=Purple Flag
+tile.plants2.paintbrush.name=Desert Paintbrush
+tile.plants2.yucca.name=Yucca
+tile.plants2.notch.name=Notch Leaf Scorpion Weed
+
+tile.plants2.cactus.name=Cactus
+tile.plants2.parodia.name=Parodia Muricata
+tile.plants2.hedgehog.name=Engelmann's Hedgehog Cactus
+tile.plants2.claw.name=Devil's Claw
+tile.plants2.claw_spike.name=Devil's Claw Vine
+
+tile.plants2.cosmos.name=Tall Cosmos
+tile.plants2.larkspur.name=Larkspur
+tile.plants2.iris.name=Iris
+tile.plants2.manzanita.name=Manzanita Bush
+tile.plants2.gloriosa.name=Gloriosa Lily
+tile.plants2.lupin.name=Tall Lupin
+
+tile.plants2.lily_tall.name=Tall Calla Lily
+tile.plants2.mendo.name=Mendocino Poppy
+tile.plants2.cherry.name=Ornamental Cherry
+tile.plants2.quince.name=Quince
+tile.plants2.hawthorne.name=Hawthorne
+tile.plants2.gladiola_red.name=Crimson Gladiola
+
+tile.plants2.gladiola.name=Gladiola
+tile.plants2.gladiola_peach.name=Peach Gladiola
+tile.plants2.gladiola_orange.name=Orange Gladiola
+tile.plants2.cosmos_orange.name=Tall Orange Cosmos
+tile.plants2.datura.name=Datura
+tile.plants2.poppy_blue.name=Himalayan Blue Poppy
+
+tile.plants2.yucca_tall.name=Yucca Flower
+tile.plants2.cactus_flower.name=Tall Cactus
+tile.plants2.ocotillo.name=Ocotillo
+tile.plants2.indigo.name=Mojave Indigo Bush
+tile.plants2.dry.name=Dry Shrub
+tile.plants2.aloe.name=Cape Aloe
+
+tile.plants2.red.name=Red Sunflower
+tile.plants2.large.name=Skyscraper Sunflower
+tile.plants2.two.name=Sundance Kid Sunflower
+tile.plants2.bear.name=Teddy Bear Sunflower
+tile.plants2.tiny.name=Paradox Sunflower
+tile.plants2.dry.name=Dried Sunflower
+
+tile.plants2.blue_bell.name=Blue Bell Sweet Peas
+tile.plants2.dark_blue.name=Dark Blue Sweet Peas
+tile.plants2.blue_purple.name=Blue Purple Sweet Peas
+tile.plants2.magenta.name=Magenta Sweet Peas
+tile.plants2.dark_magenta.name=Dark Magenta Sweet Peas
+tile.plants2.medium_pink.name=Medium Pink Sweet Peas
+
+tile.plants2.venus.name=Venus Fly Trap
+tile.plants2.osto.name=Darkosto Traposto
+
+//Dyes
+item.plants2.dark_red.name=Dark Red Flower Dye
+item.plants2.red.name=Red Flower Dye
+item.plants2.red_orange.name=Red Orange Flower Dye
+item.plants2.orange.name=Orange Flower Dye
+item.plants2.orange_yellow.name=Orange Yellow Flower Dye
+item.plants2.yellow_orange.name=Yellow Orange Flower Dye
+item.plants2.yellow.name=Yellow Flower Dye
+item.plants2.light_yellow.name=Light Yellow Flower Dye
+item.plants2.yellow_green.name=Yellow Green Flower Dye
+item.plants2.lime.name=Lime Flower Dye
+item.plants2.green.name=Green Flower Dye
+item.plants2.dark_green.name=Dark Green Flower Dye
+item.plants2.blue_green.name=Blue Green Flower Dye
+item.plants2.aqua.name=Aqua Flower Dye
+item.plants2.cyan.name=Cyan Flower Dye
+item.plants2.cloud_blue.name=Cloud Blue Flower Dye
+
+item.plants2.light_blue.name=Light Blue Flower Dye
+item.plants2.blue_bell.name=Blue Bell Flower Dye
+item.plants2.medium_blue.name=Medium Blue Flower Dye
+item.plants2.blue.name=Blue Flower Dye
+item.plants2.dark_blue.name=Dark Blue Flower Dye
+item.plants2.blue_purple.name=Blue Purple Flower Dye
+item.plants2.purple.name=Purple Flower Dye
+item.plants2.lavender.name=Lavender Flower Dye
+item.plants2.light_lavender.name=Light Lavender Flower Dye
+item.plants2.purple_magenta.name=Purple Magenta Flower Dye
+item.plants2.magenta.name=Magenta Flower Dye
+item.plants2.magenta_pink.name=Magenta Pink Flower Dye
+item.plants2.dark_magenta.name=Dark Magenta Flower Dye
+item.plants2.dark_pink.name=Dark Pink Flower Dye
+item.plants2.medium_pink.name=Medium Pink Flower Dye
+item.plants2.pink.name=Pink Flower Dye
+
+//Dye Glass
+tile.block_dye_glass.red.name=Red Dyed Glass
+tile.block_dye_glass.orange.name=Orange Dyed Glass
+tile.block_dye_glass.yellow_orange.name=Yellow Orange Dyed Glass
+tile.block_dye_glass.yellow.name=Yellow Dyed Glass
+tile.block_dye_glass.lime.name=Lime Dyed Glass
+tile.block_dye_glass.green.name=Green Dyed Glass
+tile.block_dye_glass.blue_green.name=Blue Green Dyed Glass
+tile.block_dye_glass.cyan.name=Cyan Dyed Glass
+tile.block_dye_glass.light_blue.name=Light Blue Dyed Glass
+tile.block_dye_glass.blue_bell.name=Blue Bell Dyed Glass
+tile.block_dye_glass.blue.name=Blue Dyed Glass
+tile.block_dye_glass.blue_purple.name=Blue Purple Dyed Glass
+tile.block_dye_glass.purple.name=Purple Dyed Glass
+tile.block_dye_glass.lavender.name=Lavender Dyed Glass
+tile.block_dye_glass.magenta.name=Magenta Dyed Glass
+tile.block_dye_glass.pink.name=Pink Dyed Glass
+
+
+//Dye Glass Pane
+tile.block_dye_glass_pane.red.name=Red Dyed Glass Pane
+tile.block_dye_glass_pane.orange.name=Orange Dyed Glass Pane
+tile.block_dye_glass_pane.yellow_orange.name=Yellow Orange Dyed Glass Pane
+tile.block_dye_glass_pane.yellow.name=Yellow Dyed Glass Pane
+tile.block_dye_glass_pane.lime.name=Lime Dyed Glass Pane
+tile.block_dye_glass_pane.green.name=Green Dyed Glass Pane
+tile.block_dye_glass_pane.blue_green.name=Blue Green Dyed Glass Pane
+tile.block_dye_glass_pane.cyan.name=Cyan Dyed Glass Pane
+tile.block_dye_glass_pane.light_blue.name=Light Blue Dyed Glass Pane
+tile.block_dye_glass_pane.blue_bell.name=Blue Bell Dyed Glass Pane
+tile.block_dye_glass_pane.blue.name=Blue Dyed Glass Pane
+tile.block_dye_glass_pane.blue_purple.name=Blue Purple Dyed Glass Pane
+tile.block_dye_glass_pane.purple.name=Purple Dyed Glass Pane
+tile.block_dye_glass_pane.lavender.name=Lavender Dyed Glass Pane
+tile.block_dye_glass_pane.magenta.name=Magenta Dyed Glass Pane
+tile.block_dye_glass_pane.pink.name=Pink Dyed Glass Pane
+
+
+tile.plants2.doubles_cosmos = Cosmos
+tile.plants2.doubles_gloriosa = Gloriosa
+tile.plants2.doubles_iris = Iris
+tile.plants2.doubles_larkspur = Larkspur
+tile.plants2.doubles_lupin = Lupin
+tile.plants2.doubles_manzanita = Manzanita
+tile.plants2.doublesb_cherry = Cherry
+tile.plants2.doublesb_gladiola_red = Gladiola red
+tile.plants2.doublesb_hawthorne = Hawthorne
+tile.plants2.doublesb_lily_tall = Lily tall
+tile.plants2.doublesb_mendo = Mendo
+tile.plants2.doublesb_quince = Quince
+tile.plants2.doublesc_cosmos_orange = Cosmos orange
+tile.plants2.doublesc_datura = Datura
+tile.plants2.doublesc_gladiola = Gladiola
+tile.plants2.doublesc_gladiola_orange = Gladiola orange
+tile.plants2.doublesc_gladiola_peach = Gladiola peach
+tile.plants2.doublesc_poppy_blue = Poppy blue
+tile.plants2.doublesd_aloe = Aloe
+tile.plants2.doublesd_cactus_flower = Cactus flower
+tile.plants2.doublesd_dry = Dry
+tile.plants2.doublesd_indigo = Indigo
+tile.plants2.doublesd_ocotillo = Ocotillo
+tile.plants2.doublesd_yucca_tall = Yucca tall
+tile.plants2.doublesp_blue_bell = Blue bell
+tile.plants2.doublesp_blue_purple = Blue purple
+tile.plants2.doublesp_dark_blue = Dark blue
+tile.plants2.doublesp_dark_magenta = Dark magenta
+tile.plants2.doublesp_magenta = Magenta
+tile.plants2.doublesp_medium_pink = Medium pink
+tile.plants2.doubless_bear = Bear
+tile.plants2.doubless_dry = Dry
+tile.plants2.doubless_large = Large
+tile.plants2.doubless_red = Red
+tile.plants2.doubless_tiny = Tiny
+tile.plants2.doubless_two = Two
